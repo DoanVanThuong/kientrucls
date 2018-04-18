@@ -1,6 +1,6 @@
 <?php $curr = 'product';?>
 @extends('master-page')
-@section('title')Sản phẩm | Kiến trúc LS
+@section('title')Sản phẩms | Kiến trúc LS
 @stop
 @section('define-css')
 <link rel="stylesheet" href="{{asset('css/header-page.css')}}">
