@@ -1,0 +1,415 @@
+/*Style for Technical*/
+
+
+/*Reponsive*/
+
+.technical-page .hr-technical {
+    max-width: 105px;
+    border-top: 4px solid #e6b115;
+    background: #e6b115;
+}
+
+.technical-page .scroll-menu {
+    display: block;
+    margin-bottom: 0;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+
+/*banner-technical*/
+
+.banner-technical {
+    min-height: 390px;
+    background: url("../img/technical/banner-technical.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.banner-technical .tech-slogan {
+    color: #fefefe;
+    font-size: 36px;
+    font-family: 'Roboto-Bold';
+    line-height: 22.64px;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 70px;
+}
+
+.banner-technical p {
+    font-family: 'Roboto-Regular';
+    font-size: 20px;
+    color: #fffefe;
+    line-height: 24px;
+    text-align: center;
+}
+
+
+/*download-autocadfile*/
+
+.download-autocadfile {
+    padding: 50px 0 30px 0;
+    background: #f5f5f5;
+}
+
+.download-autocadfile p {
+    font-family: 'Roboto-Regular';
+    font-size: 22px;
+    color: #211f20;
+    line-height: 22.64px;
+    text-align: left;
+    padding: 20px;
+    float: left;
+}
+
+.download-autocadfile button.download {
+    background: #f4bc16;
+    color: #fff;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+    border-radius: 30px;
+    padding: 16px 40px;
+    float: right;
+}
+
+.download-autocadfile button.download .fa {
+    font-size: 18px;
+}
+
+.download-autocadfile button.download:hover {
+    background: #fff;
+    color: #f4bc16;
+    -webkit-transition: all 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: all 0.2s;
+}
+
+.download-autocadfile button.download:hover a {
+    color: #f4bc16;
+}
+
+.download-autocadfile button.download:focus {
+    border: 0;
+    outline: none;
+}
+
+.download-autocadfile button.download a {
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    -webkit-transition: all 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: all 0.2s;
+}
+
+.modal .modal-backdrop.in {
+    opacity: 0.85;
+}
+
+.modal .modal-content img {
+    width: 70%;
+    margin: 0px auto;
+}
+
+.modal .modal-content .close {
+    position: absolute;
+    top: 7px;
+    right: -60px;
+    opacity: 1;
+}
+
+.modal .modal-content .close:before {
+    content: 'x';
+    color: #bbbbbb;
+    font-size: 24px;
+    text-align: center;
+    background: #252525;
+    border: 1px solid #fff;
+    padding: 3px 10px;
+    text-transform: uppercase;
+}
+
+.modal .modal-content .close:focus,
+.modal .modal-content .close:active {
+    border: 0;
+    outline: none;
+}
+
+
+/*technical-content*/
+
+.technical-content {
+    background-color: #fff;
+    padding: 90px 0 50px 0;
+}
+
+.technical-content .technical-title {
+    font-family: 'Roboto-Regular';
+    font-size: 30px;
+    line-height: 22.64px;
+    color: #211f20;
+    text-transform: uppercase;
+}
+
+.technical-content .techn-content {
+    margin-top: 60px;
+}
+
+.technical-content .techn-content .caption {
+    font-family: 'Roboto-Regular';
+    font-size: 16px;
+    line-height: 19px;
+    color: #222121;
+    padding: 20px 0 30px 20px;
+    position: absolute;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+    background: #f5f5f5;
+    width: 100%;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.technical-content .techn-content .caption:hover {
+    background: #f4bc16;
+    color: #fff;
+    -webkit-transition: ease-out 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: ease-out 0.2s;
+}
+
+.technical-content .techn-content .img-tech-wp {
+    height: 230px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #d4d4d4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+.technical-content .techn-content .img-tech-wp img {
+    max-width: 70%;
+    height: auto;
+}
+
+.technical-content .techn-content .img-tech-wp .caption {
+    padding: 13px 0 3px 20px;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.technical-content .techn-content .img-tech-wp .caption p {
+    font-family: 'Roboto-Bold';
+}
+
+.technical-content .techn-content .img-tech-wp .caption:hover {
+    background: #f4bc16;
+    color: #fff;
+    -webkit-transition: ease-out 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: ease-out 0.2s;
+}
+
+.technical-content .techn-content .img-tech-wp .btn-info {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    padding: 6px 67px;
+    z-index: 4;
+    opacity: 0;
+    background: #b3b3b3;
+    outline: none;
+    border: 1px solid #b3b3b3;
+    border-radius: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.technical-content .techn-content .img-tech-wp .btn-info:hover {
+    background: #f6be00;
+    border: 0;
+}
+
+.technical-content .techn-content .img-tech-wp:hover .btn-info {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    -webkit-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+.technical-content .techn-content .btn-more,
+.technical-content .techn-content .btn-less {
+    text-align: center;
+}
+
+.technical-content .techn-content .btn-more a,
+.technical-content .techn-content .btn-less a {
+    font-family: 'Roboto-Regular';
+    font-size: 18px;
+    line-height: 42.46px;
+    color: #404040;
+}
+
+.technical-content .techn-content .btn-more a:hover,
+.technical-content .techn-content .btn-less a:hover {
+    color: #f6be00;
+    -webkit-transition: all 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: all 0.2s;
+}
+
+.technical-content .techn-content .thumb-wp {
+    border: 1px solid #eee;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.technical-content .techn-content .thumb-wp .thumb {
+    position: relative;
+    min-height: 300px;
+}
+
+.technical-content .techn-content .thumb-wp .thumb img {
+    width: 100%;
+}
+
+.technical-content .techn-content .list-en-report li {
+    background: #f5f5f5;
+    font-size: 16px;
+    line-height: 22px;
+    font-family: 'Roboto-Regular';
+    padding: 20px 0 25px 20px;
+    margin-bottom: 20px;
+    -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.technical-content .techn-content .list-en-report li:hover {
+    color: #fff;
+    background: #f4bc16;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: all 0.2s;
+}
+
+.technical-content .techn-content .list-en-report li p {
+    font-family: 'Roboto-Bold';
+    color: #222121;
+}
+
+
+/* ==========================================================================
+   Responsive CSS Landscape Tablet
+   ========================================================================== */
+
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+    .main-content .technical-content .technical-title {
+        line-height: 1;
+    }
+    .technical-content .techn-content .thumb img {
+        height: auto;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Tablet
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .main-content .technical-content .technical-title {
+        line-height: 1;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Landscape Mobile
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .main-content .technical-content .technical-title {
+        line-height: 1;
+    }
+    .technical-content .techn-content .thumb {
+        height: auto;
+    }
+    .technical-content .techn-content .thumb img {
+        height: auto;
+    }
+    .modal .modal-content .close {
+        right: 0;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Mobile
+   ========================================================================== */
+
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+    .banner-technical .tech-slogan {
+        line-height: 1;
+    }
+    .main-content .technical-content .technical-title {
+        line-height: 1;
+    }
+    .technical-content .techn-content .thumb {
+        height: auto;
+    }
+    .modal .modal-content .close {
+        right: 0;
+    }
+    .download-autocadfile button.download {
+        float: left;
+    }
+}
+
+
+/*# sourceMappingURL=technical.css.map */

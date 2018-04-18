@@ -1,0 +1,147 @@
+.scroll-menu {
+    position: relative;
+    z-index: 99;
+    min-height: 60px;
+    display: none;
+    background: white;
+}
+
+.scroll-navbar {
+    margin-left: 2%;
+    padding-top: 5px;
+}
+
+.scroll-navbar li a {
+    font-family: 'Roboto-Regular';
+    font-size: 14px;
+}
+
+.scroll-navbar .active-line {
+    outline: none;
+    border-bottom: 4px solid #f4bc16;
+    color: #262626;
+    font-weight: bold;
+}
+
+.scroll-navbar li {
+    min-height: 60px;
+}
+
+.scroll-menu .navbar-right li:nth-child(n+2) {
+    border-left: 2px solid #ababab;
+    border-right: 2px solid #ababab;
+    height: 65px;
+    padding: 25px;
+    color: #ababab;
+}
+
+.scroll-menu .navbar-right li:nth-child(n+3) {
+    border-left: none;
+}
+
+.scroll-menu .navbar-right .scroll-hotline {
+    padding: 20px;
+    color: black;
+    font-size: 16px;
+    font-family: 'Candara Bold';
+}
+
+.scroll-menu .navbar-right .search:hover i,
+.scroll-menu .navbar-right .facebook:hover i,
+.scroll-search form button:hover i {
+    color: black;
+    cursor: pointer;
+}
+
+.scroll-search {
+    display: none;
+    right: 18px;
+    position: absolute;
+    right: 60px;
+    padding: 10px;
+    background: rgba(245, 245, 245, 0.9);
+    margin-top: 5px;
+    box-shadow: 2px 10px 5px;
+    width: 295px;
+}
+
+.scroll-search form input {
+    width: 80%;
+    height: 50px;
+    border: 1px solid #E2E6E7;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.scroll-search form button {
+    width: 50px;
+    height: 50px;
+    outline: none;
+    border: 1px solid #E2E6E7;
+    background: rgb(245, 245, 245);
+}
+
+.scroll-search form button i {
+    color: #ababab;
+}
+
+
+/*scroll to Top*/
+
+#scroll {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    background: rgba(38, 38, 40, 0.4);
+}
+
+#scroll:hover {
+    background: #f4bc16;
+}
+
+#scroll i {
+    font-size: 20px;
+}
+
+.scroll-menu form {
+    display: none;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+    .scroll-navbar {
+        margin-left: 2%;
+    }
+    .scroll-menu .navbar-right .scroll-hotline {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .scroll-navbar {
+        margin-left: 2%;
+    }
+    .scroll-menu .navbar-right .scroll-hotline {
+        display: none;
+    }
+    .scroll-navbar li a {
+    font-size: 7px;
+}
+
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+    .scroll-menu form {
+        margin-left: 2%;
+        display: -webkit-inline-box;
+        margin-top: 16px;
+    }
+    .scroll-menu form input,
+    .scroll-menu form button {
+        height: 30px;
+    }
+}

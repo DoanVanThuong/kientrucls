@@ -1,0 +1,16 @@
+.navbar-page  .navbar-nav li:hover{
+    background: rgb(33,167,72); 
+}
+.navbar-page {
+    margin-bottom: 0px;
+}
+.navbar-page  .navbar-nav li.active a{
+    color:#fff;
+    background: rgb(33,167,72); 
+    
+}
+.navbar-page  .navbar-nav li a:hover {
+    cursor: pointer;
+    color:#fff;
+    transition: all .2s;
+ }

@@ -1,0 +1,308 @@
+    .installation-introduction .line {
+        width: 50px;
+        border: 1px solid #f4b400;
+        margin: 20px 0px 30px 0px;
+    }
+
+    .installation-introduction h2 {
+        font-size: 19px;
+        font-family: 'Roboto-Medium';
+        text-transform: uppercase;
+    }
+
+    .installation-introduction p {
+        font-family: 'Roboto-Regular';
+        line-height: 2;
+        font-size: 14px;
+        color: #777777;
+    }
+
+    .installation-introduction {
+        background: #eeeeee;
+        padding: 70px 0px 100px 0px;
+    }
+
+    .direction button.download:hover {
+        background-color: #f4bc16!important;
+    }
+
+    .direction button.download:hover a {
+        color: white!important;
+    }
+
+    .process {
+        background: white;
+        text-align: center;
+        padding: 60px 0px 0px 0px;
+    }
+
+    .process .line {
+        width: 82px;
+        border: 1px solid #f4b400;
+        margin: 20px auto 30px auto;
+    }
+
+    .process p {
+        color: #7e7d7d;
+        font-family: 'Roboto-Regular';
+        font-size: 16px;
+    }
+
+    .slider-process .process-item {
+        background: url('../img/installation/slider-bg.png') no-repeat transparent;
+        height: 440px;
+    }
+
+    .slider-process .slider-nav {
+        padding: 70px 200px 0px 288px;
+        margin-bottom: -5px;
+    }
+
+    .slider-process .slider-nav .slick-track {
+        width: 798px!important;
+        cursor: pointer;
+    }
+
+    .slider-process .slider-nav .slick-active:focus,
+    .slider-process .slider-nav .slick-current, .look-out .slick-active:focus,
+   .look-out .submit-request:focus, .look-out .send-mess input[type="submit"]:focus
+     {
+        outline: none;
+    }
+
+    .slider-process .icon-process .white {
+        display: none;
+    }
+
+    .slider-process .icon-process:hover,
+    .slider-process .slider-nav .slick-current .icon-process {
+        background: #f4b400;
+        -webkit-transition: all 0.5s linear;
+        -moz-transition: all 0.5s linear;
+        -o-transition: all 0.5s linear;
+        transition: all 0.5s linear;
+    }
+
+    .slider-process .icon-process:hover .black,
+    .slider-process .slider-nav .slick-current .icon-process .black {
+        display: none;
+    }
+
+    .slider-process .icon-process:hover .white,
+    .slider-process .slider-nav .slick-current .icon-process .white {
+        display: inherit;
+    }
+    .slider-process .slider-nav .each-process{
+        position: relative;
+        height: 137px;
+    }
+    .slider-process .each-process .icon {
+        visibility: hidden;
+    }
+
+    .slider-process .slick-current .icon {
+        visibility: visible;
+        margin: auto;
+        display: block;
+        position: absolute;
+        padding-left: 87px;
+        font-size: 33px;
+        color: #ececec;
+        top:113px;
+    }
+
+    .right-side {
+        display: flex;
+    }
+
+    .right-side .descript {
+        text-align: left;
+        padding: 125px 0px 125px 124px;
+    }
+
+    .right-side .descript h2 {
+        font-size: 36px;
+    }
+
+    .right-side .img-house img {
+        margin: 130px 0px 0px 10px;
+        height: 330px;
+        width: 100%;
+    }
+
+    .left-side img {
+        display: -webkit-inline-box;
+        float: left;
+        height: 268px;
+        margin: 100px
+    }
+
+    .look-out {
+        text-align: center;
+        padding: 60px 0px;
+    }
+
+    .look-out .slider-nav {
+        margin-left: 20%;
+        cursor: pointer;
+    }
+
+    .look-out .drag-pic {
+        height: 188px;
+        background: white;
+        border: 1px solid rgba(197, 197, 197, 0.4);
+    }
+
+    .look-out .form-control {
+        margin-bottom: 15px;
+        color: #fff;
+        font-size: 13px;
+        border: 1px solid #fff;
+        border-radius: 0;
+        height: 30px;
+        box-shadow: none;
+    }
+
+    .drag-pic {
+        padding: 20px 24px 0px 24px;
+    }
+
+    .drag-pic .custom-file {
+        color: #777777;
+        font-family: 'Roboto-Medium';
+        text-align: left;
+        font-weight: 100;
+    }
+
+    .drag-pic .custom-file::after {
+        background: url('../img/installation/arrow.png') no-repeat;
+        right: 40px;
+        top: auto;
+        cursor: pointer;
+    }
+
+    .drag-pic input[type="file"] {
+        opacity: 0;
+    }
+
+    .look-out .send-mess {
+        text-align: right;
+    }
+
+    .look-out .send-mess input[type="button"],
+    .look-out .send-mess input[type="submit"],
+    .look-out .submit-request {
+        text-transform: uppercase;
+        font-size: 14px;
+        font-family: 'Roboto-Bold';
+        border-radius: 30px;
+        background: #f6be00;
+        color: white;
+        border: none;
+        padding: 18px 30px;
+        width: auto;
+    }
+
+    .look-out h3 {
+        color: black;
+        font-family: 'Roboto-Bold';
+    }
+
+    .look-out .title-look {
+        font-size: 16px;
+        font-family: 'Roboto-Regular';
+        padding: 40px 0px;
+    }
+
+    .look-out .slider-nav li {
+        min-width: 300px;
+        padding: 20px;
+        border-bottom: 2px solid #737373;
+        text-transform: uppercase;
+        color: #909090;
+        font-family: 'Roboto-Medium';
+    }
+
+    .look-out .slider-nav .slick-current,
+    .look-out .slider-nav .slick-active:focus {
+        outline: none;
+        border-bottom: 2px solid #f6be00;
+        color: black;
+    }
+
+    .look-out form p {
+        padding: 30px;
+    }
+    /* ==========================================================================
+   Responsive CSS Desktop
+   ========================================================================== */
+
+    @media only screen and (min-width: 1241px) and (max-width: 1365px) {}
+    /* ==========================================================================
+   Responsive CSS Landscape Tablet -- Master
+   ========================================================================== */
+
+    @media only screen and (min-width: 960px) and (max-width: 1240px) {}
+    /* ==========================================================================
+   Responsive CSS Portrait Tablet -- Master
+   ========================================================================== */
+
+    @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .slider-process .slider-nav {
+            padding: 0px;
+        }
+        .right-side .img-house img {
+            display: none;
+        }
+        .right-side .descript {
+            padding: 125px 0px 125px 43px;
+        }
+        .left-side img {
+            margin: 130px;
+        }
+        .look-out .slider-nav {
+            margin-left: auto;
+        }
+    }
+    /* ==========================================================================
+   Responsive CSS Landscape Mobile -- Master
+   ========================================================================== */
+
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+        .slider-process .slider-nav {
+            padding: 0px;
+        }
+        .slider-process .slider-nav .slick-track {
+            width: auto!important;
+        }
+        .look-out .slider-nav {
+            margin-left: auto;
+        }
+    }
+    /* ==========================================================================
+   Responsive CSS Portrait Mobile -- Home Page
+   ========================================================================== */
+
+    @media only screen and (min-width: 100px) and (max-width: 479px) {
+        .slider-process .slider-nav {
+            padding: 0px;
+        }
+        .slider-process .slider-nav .slick-track {
+            width: auto!important;
+        }
+        .right-side .descript {
+            padding: 10px;
+        }
+        .right-side .descript h2 {
+            font-size: 33px;
+        }
+        .look-out .slider-nav li {
+            min-width: 100px;
+        }
+        .look-out .slider-nav {
+            margin-left: 10%;
+        }
+        .look-out .send-mess {
+            text-align: inherit;
+        }
+    }

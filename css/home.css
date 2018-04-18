@@ -1,0 +1,531 @@
+
+/*Style for home*/
+
+/*Estimates*/
+.free-estimate {
+	position: fixed;
+	height: 146px;
+	max-height: 100%;
+	right: 0;
+	left: auto;
+	top: 155px;
+	bottom: 0;
+	z-index: 1000;
+}
+.estimate-btn {
+	float: left;
+	margin-right: -7px;
+	cursor: pointer;
+}
+#open:hover{
+	opacity:1!important; 
+}
+.estimate-form {
+	float: left;
+	max-height: calc(100% - 80px);
+	height: auto;
+	max-width: 608px;
+	background-color:  rgb(30,118,55);
+	padding: 20px 40px;
+	font-family: 'Roboto-Light';
+	font-size: 13px;
+	color: #fff;
+	margin-top: 13px;
+	display: none;
+	overflow-y: scroll;
+	overflow-x: hidden !important;
+}
+#close {
+	display: none;
+}
+.form-title {
+	font-family: 'Dosis-Light';
+	font-size: 30px;
+	text-align: center;
+	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 20px;
+	border-bottom: 1px dotted #fff;
+	padding-bottom: 20px;
+}
+.form-title span {
+	font-family: 'UTM Neo Sans IntelBold';
+}
+.estimate-form .input-group {
+	width: 100%;
+}
+.estimate-form .input-group-addon {
+	background-color:  rgb(30,118,55);
+	border: none;
+	border-radius: 0;
+    font-size: 13px;
+    color: #fff;
+    text-align: left;
+    width: 30%;
+    vertical-align: top;
+    padding-left: 0;
+}
+.estimate-form .input-group .form-control {
+    margin-bottom: 15px;
+    color: #fff;
+    font-size: 13px;
+    background-color:  rgb(30,118,55);
+    border: 1px solid #fff;
+    border-radius: 0;
+    height: 30px;
+    box-shadow: none;
+}
+.estimate-form .input-group textarea.form-control {
+	height: auto;
+}
+.custom-file {
+	display: block;
+	border: 1px solid #fff;
+	line-height: 30px;
+	height: 30px;
+	padding: 0 12px;
+	color: #fff;
+	font-size: 13px;
+	font-family: 'Roboto-Bold';
+}
+.custom-file:after {
+	content: '';
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	background: url('../img/home/free-estimate.png') no-repeat center;
+	background-size: contain;
+	width: 10px;
+	height: 16px;
+}
+.free-estimate input[type=file] {
+	opacity: 0;
+	visibility: hidden;
+}
+.free-estimate select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: url('../img/home/free-estimate-down.png') 93% / 10% no-repeat #fff;
+}
+.free-estimate textarea {
+    resize: none;
+    background: url(../img/home/textarea.png) 98% 94% no-repeat #fff;
+}
+.notice {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+.send-row {
+	text-align: center;
+}
+.btn-send {
+	padding: 15px 30px;
+	border-radius: 30px;
+	color:  rgb(30,118,55);
+	background-color: #fff;
+	border: 2px solid #fff;
+	font-size: 20px;
+	font-family: 'UTM Neo Sans IntelBold';
+	text-align: center;
+}
+.btn-send:hover {
+	background-color:  rgb(30,118,55);
+	color: #fff;
+	border-color: #fff;
+}
+
+/*Products*/
+.our-product {
+	text-align: center;
+	padding-top: 55px;
+	padding-bottom: 63px;
+	font-family: 'Roboto-Light';
+}
+.home-title {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #151f20;
+	margin-bottom: 30px;
+}
+.home-title-border {
+	width: 82px;
+	border: 2px solid  rgb(30,118,55);
+	margin: 0 auto 40px;
+}
+.hproduct-intro {
+	font-size: 18px;
+	color: #000;
+	line-height: 27px;
+	margin-bottom: 27px;
+}
+.hproduct-item {
+	background-color: #fff;
+	padding-right: 0;
+	padding-left: 0;
+}
+.hproduct-item .home-title {
+	font-size: 22px;
+	margin-bottom: 13px;
+	text-transform: none;
+}
+.hproduct-item:hover .home-title {
+	color:  rgb(26,160,70);
+}
+.hproduct-item .home-title-border {
+	width: 40px;
+	margin: 0 auto 30px;
+}
+.hproduct-item-pic {
+	margin-bottom: 28px;
+	height: 257px;
+}
+.hproduct-item-detail {
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 18px;
+	padding-bottom: 45px;
+}
+.hproduct-item a {
+	color: #777777;
+}
+.hproduct-slider {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+	position: relative;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+	display: flex;
+	display: -webkit-flex;
+}
+.hproduct-slider .slider-control {
+	position: absolute;
+	top: 20%;
+	opacity: 0.8;
+	cursor: pointer;
+}
+.hproduct-slider .slider-control:hover {
+	opacity: 1;
+}
+.hproduct-slider .left {
+	left: -50px;
+}
+.hproduct-slider .right {
+	right: -50px;
+}
+.hview-more {
+	text-transform: uppercase;
+	font-family: 'Roboto-Bold';
+	color: #FFF;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgb(30,118,55);
+    padding: 16px 23px 15px;
+    text-align: center;
+    cursor: pointer;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 999px;
+    -moz-border-radius: 999px;
+    -webkit-border-radius: 999px;
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    border: 2px solid rgb(30,118,55);
+}
+.hview-more:hover {
+	color:  rgb(30,118,55);
+	background-color: #fff;
+	transition: all .3s ease-in;
+	-webkit-transition: all .3s ease-in;
+	-moz-transition: all .3s ease-in;
+}
+.hview-more {
+	margin-top: 40px;
+}
+
+/*Section projects*/
+
+.our-project {
+	background-color: #151f20;
+    padding-bottom: 0;
+    padding-bottom: 50px;
+}
+.our-project .home-title {
+    color:#fff; 
+}
+.img-project {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .2s;
+    
+}
+.img-project:hover {
+    cursor: pointer;
+    background:rgba(0,0,0,.4);
+    transition: all .2s;
+    transform: scale(1.1);
+}
+.img-project:hover .project-des {
+    display: block;
+    transition: all .3s ease-out;
+    -webkit-transition: all .3s ease-out;
+    color:#fff !important;
+    opacity: 1;
+}
+.project-des {
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    color:#fff;
+}
+.hproject-footer {
+	background-color: #f5f5f5;
+	padding-top: 53px;
+	padding-bottom: 53px;
+}
+.hproject-footer .hview-more {
+	margin-top: 0;
+}
+.hproject-footer-title {
+	padding-right: 50px;
+	color: #1f1f1f;
+	font-size: 20px;
+}
+.our-project .hproduct-intro {
+	margin-bottom: 60px;
+}
+
+/*Here is my story*/
+.our-story {
+	background-color: #fff;
+}
+.feature-item-group {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.feature-item {
+	text-align: left;
+	float: left;
+	position: relative;
+	width: 100%;
+	cursor: pointer;
+}
+.feature-item:before {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	float: left;
+    font-size: 48px;
+    margin-right: 30px;
+    color: rgb(30,118,55);
+    border: 1px solid #E2E6E7;
+    padding: 19px;
+    width: 80px;
+    height: 80px;
+}
+.feature-item-hover:before {
+    color: #fff;
+    border: 1px solid rgb(30,118,55);;
+    background-color: rgb(30,118,55);;
+    transition: all .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+}
+.page-margin-top {
+	margin-top: 50px;
+}
+.feature-item p {
+    font-family: 'Roboto-Light';
+    font-size: 14px;
+    line-height: 24px;
+    padding: 0;
+    margin-top: 19px;
+    margin-left: 110px;
+}
+.feature-item h4 {
+    padding-bottom: 5px;
+	font-family: 'Roboto-Regular';
+	color: #000;
+	margin: 0;
+    padding: 0;
+    transition: all .3s ease-out;
+    -webkit-transition: .3s ease-out;
+    -moz-transition: .3s ease-out;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.feature-item:first-child h4 {
+	color:  rgb(30,118,55);
+}
+.our-story-imgs {
+	max-height: 480px;
+	max-width: 480px;
+	margin: auto;
+}
+.our-story-imgs img {
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	height: auto;
+	vertical-align: top;
+}
+
+/*Testimonal*/
+.our-testimonial {
+	background: url('../img/home/client-bg.png');
+	background-size: cover;
+	min-height: 584px;
+	text-align: center;
+	color: #fff;
+	font-size: 22px;
+	background-attachment: fixed;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+#myCarousel {
+	padding-top: 87px;
+	padding-bottom: 122px;
+	position: relative;
+	width: 100%;
+}
+.testimonial-img img {
+	display: block;
+	margin: auto;
+}
+.testimonial-body {
+	font-family: 'Roboto-Light';
+	margin-top: 72px;
+	padding: 0 50px;
+}
+.testimonial-border {
+	background-color: rgb(30,118,55);
+	width: 111px;
+	height: 5px;
+	margin: 40px auto 45px;
+}
+.testimonial-author {
+	font-family: 'Roboto-LightItalic';
+}
+.our-testimonial .carousel-control i {
+	position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%) scaleY(1.3);
+    -webkit-transform: translateY(-50%) scaleY(1.3);
+    -moz-transform: translateY(-50%) scaleY(1.3);
+    z-index: 5;
+    display: inline-block;
+    font-size: 72px;
+    color: #fff;
+}
+.our-testimonial .carousel-control {
+	width: 99px;	
+}
+
+/*Logos Slider*/
+.our-logos {
+	padding-bottom: 74px;
+}
+.our-logos .home-title-border {
+	margin-bottom: 50px;
+}
+.logos-slider img {
+	-webkit-filter: grayscale(100%);
+    filter: grayscale(100%); 
+    opacity: 0.4;
+    transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+}
+.logos-slider.slick-dotted.slick-slider {
+	margin-bottom: 53px;
+}
+.logos-slider .slick-slide:hover img {
+	-webkit-filter: grayscale(0);
+    filter: grayscale(0); 
+    opacity: 1;
+    cursor: pointer;
+}
+.home-slider .slick-dots  {
+	bottom: -53px;
+	top: auto;
+}
+.home-slider .slick-dots li button:before, 
+.home-slider .slick-dots li button:before {
+    font-size: 14px;
+    color: #e2e6e7;
+    opacity: 1;
+}
+.home-slider .slick-dots li.slick-active button:before {
+    color:  rgb(30,118,55);
+}
+
+/*Responsive*/
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+	
+}
+
+/* Landscape Tablet*/
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.feature-item h4 {
+		font-size: 16px;
+	}
+}
+
+/* Landscape mobile */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	.project-item {
+		width: 50%;
+	}
+	.hproject-footer-title {
+		display: block;
+		margin-bottom: 20px;
+		font-size: 18px;
+		padding-right: 0;
+	}
+	.estimate-form {
+		float: none;
+	}
+	.free-estimate {
+		width: auto;
+	}
+	.btn-send {
+    	padding: 10px 20px;
+    }
+}
+
+/*Portrait Mobile*/
+
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+	.project-item {
+		width: 50%;
+	}
+	.hproject-footer-title {
+		display: block;
+		padding-right: 0;
+		margin-bottom: 20px;
+		font-size: 18px;
+	}
+	.estimate-form .input-group-addon {
+		display: block;
+	}
+	.estimate-form {
+		float: none;
+		padding: 20px;
+	}
+	.free-estimate {
+		width: auto;
+	}
+	.btn-send {
+    	padding: 10px 20px;
+    }
+    .stonetile-logo
+}

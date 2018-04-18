@@ -1,0 +1,348 @@
+                    .contact .scroll-menu {
+                        display: block;
+                    }
+
+                    .contact-title h2 {
+                        font-family: 'Roboto-Medium';
+                        text-transform: uppercase;
+                        display: -webkit-inline-box;
+                        font-size: 24px;
+                        margin-top: 3px;
+                    }
+
+                    .contact-title .breadcrumb {
+                        float: right;
+                        font-size: 14px;
+                        font-family: 'Roboto-Medium';
+                        text-transform: uppercase;
+                    }
+
+                    .address,
+                    .google-map,
+                    .form-mess {
+                        background: white;
+                    }
+
+                    .title-body h3 {
+                        font-family: 'Roboto-Medium';
+                        font-size: 30px;
+                        display: -webkit-inline-box;
+                    }
+
+                    .title-body .line {
+                        border-top: 5px solid #f4bc16;
+                        width: 88px;
+                    }
+
+                    .info {
+                        padding-top: 50px;
+                        padding-bottom: 50px;
+                    }
+
+                    .contact-item:before {
+                        float: left;
+                        font-size: 48px;
+                        margin-right: 30px;
+                        color: #F4BC16;
+                        border: 1px solid #E2E6E7;
+                        padding: 19px;
+                        border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        height: 83px!important;
+                    }
+
+                    .contact-item {
+                        position: relative;
+                        float: left;
+                        width: 100%;
+                    }
+
+                    .location {
+                        width: 20%;
+                    }
+
+                    .location .address-item {
+                        padding: 18px 0px 0px 37px;
+                        font-family: 'Roboto-MediumItalic';
+                        font-size: 12px;
+                        left: 18px;
+                    }
+
+                    .phone .address-item,
+                    .clock .address-item {
+                        font-size: 12px;
+                        padding: 0px 0px 0px 37px;
+                        font-family: 'Roboto-LightItalic';
+                        left: 18px;
+                    }
+
+                    .address-item strong {
+                        font-family: 'Candara Bold Italic';
+                    }
+
+                    .phone .row,
+                    .clock .row {
+                        margin-left: 20px;
+                    }
+
+                    #map {
+                        width: 100%;
+                        height: 430px;
+                        border-bottom: 5px solid #f5bd00;
+                    }
+
+                    .branches .small-title {
+                        color: #c5c5c5;
+                        text-transform: uppercase;
+                        font-family: 'Roboto-Medium';
+                        font-size: 13px;
+                        border-bottom: 3px solid #f5bd00;
+                        display: -webkit-inline-box;
+                        padding-bottom: 30px;
+                    }
+
+                    .branches .item-branches {
+                        text-align: center;
+                        cursor: pointer;
+                    }
+
+                    .branches .small-add {
+                        font-family: 'Roboto-Regular';
+                        font-size: 14px;
+                        color: #000000;
+                    }
+
+                    .left-form input, .look-out input {
+                        width: 100%;
+                        height: 52px;
+                        margin-bottom: 16px;
+                    }
+
+                    .form-mess {
+                        border-top: 1px solid rgba(197, 197, 197, 0.21);
+                        padding: 50px 0px 100px 0px;
+                    }
+
+                    .form-mess textarea,
+                    .left-form input,
+                    .form-mess .middle,
+                    .middle-add, .look-out input{
+                        border: 1px solid rgba(197, 197, 197, 0.4);
+                        padding: 20px 0px 20px 20px;
+                        ;
+                    }
+
+                    .left-form input::-webkit-input-placeholder,
+                    .form-mess textarea::-webkit-input-placeholder {
+                        color: rgb(197, 197, 197);
+                    }
+
+                    .form-mess .middle,
+                    .middle-add {
+                        text-align: center;
+                        left: 50px;
+                        height: 184px;
+                    }
+
+                    .form-mess .middle h3,
+                    .middle-add h3 {
+                        font-family: 'Roboto-Black';
+                        font-size: 20px;
+                        text-transform: uppercase;
+                    }
+
+                    .form-mess .middle p,
+                    .middle-add button {
+                        font-family: 'Roboto-Light';
+                        font-size: 16px;
+                    }
+
+                    .form-mess .middle button,
+                    .promise button,
+                    .middle-add button{
+                        border-radius: 30px;
+                        background: #f6be00;
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: 'Roboto-Black';
+                        font-size: 15px;
+                        width: 60%;
+                        height: 50px;
+                        border: none;
+                    }
+
+                    .promise .text-promise {
+                        font-family: 'Roboto-Regular';
+                        font-size: 16px;
+                        padding: 15px;
+                        margin-top: 30px;
+                    }
+
+                    .promise button {
+                        float: right;
+                        width: 40%;
+                        margin-top: 30px;
+                    }
+
+                    .google-map {
+                        padding-bottom: 40px;
+                    }
+
+                    .middle-add {
+                        position: absolute;
+                        z-index: 9;
+                        height: 200px;
+                        left: 60px;
+                        padding: 10px;
+                        background: white;
+                        top: -28px;
+                        width: 100%;
+                    }
+
+                    .middle-add h3 {
+                        font-size: 15px;
+                    }
+
+                    .middle-add button {
+                        text-transform: none;
+                    }
+
+                    .active .icon-up {
+                        visibility: visible;
+                    }
+
+                    .icon-up {
+                        visibility: hidden;
+                        position: relative;
+                        top: -33px;
+                        font-size: 32px;
+                        color: #f6be00;
+                    }
+                    .branches .active{
+                        transition: all 1s;
+                        transform: scale(1.2,1.2);
+                    }
+                    .branches .active .icon-up{
+                        top:-10px;
+                    }
+                    /* ==========================================================================
+   Responsive CSS Desktop
+   ========================================================================== */
+
+                    @media only screen and (min-width: 1241px) and (max-width: 1365px) {}
+                    /* ==========================================================================
+   Responsive CSS Landscape Tablet -- Master
+   ========================================================================== */
+
+                    @media only screen and (min-width: 960px) and (max-width: 1240px) {}
+                    /* ==========================================================================
+   Responsive CSS Portrait Tablet -- Master
+   ========================================================================== */
+
+                    @media only screen and (min-width: 768px) and (max-width: 959px) {
+                        .location {
+                            width: auto;
+                        }
+                        .location,
+                        .phone,
+                        .clock {
+                            margin-bottom: 10px;
+                        }
+                        .location .row {
+                            margin-left: 20px;
+                        }
+                        .location .address-item {
+                            padding-left: 112px;
+                        }
+                        .middle-add {
+                            top: 2px;
+                            left: 42px;
+                            width: 83%;
+                            height: 188px;
+                        }
+                        .icon-up {
+                            display: none;
+                        }
+                        .form-mess .middle {
+                            left: 0;
+                            padding-left: 0px;
+                        }
+                        .promise .btn-sendMess,
+                        .promise .text-promise {
+                            display: flex;
+                            justify-content: center;
+                            display: -webkit-flex;
+                        }
+                    }
+                    /* ==========================================================================
+   Responsive CSS Landscape Mobile -- Master
+   ========================================================================== */
+
+                    @media only screen and (min-width: 480px) and (max-width: 767px) {
+                        .location {
+                            width: auto;
+                        }
+                        .location,
+                        .phone,
+                        .clock {
+                            margin-bottom: 10px;
+                        }
+                        .location .row {
+                            margin-left: 20px;
+                        }
+                        .location .address-item {
+                            padding-left: 92px;
+                        }
+                        .middle-add {
+                            top: 2px;
+                            left: 42px;
+                            width: 83%;
+                            height: 188px;
+                        }
+                        .form-mess .middle {
+                            left: 0;
+                            padding-left: 0px;
+                        }
+                        .promise .btn-sendMess,
+                        .promise .text-promise {
+                            display: flex;
+                            justify-content: center;
+                            display: -webkit-flex;
+                        }
+                        /* ==========================================================================
+   Responsive CSS Portrait Mobile -- Home Page
+   ========================================================================== */
+                        @media only screen and (min-width: 100px) and (max-width: 479px) {
+                            .location {
+                                width: auto;
+                            }
+                            .location,
+                            .phone,
+                            .clock {
+                                margin-bottom: 10px;
+                            }
+                            .location .row {
+                                margin-left: 20px;
+                            }
+                            .location .address-item {
+                                padding-left: 50px;
+                            }
+                            .middle-add {
+                                top: 2px;
+                                left: 42px;
+                                width: 83%;
+                                height: 188px;
+                            }
+                            .form-mess .middle {
+                                left: 0;
+                                padding-left: 0px;
+                            }
+                            .promise .btn-sendMess,
+                            .promise .text-promise {
+                                display: flex;
+                                justify-content: center;
+                                display: -webkit-flex;
+                            }
+                        }
+                    }
