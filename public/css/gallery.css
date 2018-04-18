@@ -1,0 +1,611 @@
+/*Style for Gallery*/
+
+.gallery-page .scroll-menu {
+    display: block;
+    margin-bottom: 0;
+    background-image: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.gallery-header {
+    background: #f5f5f5;
+    min-height: 100px;
+}
+
+.gallery-header .left {
+    float: left;
+    padding: 24px;
+}
+
+.gallery-header .breadcumb-menu {
+    float: right;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.gallery-header .breadcumb-menu .curr a {
+    color: #878787 !important;
+}
+
+.gallery-header .breadcumb-menu li {
+    padding: 30px 6px;
+}
+
+.gallery-header .breadcumb-menu li a {
+    font-size: 14px;
+    color: #000;
+    display: block;
+    font-family: 'Roboto-Medium';
+}
+
+.gallery-header .gallery-header-title {
+    font-family: 'Roboto-Medium';
+    font-size: 24px;
+    line-height: 22.64px;
+    color: #000;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+
+/*slider images comparison */
+
+.cd-image-container {
+    /* position: absolute; */
+    position: relative;
+    z-index: 100;
+    max-width: 860px;
+    margin: 0em auto;
+}
+
+.cd-image-container img {
+    display: block;
+    max-height: 500px;
+}
+
+.cd-image-label {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 1em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0;
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px);
+    -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0.3s 0.7s;
+    -webkit-transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+    transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+    transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
+    transition: transform 0.3s 0.7s, opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
+}
+
+.cd-image-label.is-hidden {
+    visibility: hidden;
+}
+
+.is-visible .cd-image-label {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.cd-resize-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.cd-resize-img img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+.cd-resize-img .cd-image-label {
+    right: auto;
+    left: 0;
+}
+
+.is-visible .cd-resize-img {
+    width: 50%;
+    /* bounce in animation of the modified image */
+    -webkit-animation: cd-bounce-in 0.7s;
+    animation: cd-bounce-in 0.7s;
+}
+
+@-webkit-keyframes cd-bounce-in {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 55%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes cd-bounce-in {
+    0% {
+        width: 0;
+    }
+    60% {
+        width: 55%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.cd-handle {
+    position: absolute;
+    height: 44px;
+    width: 44px;
+    /* center the element */
+    left: 50.4%;
+    top: 50%;
+    margin-left: -22px;
+    margin-top: -22px;
+    border-radius: 50%;
+    background: transparent url("../img/gallery/icon-comparison.png") no-repeat center center;
+    cursor: move;
+    /* box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3); */
+    opacity: 0;
+    -webkit-transform: translate3d(0, 0, 0) scale(0);
+    transform: translate3d(0, 0, 0) scale(0);
+}
+
+.cd-handle.draggable {
+    /* change background color when element is active */
+    /* background-color: #445b7c; */
+}
+
+.is-visible .cd-handle {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+    transform: translate3d(0, 0, 0) scale(1);
+    -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0s 0.7s;
+    -webkit-transition: opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
+    transition: opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
+    transition: transform 0.3s 0.7s, opacity 0s 0.7s;
+    transition: transform 0.3s 0.7s, opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
+}
+
+
+/*end slider images comparison*/
+
+.gallery-page {
+    background: #fff;
+}
+
+.gallery-page .modal .modal-content {
+    border-bottom: 0;
+    border-radius: 0;
+}
+.gallery-page .modal .modal-content .modal-body{
+   padding: 5px;
+}
+.gallery-page .modal .modal-backdrop.in{
+    opacity: 0.9;
+}
+.gallery-page .modal .modal-content button.close {
+    position: absolute;
+    z-index: 9;
+    right: -35px;
+    top: 0;
+    background: #fff;
+    opacity: 1;
+    color: #000;
+    padding: 1px 5px;
+}
+
+.gallery-page #myCarousel {
+    padding: 0 !important;
+    max-width: 667px;
+    margin: 0px auto;
+    max-height: 500px;
+    z-index: 100;
+}
+
+.gallery-page #myCarousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.gallery-page #myCarousel .carousel-indicators li {
+    background: #737373;
+    width: 15px;
+    height: 15px;
+    border: none;
+    margin: 3px;
+}
+
+.gallery-page #myCarousel .carousel-control {
+    background: none;
+    z-index: 100;
+    opacity: 1;
+    font-size: 50px;
+    top: 50%;
+    content: '\f104';
+}
+
+.gallery-page #myCarousel .carousel-control.left {
+    left: -40%;
+    color: #f3bb16;
+}
+
+.gallery-page #myCarousel .carousel-control.right {
+    right: -50%;
+    color: #f3bb16;
+}
+
+.gallery-slider {
+    background: url("../img/gallery/bg-gallery-slider.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 690px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.gallery-slider:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.our-collection {
+    margin-top: 105px;
+    background: #fff;
+}
+
+.our-collection .our-collection-wp .our-collection-title {
+    font-family: 'UTM Neo Sans Intel';
+    font-size: 30px;
+    line-height: 81px;
+    color: #f4bc16;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.our-collection .our-collection-wp p {
+    font-size: 18px;
+    font-family: 'UTM Neo Sans Intel';
+    color: #7e7d7d;
+    text-transform: uppercase;
+    line-height: 22.64px;
+    text-align: center;
+    margin-top: 80px;
+    font-weight: 700;
+}
+
+.our-collection .our-collection-wp .collection-list {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.our-collection .our-collection-wp .collection-list li {
+    text-transform: uppercase;
+    text-align: center;
+    padding: 15px 25px;
+    -webkit-transition: all 0.2s;
+    /* Safari and Chrome */
+    /* Firefox */
+    /* IE 9 */
+    /* Opera */
+    transition: all 0.2s;
+}
+
+.our-collection .our-collection-wp .collection-list li a {
+    color: #444444;
+    font-family: 'Roboto-Medium';
+    font-size: 14px;
+}
+
+.our-collection .our-collection-wp .collection-list li:hover {
+    border-radius: 20px;
+    background: #f4bc16;
+}
+
+.our-collection .our-collection-wp .collection-list li:hover a {
+    color: #fff;
+}
+
+.our-collection .our-collection-wp .collection-list .active {
+    border-radius: 20px;
+    background: #f4bc16;
+}
+
+.our-collection .our-collection-wp .collection-list .active a {
+    color: #fff !important;
+}
+
+
+/* gallery-banner  */
+
+.gallery-banner {
+    min-height: 260px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+}
+
+.gallery-banner .gallery-banner-subtitle {
+    font-family: 'Roboto-Light';
+    font-size: 14px;
+    line-height: 22.64px;
+    color: #fffcfc;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.gallery-banner .hr-product-title {
+    max-width: 240px;
+}
+
+.gallery-banner .banner-cover {
+    position: static;
+}
+
+.gallery-banner:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
+/*bungalows*/
+
+.bungalows-banner {
+    background: url("../img/gallery/bungalows.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 50px 0 40px 0;
+}
+
+.estate-banner {
+    background: url("../img/gallery/estate.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 50px 0 40px 0;
+}
+
+.multi-banner {
+    background: url("../img/gallery/multi.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 50px 0 40px 0;
+}
+
+.two-story-banner {
+    background: url("../img/gallery/2story.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 50px 0 40px 0;
+}
+
+.landscaping-banner {
+    background: url("../img/gallery/landscaping.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: top;
+    margin: 50px 0 40px 0;
+}
+
+.gallery-banner-content .thumb-wp {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.gallery-banner-content .thumb-wp:hover .btn-info {
+    bottom: 36%;
+    left: 25%;
+    top: 36%;
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+}
+
+.gallery-banner-content .thumb-wp:hover .thumb {
+    -webkit-filter: brightness(0.5);
+    filter: brightness(0.5);
+}
+
+.gallery-banner-content .thumb-wp .thumb {
+    width: 270px;
+    height: 182px;
+    overflow: hidden;
+}
+
+.gallery-banner-content .thumb-wp .thumb img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-banner-content .thumb-wp .btn-info {
+    position: absolute;
+    top: 0px;
+    bottom: 0%;
+    padding: 5px 20px;
+    z-index: 4;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-align-items: center;
+    opacity: 0;
+    background:transparent;
+    outline: none;
+    border: 1px solid white;
+    border-radius: 40px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+}
+.gallery-banner-content .thumb-wp .btn-info:hover{
+    background: #f6be00;
+    border:0;
+}
+
+
+/* ==========================================================================
+   Responsive CSS Landscape Tablet
+   ========================================================================== */
+
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+    /*slider gallery*/
+    .gallery-page #myCarousel .carousel-control.left {
+        left: -25%;
+    }
+
+    .gallery-page #myCarousel .carousel-control.right {
+        right: -25%;
+    }
+
+    .gallery-page .gallery-banner-content .thumb-wp:hover .btn-info {
+        left: 20%;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Tablet
+   ========================================================================== */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    /*slider gallery*/
+    .gallery-page #myCarousel .carousel-control.left {
+        left: 0;
+    }
+
+    .gallery-page #myCarousel .carousel-control.right {
+        right: 0;
+    }
+
+    .gallery-page .gallery-banner-content .thumb-wp:hover .btn-info {
+        left: 20%;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Landscape Mobile
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    /*slider gallery*/
+    .gallery-page #myCarousel .carousel-control.left {
+        left: 0;
+    }
+
+    .gallery-page #myCarousel .carousel-control.right {
+        right: 0;
+    }
+
+    .our-collection .our-collection-wp .collection-list li {
+        display: block;
+    }
+
+    .gallery-page .banner-cover .product-title {
+        line-height: 1;
+    }
+
+    .gallery-page .thumb-wp img {
+        margin: 0px auto;
+    }
+
+    .gallery-banner-content .thumb-wp:hover .btn-info {
+        left: 40%;
+    }
+}
+
+
+/* ==========================================================================
+   Responsive CSS Portrait Mobile
+   ========================================================================== */
+
+@media only screen and (min-width: 100px) and (max-width: 479px) {
+    /*slider gallery*/
+    .gallery-page #myCarousel .carousel-control.left {
+        left: 0;
+    }
+
+    .gallery-page #myCarousel .carousel-control.right {
+        right: 0;
+    }
+
+    .our-collection .our-collection-wp .collection-list li {
+        display: block;
+    }
+
+    .gallery-page .banner-cover .product-title {
+        line-height: 1;
+    }
+
+    .gallery-page .thumb-wp img {
+        margin: 0px auto;
+    }
+
+    .gallery-page .gallery-banner-content .thumb-wp:hover .btn-info {
+        left: 25%;
+    }
+}
+
+
+/*# sourceMappingURL=gallery.css.map */

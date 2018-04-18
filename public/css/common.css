@@ -1,0 +1,160 @@
+/* ============= STYLE FOR REGULAR SITES'S ELEMENTS  ======================== */
+@font-face{
+	font-family: 'Candara Bold Italic';
+	src: url('../fonts/Candara/Candara Bold Italic.ttf');
+}
+@font-face{
+	font-family: 'Candara Bold';
+	src: url('../fonts/Candara/Candara Bold.ttf');
+}
+@font-face{
+	font-family: 'Candara Italic';
+	src: url('../fonts/Candara/Candara Italic.ttf');
+}
+@font-face{
+	font-family: 'Candara';
+	src: url('../fonts/Candara/Candara.ttf');
+}
+@font-face{
+	font-family: 'UTM Mabella';
+	src: url('../fonts/Mabella/UTM Mabella.ttf');
+}
+@font-face{
+	font-family: 'UTM Neo Sans Intel_Italic';
+	src: url('../fonts/Neo Sans Intel/UTM Neo Sans Intel_Italic.ttf');
+}
+@font-face{
+	font-family: 'UTM Neo Sans Intel';
+	src: url('../fonts/Neo Sans Intel/UTM Neo Sans Intel.ttf');
+}
+@font-face{
+	font-family: 'UTM Neo Sans IntelBold_Italic';
+	src: url('../fonts/Neo Sans Intel/UTM Neo Sans IntelBold_Italic.ttf');
+}
+@font-face{
+	font-family: 'UTM Neo Sans IntelBold';
+	src: url('../fonts/Neo Sans Intel/UTM Neo Sans IntelBold.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Black';
+	src: url('../fonts/Roboto/Roboto-Black.ttf');
+}
+@font-face{
+	font-family: 'Roboto-BlackItalic';
+	src: url('../fonts/Roboto/Roboto-BlackItalic.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Bold';
+	src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face{
+	font-family: 'Roboto-BoldItalic';
+	src: url('../fonts/Roboto/Roboto-BoldItalic.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Italic';
+	src: url('../fonts/Roboto/Roboto-Italic.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Light';
+	src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+@font-face{
+	font-family: 'Roboto-LightItalic';
+	src: url('../fonts/Roboto/Roboto-LightItalic.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Medium';
+	src: url('../fonts/Roboto/Roboto-Medium.ttf');
+}
+@font-face{
+	font-family: 'Roboto-MediumItalic';
+	src: url('../fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Regular';
+	src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face{
+	font-family: 'Roboto-Thin';
+	src: url('../fonts/Roboto/Roboto-Thin.ttf');
+}
+@font-face{
+	font-family: 'Roboto-ThinItalic';
+	src: url('../fonts/Roboto/Roboto-ThinItalic.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-Bold';
+	src: url('../fonts/Roboto/RobotoCondensed-Bold.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-BoldItalic';
+	src: url('../fonts/Roboto/RobotoCondensed-BoldItalic.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-Italic';
+	src: url('../fonts/Roboto/RobotoCondensed-Italic.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-Light';
+	src: url('../fonts/Roboto/RobotoCondensed-Light.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-LightItalic';
+	src: url('../fonts/Roboto/RobotoCondensed-LightItalic.ttf');
+}
+@font-face{
+	font-family: 'RobotoCondensed-Regular';
+	src: url('../fonts/Roboto/RobotoCondensed-Regular.ttf');
+}
+@font-face{
+	font-family: 'Dosis-Light';
+	src: url('../fonts/Dosis-Light.otf');
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 13px;
+    background: #fff;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+form {
+    margin: 0
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	text-decoration: none;
+	outline: none;
+}
+
+.container {
+    max-width: 1182px;
+    height: auto;
+}
+
+.reset-padding-container {
+    padding: 0!important;
+}
+.reset-margin{
+	margin:0!important;
+}
