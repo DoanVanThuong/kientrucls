@@ -18,9 +18,15 @@ Route::get('lien-he', function() {
     return view('pages/contact');
 });
 
-Route::get('san-pham', 'PageController@SanPham');
+// Route::get('san-pham', 'PageController@SanPham');
 Route::get('chitiet', function(){
-return view('pages.product_detail');
+    return view('pages.product_detail');
 });
 Route::get('bo-suu-tap', 'PageController@DuAn');
+
+
+Route::group(['prefix' =>'san-pham'] ,function(){
+	Route::get('/','PageController@SanPham');
+	Route::get('/{slug}','ProductController@ViewProductDetail');
+});
 

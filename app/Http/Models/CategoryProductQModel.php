@@ -17,8 +17,23 @@ class CategoryProductQModel extends Model {
     public static function getProduct($category_id) {
         return DB::table('products as p')
         ->select('p.*')
-        ->where('category_id', $category_id)
+        ->where('category_id', $category_id )
         ->get();
+    }
+
+   
+    public static function getProductById($id) {
+        return DB::table('products as p')
+        ->select('p.*')
+        ->where( 'id', $id)
+        ->get();
+    }
+
+    public static function get_id_news($slug) {
+        $data = DB::table('products')
+        ->where('slug',$slug)
+        ->first();
+        return $data->id;
     }
     
 
