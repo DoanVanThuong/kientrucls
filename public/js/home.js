@@ -34,7 +34,7 @@
         slidesToShow: 3,
         autoplay: true,
         speed: 800,
-        autoplaySpeed: 855500,
+        autoplaySpeed: 500,
         slidesToScroll: 3,
         arrows: true,
         prevArrow: '<div class="slider-control left"><img src="img/home/left-btn.png" alt="" class="img-responsive"></div>',

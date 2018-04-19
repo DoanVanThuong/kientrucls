@@ -14,6 +14,14 @@ class CategoryProductQModel extends Model {
         ->get();
     }
 
+    public static function getProduct($category_id) {
+        return DB::table('products as p')
+        ->select('p.*')
+        ->where('category_id', $category_id)
+        ->get();
+    }
+    
+
 }
 
 

@@ -18,9 +18,7 @@ Route::get('lien-he', function() {
     return view('pages/contact');
 });
 
-Route::get('san-pham', function() {
-    return view('pages/product');
-});
+Route::get('san-pham', 'PageController@SanPham');
 
 Route::get('bo-suu-tap', function() {
     return view('pages/gallery');
