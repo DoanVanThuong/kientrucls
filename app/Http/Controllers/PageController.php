@@ -39,6 +39,8 @@ class PageController extends Controller
         $product_dogo = CategoryProductQModel::getProduct(6);
         $product_tranhkinh = CategoryProductQModel::getProduct(2);
         $product_gach = CategoryProductQModel::getProduct(4);
+        
+        
         return view('pages.product', [
             'product_giaydantuong' =>$product_giaydantuong,
             'product_sofa' =>$product_sofa,
