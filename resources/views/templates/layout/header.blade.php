@@ -43,10 +43,10 @@
                         </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li>
-                                <a href="#">Dự án</a>
+                                <a href="/bo-suu-tap">Dự án</a>
                             </li>
-                            <li>
-                                <a href="gallery.html">Bộ Sưu tập</a>
+                            <li class=" {{$curr == 'gallery' ? 'active' : '' }}">
+                                <a href="/bo-suu-tap">Bộ Sưu tập</a>
                             </li>
                             <li class=" {{$curr == 'contact' ? 'active' : '' }}">
                                 <a href="/lien-he">Liên Hệ</a>
