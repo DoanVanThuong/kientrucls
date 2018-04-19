@@ -16,7 +16,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">
                                 <span>Phone: </span>
-                                <br> 02462570507
+                                <br> {{$address[0]->phone}}
                             </p>
                         </div>
                     </div>
@@ -28,8 +28,7 @@
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">
-                                Số 22/16/157 Phố Đức Giang
-                                <br> Long Biên - Hà Nội</p>
+                                    {{$address[0]->address}}
                         </div>
                     </div>
                 </div>
@@ -41,7 +40,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">
                                 <span>Email: </span>
-                                <br> largeandsmall.jsc@gmail.com
+                                <br> {{$address[0]->email}}
                             </p>
                         </div>
                     </div>
@@ -56,7 +55,7 @@
                     <h3 class="widget-title">Giới thiệu</h3>
                     <div class="title-border"></div>
                     <div class="widget-txt">
-                        <p>CÔNG TY CP TƯ VẤN THIẾT KẾ XÂY DỰNG VÀ THƯƠNG MẠI KHÔNG GIAN LỚN VÀ NHỎ
+                        <p>{{$about->title}}
 
                         </p>
                     </div>
@@ -82,79 +81,43 @@
                     <h3 class="widget-title">Các sản phẩm</h3>
                     <div class="title-border"></div>
                     <ul class="widget-menu fproduct-menu">
+                        @foreach($category as $item)
                         <li>
-                            <a href="">Đồ gỗ nội thất</a>
+                        <a href="{{$item->slug}}">{{$item->name}}</a>
                         </li>
-                        <li>
-                            <a href="">Sofa</a>
-                        </li>
-                        <li>
-                            <a href="">Gách ốp lát</a>
-                        </li>
-                        <li>
-                            <a href="">Giấy gián tường</a>
-                        </li>
-                        <li>
-                            <a href="">Sàn gỗ</a>
-                        </li>
-                        <li>
-                            <a href="">Tranh kính</a>
-                        </li>
+                       @endforeach
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 mainf-item">
                     <h3 class="widget-title">Tag</h3>
                     <div class="title-border"></div>
                     <ul class="widget-menu fcate-menu">
-                        <li>
-                            <a href="">Build</a>
-                        </li>
-                        <li>
-                            <a href="">Design</a>
-                        </li>
-                        <li>
-                            <a href="">Flooring</a>
-                        </li>
-                        <li>
-                            <a href="">Painting</a>
-                        </li>
-                        <li>
-                            <a href="">Pavers</a>
-                        </li>
-                        <li>
-                            <a href="">Plumbing</a>
-                        </li>
-                        <li>
-                            <a href="">Renovation</a>
-                        </li>
-                        <li>
-                            <a href="">Repairs</a>
-                        </li>
-                        <li>
-                            <a href="">Solar Systems</a>
-                        </li>
-                        <li>
-                            <a href="">Tiling</a>
-                        </li>
+                            @foreach($category as $item)
+                            <li>
+                            <a href="{{$item->slug}}">{{$item->name}}</a>
+                            </li>
+                           @endforeach
                     </ul>
                 </div>
                 <div class="col-md-3 col-sm-6 mainf-item">
                     <h3 class="widget-title">Tin tức mới nhất</h3>
                     <div class="title-border"></div>
+                    @foreach($news as $item)
                     <div class="row entry-post">
                         <div class="col-md-5 col-xs-3">
-                            <img src="img/home/f1.png" alt="" class="img-responsive">
+                            <img src="{{asset($item->img)}}" alt="" class="img-responsive">
                         </div>
                         <div class="col-md-7 col-xs-9">
                             <h4 class="entry-title">
-                                <a href="#"></a> Khám phá ngôi nhà "rất quái" của Tùng Dương</a>
+                            <a href="{{$item->slug}}"></a>{{$item->title}}</a>
                             </h4>
                             <div class="entry-meta">
-                                <span class="meta-date">April 25, 2015</span>
+                                <span class="meta-date">{{$item->created_at}}</span>
                             </div>
                         </div>
                     </div>
-                    <div class="row entry-post">
+                    @endforeach
+                    {{-- <div class="row entry-post">
                         <div class="col-md-5 col-xs-3">
                             <img src="img/home/f1.png" alt="" class="img-responsive">
                         </div>
@@ -166,7 +129,7 @@
                                 <span class="meta-date">April 25, 2015</span>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>

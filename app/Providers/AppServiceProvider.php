@@ -3,6 +3,10 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Http\Models\BaseModel;
+use App\Http\Models\CategoryProductQModel;
+
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +17,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        //chia se du lieu contact tat ca cac trang
+        $address = BaseModel::getAddress();
+        $about =  BaseModel::getAbout()->first();
+        $category = CategoryProductQModel::getCategoryProduct();
+        $news = BaseModel::getNews(2);
+        View()->share([
+            'address' => $address,
+            'about' => $about,
+            'category' =>$category,
+            'news' => $news
+            ]);
     }
 
     /**

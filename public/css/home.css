@@ -181,6 +181,9 @@
 	margin-bottom: 28px;
 	height: 257px;
 }
+.hproduct-item-pic img {
+    height:250px;
+}
 .hproduct-item-detail {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -262,6 +265,8 @@
     justify-content: center;
     align-items: center;
     transition: all .2s;
+    overflow: hidden;
+    height:195px;
     
 }
 .img-project:hover {
@@ -395,7 +400,9 @@
 }
 .testimonial-img img {
 	display: block;
-	margin: auto;
+    margin: auto;
+    width:100px;
+    height: 100px;
 }
 .testimonial-body {
 	font-family: 'Roboto-Light';

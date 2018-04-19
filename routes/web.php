@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages/index');
-});
+Route::get('/', 'PageController@TrangChu');
 
 Route::get('gioi-thieu', function() {
     return view('pages/about');

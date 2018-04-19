@@ -3,36 +3,28 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
-            <div class="item active">
+            <?php $i = 1; ?>
+            @foreach($feedback as $item)
+            <div class="item 
+            @if($i == 1)
+            {{'active'}}
+            @else {{}}
+            @endif
+            <?php $i++; ?>
+            ">
                 <div class="container">
                     <div class="testimonial-img">
-                        <img src="{{asset('img/home/icon-group.png')}}" alt="" class="img-responsive">
+                        <img src="{{asset($item->img)}}" alt="" class="img-responsive">
                     </div>
-                    <div class="testimonial-body">
-                        "Chúng tôi cảm ơn không gian LS vì đã nổ lực mang lại không gian sống xanh, sạch và hết sức tiện nghi cho gia đình tôi"
+                    <div class="testimonial-body">{{$item->content}}
                     </div>
                     <div class="testimonial-border"></div>
                     <p class="testimonial-author">
-                        <span class="testimonial-client">Mr. Thương</span> -
-                        <span class="testimonial-pos">Khách hàng - Tại Hà Nội</span>
+                        <span class="testimonial-client">{{$item->customer}}</span> -
                     </p>
                 </div>
             </div>
-            <div class="item">
-                <div class="container">
-                    <div class="testimonial-img">
-                        <img src="{{asset('img/home/icon-group.png')}}" alt="" class="img-responsive">
-                    </div>
-                    <div class="testimonial-body">
-                        "Chúng tôi cảm ơn không gian LS vì đã nổ lực mang lại không gian sống xanh, sạch và hết sức tiện nghi cho gia đình tôi"
-                    </div>
-                    <div class="testimonial-border"></div>
-                    <p class="testimonial-author">
-                        <span class="testimonial-client">Mr. Thương</span> -
-                        <span class="testimonial-pos">Khách hàng - Tại Hà Nội</span>
-                    </p>
-                </div>
-            </div>
+            @endforeach
         </div>
         <!-- Controls -->
         <a class="left carousel-control">
