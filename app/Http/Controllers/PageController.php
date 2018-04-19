@@ -49,7 +49,16 @@ class PageController extends Controller
     }
 
     function DuAn() {
-        return view('pages.gallery');
+        $project_bietthu = ProjectQModel::getProjectByCategory(1);
+        $project_nhaco = ProjectQModel::getProjectByCategory(2);
+        $project_nhalo = ProjectQModel::getProjectByCategory(3);
+        $project_vanphong = ProjectQModel::getProjectByCategory(4);
+        return view('pages.gallery', [
+            'project_bietthu' => $project_bietthu,
+            'project_nhaco' =>$project_nhaco,
+            'project_nhalo' =>$project_nhalo,
+            'project_vanphong' => $project_vanphong
+        ]);
     }
 
 
