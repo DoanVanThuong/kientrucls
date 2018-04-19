@@ -19,6 +19,8 @@ Route::get('lien-he', function() {
 });
 
 Route::get('san-pham', 'PageController@SanPham');
-
+Route::get('chitiet', function(){
+return view('pages.product_detail');
+});
 Route::get('bo-suu-tap', 'PageController@DuAn');
 
