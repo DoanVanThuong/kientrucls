@@ -13,10 +13,7 @@
 
 Route::get('/', 'PageController@TrangChu');
 
-Route::get('gioi-thieu', function() {
-    return view('pages/about');
-});
-
+Route::get('gioi-thieu', 'PageController@GioiThieu');
 Route::get('lien-he', function() {
     return view('pages/contact');
 });

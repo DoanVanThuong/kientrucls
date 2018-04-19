@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Http\Models\MenuQModel;
 use App\Http\Models\CategoryProductQModel;
 use App\Http\Models\ProjectQModel;
+use App\Http\Models\BaseModel;
+
 
 class PageController extends Controller
 {
@@ -22,6 +24,13 @@ class PageController extends Controller
            'feedback' => $feedback,
            'logo' => $logo,
            ]);
+    }
+
+    function GioiThieu() {
+        $about = BaseModel::getAbout()->first();
+        return view('pages.about' , [
+            'about' => $about
+        ]);
     }
 
 
