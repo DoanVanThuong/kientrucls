@@ -1,5 +1,5 @@
 <section class="gallery-banner-content" id="banner-2">
-        <div class="gallery-banner estate-banner">
+        <div class="gallery-banner multi-banner">
             <div class="banner-cover">
                 <div class="banner-info-center">
                     <h2 class="product-title">Nhà lô</h2>

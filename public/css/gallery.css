@@ -53,239 +53,6 @@
 }
 
 
-/*slider images comparison */
-
-.cd-image-container {
-    /* position: absolute; */
-    position: relative;
-    z-index: 100;
-    max-width: 860px;
-    margin: 0em auto;
-}
-
-.cd-image-container img {
-    display: block;
-    max-height: 500px;
-}
-
-.cd-image-label {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    color: #ffffff;
-    padding: 1em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-    -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0.3s 0.7s;
-    -webkit-transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
-    transition: opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
-    transition: transform 0.3s 0.7s, opacity 0.3s 0.7s;
-    transition: transform 0.3s 0.7s, opacity 0.3s 0.7s, -webkit-transform 0.3s 0.7s;
-}
-
-.cd-image-label.is-hidden {
-    visibility: hidden;
-}
-
-.is-visible .cd-image-label {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-}
-
-.cd-resize-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    overflow: hidden;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-
-.cd-resize-img img {
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: block;
-    height: 100%;
-    width: auto;
-    max-width: none;
-}
-
-.cd-resize-img .cd-image-label {
-    right: auto;
-    left: 0;
-}
-
-.is-visible .cd-resize-img {
-    width: 50%;
-    /* bounce in animation of the modified image */
-    -webkit-animation: cd-bounce-in 0.7s;
-    animation: cd-bounce-in 0.7s;
-}
-
-@-webkit-keyframes cd-bounce-in {
-    0% {
-        width: 0;
-    }
-    60% {
-        width: 55%;
-    }
-    100% {
-        width: 50%;
-    }
-}
-
-@keyframes cd-bounce-in {
-    0% {
-        width: 0;
-    }
-    60% {
-        width: 55%;
-    }
-    100% {
-        width: 50%;
-    }
-}
-
-.cd-handle {
-    position: absolute;
-    height: 44px;
-    width: 44px;
-    /* center the element */
-    left: 50.4%;
-    top: 50%;
-    margin-left: -22px;
-    margin-top: -22px;
-    border-radius: 50%;
-    background: transparent url("../img/gallery/icon-comparison.png") no-repeat center center;
-    cursor: move;
-    /* box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.2), 0 0 10px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3); */
-    opacity: 0;
-    -webkit-transform: translate3d(0, 0, 0) scale(0);
-    transform: translate3d(0, 0, 0) scale(0);
-}
-
-.cd-handle.draggable {
-    /* change background color when element is active */
-    /* background-color: #445b7c; */
-}
-
-.is-visible .cd-handle {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-    transform: translate3d(0, 0, 0) scale(1);
-    -webkit-transition: -webkit-transform 0.3s 0.7s, opacity 0s 0.7s;
-    -webkit-transition: opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
-    transition: opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
-    transition: transform 0.3s 0.7s, opacity 0s 0.7s;
-    transition: transform 0.3s 0.7s, opacity 0s 0.7s, -webkit-transform 0.3s 0.7s;
-}
-
-
-/*end slider images comparison*/
-
-.gallery-page {
-    background: #fff;
-}
-
-.gallery-page .modal .modal-content {
-    border-bottom: 0;
-    border-radius: 0;
-}
-.gallery-page .modal .modal-content .modal-body{
-   padding: 5px;
-}
-.gallery-page .modal .modal-backdrop.in{
-    opacity: 0.9;
-}
-.gallery-page .modal .modal-content button.close {
-    position: absolute;
-    z-index: 9;
-    right: -35px;
-    top: 0;
-    background: #fff;
-    opacity: 1;
-    color: #000;
-    padding: 1px 5px;
-}
-
-.gallery-page #myCarousel {
-    padding: 0 !important;
-    max-width: 667px;
-    margin: 0px auto;
-    max-height: 500px;
-    z-index: 100;
-}
-
-.gallery-page #myCarousel .carousel-indicators {
-    bottom: -50px;
-}
-
-.gallery-page #myCarousel .carousel-indicators li {
-    background: #737373;
-    width: 15px;
-    height: 15px;
-    border: none;
-    margin: 3px;
-}
-
-.gallery-page #myCarousel .carousel-control {
-    background: none;
-    z-index: 100;
-    opacity: 1;
-    font-size: 50px;
-    top: 50%;
-    content: '\f104';
-}
-
-.gallery-page #myCarousel .carousel-control.left {
-    left: -40%;
-    color: #f3bb16;
-}
-
-.gallery-page #myCarousel .carousel-control.right {
-    right: -50%;
-    color: #f3bb16;
-}
-
-.gallery-slider {
-    background: url("../img/gallery/bg-gallery-slider.jpg") no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    min-height: 690px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    position: relative;
-    color: #fff;
-}
-
-.gallery-slider:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background: rgba(0, 0, 0, 0.4);
-}
-
 .our-collection {
     /* margin-top: 105px; */
     background: #fff;
@@ -401,7 +168,7 @@
 /*bungalows*/
 
 .bungalows-banner {
-    background: url("../img/gallery/bungalows.jpg") no-repeat;
+    background: url("../img/gallery/background-bietthu.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -409,7 +176,7 @@
 }
 
 .estate-banner {
-    background: url("../img/gallery/estate.jpg") no-repeat;
+    background: url("../img/gallery/nhaco/nhaco4.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -417,7 +184,7 @@
 }
 
 .multi-banner {
-    background: url("../img/gallery/multi.jpg") no-repeat;
+    background: url("../img/gallery/nhalo/nhalo2.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
@@ -425,20 +192,13 @@
 }
 
 .two-story-banner {
-    background: url("../img/gallery/2story.jpg") no-repeat;
+    background: url("../img/gallery/background-vanphong.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: top;
     margin: 50px 0 40px 0;
 }
 
-.landscaping-banner {
-    background: url("../img/gallery/landscaping.jpg") no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: top;
-    margin: 50px 0 40px 0;
-}
 
 .gallery-banner-content .thumb-wp {
     position: relative;

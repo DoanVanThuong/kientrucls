@@ -1,5 +1,5 @@
 <section class="gallery-banner-content">
-        <div class="gallery-banner estate-banner">
+        <div class="gallery-banner two-story-banner">
             <div class="banner-cover">
                 <div class="banner-info-center">
                     <h2 class="product-title">Văn phòng</h2>

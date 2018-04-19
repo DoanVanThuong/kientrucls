@@ -1,5 +1,5 @@
 <section class="gallery-banner-content " id="banner-1">
-        <div class="gallery-banner bungalows-banner">
+        <div class="gallery-banner estate-banner">
             <div class="banner-cover">
                 <div class="banner-info-center">
                     <h2 class="product-title">Nhà cỗ </h2>
