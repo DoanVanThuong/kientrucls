@@ -41,6 +41,7 @@
     background:#fbc658;
     color:#fff;
     border-radius:30px;
+    border:none;
 }
 
 .pagination-area ul li a {
@@ -66,4 +67,47 @@
 
 .news-relative {
     margin-top:100px;
+}
+.news-relative img {
+    margin: 0px auto;
+}
+
+.btn-facebook {
+    color: #FFFFFF;
+    background-color: #3b5998;
+    border-color: #3b5998;
+    opacity: 0.8;
+}
+.btn-google {
+    color: #FFFFFF;
+    background-color: #dd4b39;
+    border-color: #dd4b39;
+    opacity: 0.8;
+}
+.btn-just-icon {
+    border-radius: 50px;
+    height: 40px;
+    width: 40px;
+    min-width: 40px;
+    padding: 8px;
+}
+.btn-just-icon:hover {
+    background: #f5593d;
+    color:#fff;
+    border:none;
+    
+}
+.list-news-relative li {
+    padding: 5px 0px;
+
+}
+
+.list-news-relative li a {
+    color:rgb(30,118,55);
+    font-size: 20px;
+}
+
+.list-news-relative li a:hover {
+    color:#fbc658;;
+    transition: .2s;
 }

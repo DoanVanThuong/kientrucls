@@ -11,7 +11,7 @@
                 <div class="col-md-4 col-sm-4 top-fitem">
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <img src="img/home/icon1.png" class="img-responsive" alt="">
+                            <img src="{{asset('img/home/icon1.png')}}" class="img-responsive" alt="">
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">
@@ -24,7 +24,7 @@
                 <div class="col-md-4 col-sm-4 top-fitem">
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <img src="img/home/icon2.png" class="img-responsive" alt="">
+                            <img src="{{asset('img/home/icon2.png')}}" class="img-responsive" alt="">
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">
@@ -35,7 +35,7 @@
                 <div class="col-md-4 col-sm-4 top-fitem">
                     <div class="row">
                         <div class="col-md-3 col-sm-3 col-xs-3">
-                            <img src="img/home/icon3.png" class="img-responsive" alt="">
+                            <img src="{{asset('img/home/icon3.png')}}" class="img-responsive" alt="">
                         </div>
                         <div class="col-md-9 col-sm-9 col-xs-9">
                             <p class="contact-info">

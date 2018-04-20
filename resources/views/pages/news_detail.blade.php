@@ -12,13 +12,19 @@
        <section class="content-detail">
             <div class="container">
                 <div class="row">
-                    <h3 class="title">18 xu hướng thiết kế nội thất nổi bật trong 2014 - Phần 2</h3>
-                    <ul class="list-inline">
+                    <h3 class="title text-center">18 xu hướng thiết kế nội thất nổi bật trong 2014 - Phần 2</h3>
+                    <ul class="list-inline list-social">
                         <li>
-                            <i class="fa fa-facebook" arial-hidden="false"></i>
+                            <button class="btn btn-just-icon btn-facebook">
+                                    <i class="fa fa-facebook" arial-hidden="false"></i>
+
+                            </button>
                         </li>
                         <li>
-                            <i class="fa fa-google" arial-hidden="false"></i>
+                                <button class="btn btn-just-icon btn-google">
+                                        <i class="fa fa-google" arial-hidden="false"></i>
+    
+                                </button>
                         </li>
                     </ul>
                     <div class="detail">
@@ -29,21 +35,20 @@
             </div>
        </section>
        <section class="news-relative">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <img src="{{asset('img/news/kham-pha-ngoi-nha-rat-quai-cua-tung-duong.jpg')}}" class="img-responsive" alt="">
-                            </div>
-                            <div class="col-md-9">
-                                <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores, fugiat.</a>
-                                <div class="des">desciprtion</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           <div class="container">
+                <h4>Tin liên quan <span class="text-danger">*</span></h4>
+                <ul class="list-unstyled list-news-relative">
+                    <li>
+                        <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, quas.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, quas.</a>
+                    </li>
+                    <li>
+                        <a href="#">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad, quas.</a>
+                    </li>
+                </ul>
+           </div>
        </section>
     </div>
 @stop
