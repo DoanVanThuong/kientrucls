@@ -5,7 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Http\Models\BaseModel;
 use App\Http\Models\CategoryProductQModel;
-
+use Illuminate\Pagination\Paginator;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -28,6 +28,8 @@ class AppServiceProvider extends ServiceProvider
             'category' =>$category,
             'news' => $news
             ]);
+
+            
     }
 
     /**

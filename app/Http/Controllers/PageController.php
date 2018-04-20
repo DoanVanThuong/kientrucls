@@ -7,6 +7,8 @@ use App\Http\Models\MenuQModel;
 use App\Http\Models\CategoryProductQModel;
 use App\Http\Models\ProjectQModel;
 use App\Http\Models\BaseModel;
+use App\Http\Models\NewsQModel;
+
 
 
 class PageController extends Controller
@@ -62,7 +64,10 @@ class PageController extends Controller
     }
 
     function TinTuc() {
-        return view('pages.news');
+        $news = NewsQModel::get_news(2);
+        return view('pages.news', [
+            'news' => $news
+        ]);
     }
 
 

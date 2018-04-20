@@ -1,11 +1,20 @@
+.content-wp .img-news {
+    overflow: hidden;
+    height: 280px;
+}
 .content-wp .img-news img {
     border-radius:12px;
+    transition: all .2s;
 }
-
+.content-wp .img-news img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
 .content-wp .des{
     padding-left: 5px;
     padding-right: 5px;
 }
+
 .des{
     margin:20px;
 }
@@ -17,13 +26,18 @@
     color:#444444;
     text-align: center;
 }
+.des .title:hover {
+    cursor: pointer;
+    color:#fbc658;
+    
+}
 .des p.content {
     color: #9A9A9A;
     margin-bottom: 5px;
     margin-top: 15px;
     text-align: justify;
 }
-.des button {
+.des a {
     background:#fbc658;
     color:#fff;
     border-radius:30px;
