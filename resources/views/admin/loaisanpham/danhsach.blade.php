@@ -12,21 +12,7 @@ $curr = 'categories';
                         <small>danh sách</small>
                     </h1>
                 </div>
-                <!-- /.col-lg-12 -->
-                {{-- hàm hiển thị lỗi --}}
-                            @if( count($errors) > 0 )
-                                <div class="alert alert-danger">
-                                    @foreach($errors ->all() as $item)
-                                    {{ $item }} <br>
-                                    @endforeach
-                                </div>
-                            @endif
-                            @if( session('thongbao') )
-                                <div class="alert alert-success">
-                                    {{ session('thongbao') }}
-                                </div>
-                            @endif()
-                            {{--  --}}
+                @include('admin.functions.alert')
                     
                 <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                     <thead>
@@ -34,16 +20,22 @@ $curr = 'categories';
                             <th class="text-center">ID</th>
                             <th class="text-center">Tên</th>
                             <th class="text-center">slug</th>
+                            <th class="text-center">ảnh đại diện</th>            
                             <th class="text-center">Xóa</th>
                             <th class="text-center">Sửa</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach($loaisanpham as $item)
-                        <tr class="odd gradeX" align="center">
-                            <td>{{$item->id}}</td>
+                        <tr class="odd gradeX " align="center">
+                            <td class="text-center">{{$item->id}}</td>
                             <td>{{$item->name}}</td>
                             <td>{{$item->slug}}</td>
+                            <td>
+                                <img src="{{asset($item->img)}}" width="20%" class="img-responsive" alt="">
+                            </td>
+                            
+                            
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/loaisanpham/xoa/{{$item->id}}"> Xóa</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/loaisanpham/sua/{{$item->id}}">Sửa</a></td>
                         </tr>
