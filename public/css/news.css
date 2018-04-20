@@ -1,0 +1,48 @@
+.content-wp .img-news img {
+    border-radius:12px;
+}
+
+.content-wp .des{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.des{
+    margin:20px;
+}
+.des .news-tag {
+    text-align:center;
+    color:#51cbce;
+}
+.des .title {
+    color:#444444;
+    text-align: center;
+}
+.des p.content {
+    color: #9A9A9A;
+    margin-bottom: 5px;
+    margin-top: 15px;
+    text-align: justify;
+}
+.des button {
+    background:#fbc658;
+    color:#fff;
+    border-radius:30px;
+}
+
+.pagination-area ul li a {
+    background-color: transparent;
+    border: 2px solid #f5593d;
+    border-radius: 20px;
+    color: #f5593d;
+    height: 36px;
+    margin: 0 2px;
+    width: 72px;
+    padding: 7px 12px;
+}
+.pagination-area ul li:first-child a, .pagination-area ul li:last-child a
+{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
