@@ -60,3 +60,10 @@
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
 }
+
+
+/* news detail */
+
+.news-relative {
+    margin-top:100px;
+}
