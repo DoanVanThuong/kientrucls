@@ -30,11 +30,13 @@ Route::group(['prefix' =>'tin-tuc'] ,function(){
 	Route::get('/{slug}','NewsController@ViewNewsDetail');
 });
 //adimin
-Route::group(['prefix'=>'loaisanpham'] , function(){
-    Route::get('/danhsach','LoaiSanPhamController@getDanhSach');
-    Route::get('/them','LoaiSanPhamController@getThem');
-    Route::post('/them','LoaiSanPhamController@postThem');
-    Route::get('/sua/{id}','LoaiSanPhamController@getSua');
-    Route::post('/sua/{id}','LoaiSanPhamController@postSua');		
-    Route::get('/xoa/{id}','LoaiSanPhamController@getXoa');
+Route::group(['prefix' =>'admin'], function(){
+    Route::group(['prefix'=>'loaisanpham'] , function(){
+        Route::get('/danhsach','AdminControllers\LoaiSanPhamController@getDanhSach');
+        Route::get('/them','AdminControllers\LoaiSanPhamController@getThem');
+        Route::post('/them','AdminControllers\LoaiSanPhamController@postThem');
+        Route::get('/sua/{id}','AdminControllers\LoaiSanPhamController@getSua');
+        Route::post('/sua/{id}','AdminControllers\LoaiSanPhamController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\LoaiSanPhamController@getXoa');
+    });
 });

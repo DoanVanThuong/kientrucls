@@ -9,7 +9,12 @@ use App\Http\Models\adminModels\LoaiSanPham;
 class LoaiSanPhamController extends Controller
 {
     function getDanhSach() {
+        $name = LoaiSanPham::getTableName();
         $loaisanpham = LoaiSanPham::all();
-		return view('admin.loaitin.danhsach',['loaisanpham'=>$loaisanpham]);
+		return view('admin.loaisanpham.danhsach',[
+            'loaisanpham'=>$loaisanpham,
+            'name' => $name
+            ]);
     }
+
 }

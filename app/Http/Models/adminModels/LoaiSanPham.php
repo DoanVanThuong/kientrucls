@@ -19,4 +19,8 @@ class LoaiSanPham extends Model
     	return $this->hasMany('App\Http\Models\adminModels\SanPham','category_id' ,'id');
     }
 
+    public static function getTableName(){
+        return with(new static)->getTable();
+    }
+
 }
