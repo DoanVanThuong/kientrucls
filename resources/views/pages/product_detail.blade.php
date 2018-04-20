@@ -16,5 +16,6 @@
 @stop
 
 @section('define-js')
-<script src="js/product_detail.js"></script>
+<script src="{{asset('js/product_detail.js')}}"></script>
+
 @stop

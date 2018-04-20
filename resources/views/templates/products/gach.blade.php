@@ -20,7 +20,7 @@
                         <img class="img-responsive" title="{{$item->des}}" src="{{asset($item->img)}}" alt="">
                             <div class="order-bar">
                                 <div class="order">
-                                    <a href="{{$item->slug}}">View Detail</a>
+                                    <a href="/san-pham/{{$item->slug}}">View Detail</a>
                                 </div>
                                 <div class="arrow">
                                     <i class="fa fa-chevron-right" aria-hidden="true"></i>

@@ -1,13 +1,13 @@
 <section class="body-product-detail">
         <div class="container">
-            <h2 class="title-header">Sofa</h2>
+            <h2 class="title-header">{{$categoryName}}</h2>
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <div class="side-left">
                         <!--banner-->
                         <div class="banner">
                             <div class="right-banner">
-                                <img src="img/products/sofa/slider-sofa.jpg" class="img-responsive" alt="">
+                                <img src="{{asset($dataProduct->img)}}" class="img-responsive" alt="">
                             </div>
                         </div>
                         <!--item & packaging-->

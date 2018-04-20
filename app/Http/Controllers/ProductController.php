@@ -9,11 +9,13 @@ class ProductController extends Controller
 {
     function ViewProductDetail($slug) {
         $id = CategoryProductQModel::get_id_news($slug);
-        print($id);
         $dataProduct = CategoryProductQModel::getProductById($id)->first();
-        dd($dataProduct);
-        // return view('pages.product_detail', [
-        //     'id' => $id
-        // ]);
+        $categoryName = CategoryProductQModel::getCategoryName($dataProduct->category_id);
+        $relativeProduct = CategoryProductQModel::getProduct($dataProduct->category_id);
+        return view('pages.product_detail', [
+            'dataProduct' => $dataProduct,
+            'categoryName' =>$categoryName,
+            'relativeProduct' =>$relativeProduct
+        ]);
     }
 }

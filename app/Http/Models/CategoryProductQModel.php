@@ -20,7 +20,12 @@ class CategoryProductQModel extends Model {
         ->where('category_id', $category_id )
         ->get();
     }
-
+    public static function getCategoryName($category_id) {
+        $data = DB::table('categories as c')
+         ->where('id', $category_id)
+        ->first();
+        return $data->name;
+    }
    
     public static function getProductById($id) {
         return DB::table('products as p')
