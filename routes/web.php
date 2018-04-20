@@ -30,3 +30,8 @@ Route::group(['prefix' =>'san-pham'] ,function(){
 	Route::get('/{slug}','ProductController@ViewProductDetail');
 });
 
+Route::group(['prefix' =>'tin-tuc'] ,function(){
+	Route::get('/','PageController@TinTuc');
+	Route::get('/{slug}','ProductController@ViewProductDetail');
+});
+

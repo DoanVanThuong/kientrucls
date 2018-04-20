@@ -27,8 +27,8 @@
                     <li class="{{$curr == 'product' ? 'active' : ''}}">
                         <a href="/san-pham">Sản phẩm</a>
                     </li>
-                <li>
-                        <a href="/bo-suu-tap">Dự án</a>
+                    <li class="{{$curr == 'news' ? 'active' : '' }}">
+                        <a href="/tin-tuc">Tin Tức</a>
                     </li>
                     <li class="{{$curr == 'gallery' ? 'active' : ''}}">
                         <a href="/bo-suu-tap">Bộ Sưu tập</a>

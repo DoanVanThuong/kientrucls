@@ -61,5 +61,9 @@ class PageController extends Controller
         ]);
     }
 
+    function TinTuc() {
+        return view('pages.news');
+    }
+
 
 }
