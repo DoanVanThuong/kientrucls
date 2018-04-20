@@ -24,6 +24,7 @@
                             <li>
                                 <a href="/admin/loaisanpham/them"><span><i class="fa fa-plus-circle" aria-hidden="true"></i></span>&nbsp;Thêm Loại Tin</a>
                             </li>
+                           
                         </ul>
                     <!-- /.nav-second-level -->
                 </li>
