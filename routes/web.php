@@ -40,3 +40,7 @@ Route::group(['prefix' =>'admin'], function(){
         Route::get('/xoa/{id}','AdminControllers\LoaiSanPhamController@getXoa');
     });
 });
+
+// Route::get('admin', function(){
+//     return view('adminls.loaisanpham.danhsach');
+// });

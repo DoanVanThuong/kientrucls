@@ -11,14 +11,14 @@ class LoaiSanPhamController extends Controller
     function getDanhSach() {
         $name = LoaiSanPham::getTableName();
         $loaisanpham = LoaiSanPham::all();
-		return view('admin.loaisanpham.danhsach',[
+		return view('adminls.loaisanpham.danhsach',[
             'loaisanpham'=>$loaisanpham,
             'name' => $name
             ]);
     }
 
     function getThem() {
-        return view('admin.loaisanpham.them');
+        return view('adminls.loaisanpham.them');
     }
 
     function postThem(Request $request) {
@@ -35,11 +35,12 @@ class LoaiSanPhamController extends Controller
 		]);
 		$loaisanpham = new LoaiSanPham();
         $loaisanpham->name = $request->tenloaiSP;
-		$loaisanpham->type = $request->tenloaiSP;
+        $loaisanpham->type = $request->tenloaiSP;
+        $loaisanpham->description = $request->description;
         $loaisanpham->slug =str_slug($request->tenloaiSP);   
          //kiem tra upload anh
         if($request->hasFile('anh')) { 
-            if ($request->file('anh')->isValid()) {
+            if ($request->file('anh')->isValid()) {                
                 $file = $request->file('anh');
                 $format = $file->getClientOriginalExtension();
                     if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
@@ -60,23 +61,22 @@ class LoaiSanPhamController extends Controller
                     $file->move('img/products', $hinh);
                     $loaisanpham->img = 'img/products/'.$hinh;
                 }
+                else
                 return redirect('admin/loaisanpham/them')->with('thongbao','Lỗi, vui lòng kiểm tra lại');                
             }        
          else
-         {
-            echo "not upload";
-             
+         {             
              $loaisanpham->img = " ";
          }
-		// $loaisanpham->save();
+		$loaisanpham->save();
 		//thêm thành công thì làm gì?
-		// return redirect('admin/loaisanpham/them')->with('thongbao','thêm thành công');
+		return redirect('admin/loaisanpham/them')->with('thongbao','thêm thành công');
     }
 
     function getSua($id) {
 		//lấy ra id loại tin muốn sưa
 		$loaisanpham = LoaiSanPham::find($id);	
-		return view('admin.loaisanpham.sua' ,['loaisanpham' =>$loaisanpham]);
+		return view('adminls.loaisanpham.sua' ,['loaisanpham' =>$loaisanpham]);
     }
 
     function postSua($id, Request $request) {
