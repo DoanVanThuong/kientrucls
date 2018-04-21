@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Models\adminModels\SanPham;
 use App\Http\Models\adminModels\LoaiSanPham;
 use RealRashid\SweetAlert\Facades\Alert;
+
 class SanPhamController extends Controller
 {
    function getDanhSach() {
