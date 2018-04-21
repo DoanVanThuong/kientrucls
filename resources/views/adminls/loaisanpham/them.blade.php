@@ -8,7 +8,7 @@
         <!-- /.box-header -->
         <!-- form start -->
         <form action="admin/loaisanpham/them" method="POST" enctype="multipart/form-data">  
-            @include('admin.functions.alert')
+            @include('adminls.functions.alert')
             <div class="box-body">
             <div class="form-group">
               <label for="exampleInputEmail1">Tên loại <span class="text-danger">*</span></label>

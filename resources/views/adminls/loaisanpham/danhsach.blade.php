@@ -10,7 +10,7 @@
                     <small>danh sách</small>
               </h1>
             </div>
-            @include('admin.functions.alert')
+            @include('adminls.functions.alert')
             
             <!-- /.box-header -->
             <div class="box-body">
