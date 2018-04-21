@@ -25,7 +25,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
         apply the skin class to the body tag so the changes take effect. -->
   <link rel="stylesheet" href="admin_asset2/dist/css/skins/skin-blue.min.css">
   <link rel="stylesheet" href="admin_asset2/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
-  
     @yield('define-css')
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -86,6 +85,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="admin_asset2/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="admin_asset2/dist/js/adminlte.min.js"></script>
+<script src="admin_asset2/bower_components/ckeditor/ckeditor.js"></script>
+<script src="ckfinder/ckfinder.js" ></script>
+
 <script>
         $(function () {
             $('#example1').DataTable()
@@ -99,7 +101,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 'responsive': true
             })
         })
-    </script>
+</script>
 @yield('define-js')
 <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 

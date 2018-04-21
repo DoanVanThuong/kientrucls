@@ -34,8 +34,8 @@
                             <td>{{$item->des}}</td>
                             <td>{{$item->content}}</td>
                             <td>{{$item->slug}}</td>                   
-                            <td style="width:50%">
-                                <img src="{{asset($item->img)}}" width="30%" class="img-responsive" alt="">
+                            <td style="width:30%">
+                                <img src="{{asset($item->img)}}" class="img-responsive" alt="">
                             </td>    
                             <td class="center"><i class="fa fa-trash-o  fa-fw"></i><a href="admin/tintuc/xoa/{{$item->id}}"> Xóa</a></td>
                             <td class="center"><i class="fa fa-pencil fa-fw"></i> <a href="admin/tintuc/sua/{{$item->id}}">Sửa</a></td>

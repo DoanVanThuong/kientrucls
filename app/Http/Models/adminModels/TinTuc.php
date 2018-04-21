@@ -1,6 +1,5 @@
 <?php
-
-namespace App\adminModels;
+namespace App\Http\Models\adminModels;
 
 use Illuminate\Database\Eloquent\Model;
 use App\Http\Helpers\Constants;
