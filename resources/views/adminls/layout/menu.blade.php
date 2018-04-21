@@ -29,31 +29,42 @@
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li><a href="/"><i class="fa fa-link"></i> <span>Trang chủ</span></a></li>
-        <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
-          <a href="javascript:void(0)   "><i class="fa fa-link "></i> <span>Loại sản phẩm</span>
-            <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li class="{{$view == 'categories_list' ? 'active' : ''}}  "><a href="admin/loaisanpham/danhsach">Danh sách</a></li>
-            <li class="{{$view == 'categories_add' ? 'active' : ''}} "><a href="admin/loaisanpham/them">Thêm loại SP</a></li>
-          </ul>
-        </li>
-        <li class="treeview {{$curr == 'products' ? 'active' : ''}}  ">
+            <li class="header">HEADER</li>
+            <!-- Optionally, you can add icons to the links -->
+            <li><a href="/"><i class="fa fa-link"></i> <span>Trang chủ</span></a></li>
+            <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
+            <a href="javascript:void(0)   "><i class="fa fa-link "></i> <span>Loại sản phẩm</span>
+                <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+                <li class="{{$view == 'categories_list' ? 'active' : ''}}  "><a href="admin/loaisanpham/danhsach">Danh sách</a></li>
+                <li class="{{$view == 'categories_add' ? 'active' : ''}} "><a href="admin/loaisanpham/them">Thêm loại SP</a></li>
+            </ul>
+            </li>
+            <li class="treeview {{$curr == 'products' ? 'active' : ''}}  ">
                 <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Sản phẩm</span>
-                  <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                  </span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
-                  <li class="{{$view == 'products_list' ? 'active' : ''}}  "><a href="admin/sanpham/danhsach">Danh sách</a></li>
-                  <li class="{{$view == 'products_add' ? 'active' : ''}} "><a href="admin/sanpham/them">Thêm SP</a></li>
+                    <li class="{{$view == 'products_list' ? 'active' : ''}}  "><a href="admin/sanpham/danhsach">Danh sách</a></li>
+                    <li class="{{$view == 'products_add' ? 'active' : ''}} "><a href="admin/sanpham/them">Thêm SP</a></li>
                 </ul>
-              </li>
+            </li>
+            <li class="treeview {{$curr == 'news' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Tin Tức</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'news_list' ? 'active' : ''}}  "><a href="admin/tintuc/danhsach">Danh sách tin</a></li>
+                    <li class="{{$view == 'news_add' ? 'active' : ''}} "><a href="admin/tintuc/them">Thêm tin mới</a></li>
+                </ul>
+            </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
