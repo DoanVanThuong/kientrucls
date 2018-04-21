@@ -7,7 +7,7 @@
         </div>
         <!-- /.box-header -->
         <!-- form start -->
-        <form action="admin/loaisanpham/them" method="POST" enctype="multipart/form-data">  
+    <form action="admin/loaisanpham/sua/{{$loaisanpham->id}}" method="POST" enctype="multipart/form-data">  
             @include('adminls.functions.alert')
             <div class="box-body">
             <div class="form-group">

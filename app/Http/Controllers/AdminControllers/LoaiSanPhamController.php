@@ -42,14 +42,13 @@ class LoaiSanPhamController extends Controller
         if($request->hasFile('anh')) { 
             if ($request->file('anh')->isValid()) {                
                 $file = $request->file('anh');
-                $format = $file->getClientOriginalExtension();
+                $format =strtolower( $file->getClientOriginalExtension());
                     if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
                         alert()->error('Có lỗi', 'Error');
-                        return redirect('admin/loaisanpham/them')->with('thongbao','file ảnh phải có đuôi jpg, png, jpeg, bmp');
+                        return redirect('admin/loaisanpham/them')->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
                     }             
                     //lay ten hinh
                     $tenhinh = $file->getClientOriginalName();
-                    echo $file;
                     
                     //dat ten hinh cho khoi trung
                     $hinh = str_random(4)."_".$tenhinh;
@@ -59,10 +58,10 @@ class LoaiSanPhamController extends Controller
                     }
                     //luu hinh vào thu muc
                     $file->move('img/products', $hinh);
-                    $loaisanpham->img = 'img/products/'.$hinh;
+                    $loaisanpham->img = strtolower('img/products/'.$hinh);
                 }
                 else
-                return redirect('admin/loaisanpham/them')->with('thongbao','Lỗi, vui lòng kiểm tra lại');                
+                return redirect('admin/loaisanpham/them')->with('loi','Lỗi, vui lòng kiểm tra lại');                
             }        
          else
          {             
@@ -92,8 +91,42 @@ class LoaiSanPhamController extends Controller
 			'tenloaiSP.max' => 'tên loại sản phẩm phải có độ dài từ 3 cho đến 100 ký tự',
 		]);
         $loaisanpham->name = $request->tenloaiSP;
-		$loaisanpham->type = $request->tenloaiSP;
-        $loaisanpham->slug =str_slug($request->tenloaiSP);        
+        $loaisanpham->type = $request->tenloaiSP;
+		$loaisanpham->description = $request->description;
+        $loaisanpham->slug =str_slug($request->tenloaiSP); 
+        
+          //kiem tra upload anh
+        if($request->hasFile('anh')) { 
+            if ($request->file('anh')->isValid()) {                
+                $file = $request->file('anh');
+                $format =strtolower( $file->getClientOriginalExtension());
+                    if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
+                        alert()->error('Có lỗi', 'Error');
+                        return redirect('admin/loaisanpham/them')->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
+                    }             
+                    //lay ten hinh
+                    $tenhinh = $file->getClientOriginalName();
+                    
+                    //dat ten hinh cho khoi trung
+                    $hinh = str_random(4)."_".$tenhinh;
+                    //neu random trung thi chay lai random lai
+                    while (file_exists("img/products/".$hinh)) {
+                        $hinh = str_random(4)."_".$tenhinh;
+                    }
+                    //luu hinh vào thu muc
+                    $file->move('img/products', $hinh);
+                    //xóa file cũ
+                    unlink($loaisanpham->img);                    
+                    $loaisanpham->img = strtolower('img/products/'.$hinh);
+                      //xóa file cũ
+                }
+                else
+                return redirect('admin/loaisanpham/them')->with('loi','Lỗi, vui lòng kiểm tra lại');                
+            }        
+         else
+         {             
+            //nếu không thay hình
+         }
 		$loaisanpham->save();
 		//sau khi sửa xong trở lại trang sửa		
 		return redirect('admin/loaisanpham/sua/'.$id.'/')->with('thongbao','sửa thành công');
