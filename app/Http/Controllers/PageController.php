@@ -15,7 +15,7 @@ class PageController extends Controller
 {
 
     function TrangChu() {
-        $product = CategoryProductQModel::getCategoryProduct();
+        $product = CategoryProductQModel::getCategoryProduct(6);
         $project = ProjectQModel::getProject(4);
         $feedback = ProjectQModel::getFeedback(3);
         $logo = ProjectQModel::getLogoCustomer();

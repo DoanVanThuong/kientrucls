@@ -20,7 +20,7 @@ class AppServiceProvider extends ServiceProvider
         //chia se du lieu contact tat ca cac trang
         $address = BaseModel::getAddress();
         $about =  BaseModel::getAbout()->first();
-        $category = CategoryProductQModel::getCategoryProduct();
+        $category = CategoryProductQModel::getCategoryProduct(6);
         $news = BaseModel::getNews(2);
         View()->share([
             'address' => $address,

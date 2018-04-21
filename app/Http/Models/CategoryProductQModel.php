@@ -8,9 +8,10 @@ use Illuminate\Support\Facades\DB;
 
 class CategoryProductQModel extends Model {
 
-    public static function getCategoryProduct() {
+    public static function getCategoryProduct($number) {
         return DB::table('categories as c')
         ->select('c.name', 'c.img', 'c.description','c.slug', 'c.type')
+        ->take($number)
         ->get();
     }
 

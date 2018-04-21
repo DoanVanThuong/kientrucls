@@ -33,7 +33,7 @@
           <!-- /.box-body -->
 
           <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Thêm mới</button>
+            <button type="submit" class="btn btn-primary">Sửa</button>
             <button type="reset" class="btn btn-danger pull-right">reset</button>            
           </div>
           {!!csrf_field()!!}
