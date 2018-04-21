@@ -31,7 +31,54 @@ class TinTucController extends Controller
     }
 
     function postThem(Request $request) {
+        
+    	$this->validate($request,[
+            'tieude' => 'required|min:10',
+            'mota' =>'required',
+            'noidung' => 'required',
+    	],
+    	[
+            'tieude.required' =>'bạn chưa nhập tiêu đề',
+            'tieude.min' =>'tiêu đề ít nhất 10 ký tự',
+            'mota.required' =>'bạn chưa nhập tóm tắt',
+            'noidung.required' =>'bạn chưa nhập nội dung',
+        ]);
+        $tintuc = new TinTuc();
+        $tintuc->title = $request->tieude;
+        $tintuc->slug = str_slug($request->tieude);
+        $tintuc->des = $request->mota;
+        $tintuc->content =  $request->noidung;
 
+         //kiem tra upload anh
+         if($request->hasFile('anh')) { 
+            if ($request->file('anh')->isValid()) {                
+                $file = $request->file('anh');
+                $format =strtolower( $file->getClientOriginalExtension());
+                    if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
+                        alert()->error('Có lỗi', 'Error');
+                        return redirect('admin/tintuc/them')->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
+                    }             
+                    //lay url hinh
+                    $tenhinh = $file->getClientOriginalName();                    
+                    $hinh = str_random(4)."_".$tenhinh;
+                    //neu random trung thi chay lai random lai
+                    while (file_exists("img/news/".$hinh)) {
+                        $hinh = str_random(4)."_".$tenhinh;
+                    }
+                    //luu hinh vào thu muc
+                    $file->move('img/news', $hinh);
+                    $tintuc->img = strtolower('img/news/'.$hinh);
+                }
+                else
+                return redirect('admin/tintuc/them')->with('loi','Lỗi, vui lòng kiểm tra lại');                
+            }        
+         else
+         {             
+             $tintuc->img = " ";
+         }         
+		$tintuc->save();
+		//thêm thành công thì làm gì?
+		return redirect('admin/tintuc/them')->with('thongbao','thêm thành công');
     }
 
     function postSua($id ,Request $request) {

@@ -32,10 +32,10 @@
                     <label >Mô tả<span class="text-danger">*</span></label>
                     <input type="text" name="mota" class="form-control"  placeholder="Nhập mô tả">
                 </div>               
-                <form>
+                <div>
                     <textarea id="noidung" name="noidung" rows="50" cols="80">
                     </textarea>
-                </form>
+                </div>
                 <div class="form-group">
                     <label for="InputFile">Ảnh đại diện<span class="text-danger">*</span></label>
                     <input type="file" name="anh" id="InputFile">       
