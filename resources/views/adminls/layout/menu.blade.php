@@ -1,6 +1,5 @@
   <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
-
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
 
@@ -33,17 +32,28 @@
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li><a href="/"><i class="fa fa-link"></i> <span>Trang chủ</span></a></li>
-        <li class="treeview <?php $curr == 'categories' ? 'active' : '' ?>">
+        <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
           <a href="javascript:void(0)   "><i class="fa fa-link "></i> <span>Loại sản phẩm</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="admin/loaisanpham/danhsach">Danh sách</a></li>
-            <li><a href="admin/loaisanpham/them">Thêm loại SP</a></li>
+            <li class="{{$view == 'categories_list' ? 'active' : ''}}  "><a href="admin/loaisanpham/danhsach">Danh sách</a></li>
+            <li class="{{$view == 'categories_add' ? 'active' : ''}} "><a href="admin/loaisanpham/them">Thêm loại SP</a></li>
           </ul>
         </li>
+        <li class="treeview {{$curr == 'products' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Sản phẩm</span>
+                  <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                  </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li class="{{$view == 'products_list' ? 'active' : ''}}  "><a href="admin/sanpham/danhsach">Danh sách</a></li>
+                  <li class="{{$view == 'products_add' ? 'active' : ''}} "><a href="admin/sanpham/them">Thêm SP</a></li>
+                </ul>
+              </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

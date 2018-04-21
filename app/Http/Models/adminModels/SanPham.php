@@ -16,5 +16,9 @@ class SanPham extends Model
     {
     	return $this->belongsTo('App\Http\Models\adminModels\LoaiSanPham','category_id','id');
     }
+
+    public static function getTableName(){
+        return with(new static)->getTable();
+    }
     
 }

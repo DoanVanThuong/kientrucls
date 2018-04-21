@@ -74,12 +74,18 @@ class LoaiSanPhamController extends Controller
 
     function getSua($id) {
 		//lấy ra id loại tin muốn sưa
-		$loaisanpham = LoaiSanPham::find($id);	
+        $loaisanpham = LoaiSanPham::find($id);	
+        if(!$loaisanpham) {
+            return;
+        }
 		return view('adminls.loaisanpham.sua' ,['loaisanpham' =>$loaisanpham]);
     }
 
     function postSua($id, Request $request) {
         $loaisanpham = LoaiSanPham::find($id);
+        if(!$loaisanpham) {
+            return;
+        }
 		$this->validate($request,
 			[
 				'tenloaiSP' =>'required|unique:categories,name|min:3|max:100'
@@ -102,7 +108,7 @@ class LoaiSanPhamController extends Controller
                 $format =strtolower( $file->getClientOriginalExtension());
                     if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
                         alert()->error('Có lỗi', 'Error');
-                        return redirect('admin/loaisanpham/them')->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
+                        return redirect('admin/loaisanpham/sua/'.$id)->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
                     }             
                     //lay ten hinh
                     $tenhinh = $file->getClientOriginalName();
@@ -121,7 +127,7 @@ class LoaiSanPhamController extends Controller
                       //xóa file cũ
                 }
                 else
-                return redirect('admin/loaisanpham/them')->with('loi','Lỗi, vui lòng kiểm tra lại');                
+                return redirect('admin/loaisanpham/sua/'.$id)->with('loi','Lỗi, vui lòng kiểm tra lại');                
             }        
          else
          {             
@@ -140,7 +146,7 @@ class LoaiSanPhamController extends Controller
         else
         alert()->success('Xóa thành công', 'Successfully');
         $loaisanpham->delete();
-        return redirect('/admin/loaisanpham/danhsach')->with('thongbao','xóa thành công');	
+        return redirect('/admin/loaisanpham/danhsach')->with('thongbao','xóa thành công'.$loaisanpham->name);	
 
         
     }

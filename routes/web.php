@@ -39,6 +39,14 @@ Route::group(['prefix' =>'admin'], function(){
         Route::post('/sua/{id}','AdminControllers\LoaiSanPhamController@postSua');		
         Route::get('/xoa/{id}','AdminControllers\LoaiSanPhamController@getXoa');
     });
+    Route::group(['prefix'=>'sanpham'] , function(){
+        Route::get('/danhsach','AdminControllers\SanPhamController@getDanhSach');
+        Route::get('/them','AdminControllers\SanPhamController@getThem');
+        Route::post('/them','AdminControllers\SanPhamController@postThem');
+        Route::get('/sua/{id}','AdminControllers\SanPhamController@getSua');
+        Route::post('/sua/{id}','AdminControllers\SanPhamController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\SanPhamController@getXoa');
+    });
 });
 
 // Route::get('admin', function(){

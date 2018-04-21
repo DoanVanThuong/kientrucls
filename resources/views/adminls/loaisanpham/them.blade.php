@@ -1,5 +1,7 @@
-@extends('adminls.layout.index')
 <?php $curr = 'categories'; ?>
+<?php $view = 'categories_add'; ?>
+@extends('adminls.layout.index')
+
 @section('content')
 <div class="box box-primary">
         <div class="box-header with-border">
