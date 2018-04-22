@@ -65,6 +65,28 @@
                     <li class="{{$view == 'news_add' ? 'active' : ''}} "><a href="admin/tintuc/them">Thêm tin mới</a></li>
                 </ul>
             </li>
+            <li class="treeview {{$curr == 'project_category' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Loại Dự Án</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'project_category_list' ? 'active' : ''}}  "><a href="admin/loaiduan/danhsach">Danh sách loại dự án</a></li>
+                    <li class="{{$view == 'project_category_add' ? 'active' : ''}} "><a href="admin/loaiduan/them">Thêm dự loại án mới</a></li>
+                </ul>
+            </li>
+            <li class="treeview {{$curr == 'project' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Dự án</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'project_list' ? 'active' : ''}}  "><a href="admin/duan/danhsach">Danh sách dự án</a></li>
+                    <li class="{{$view == 'project_add' ? 'active' : ''}} "><a href="admin/duan/them">Thêm dự án mới</a></li>
+                </ul>
+            </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

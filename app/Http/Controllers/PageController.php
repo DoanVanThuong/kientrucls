@@ -64,7 +64,7 @@ class PageController extends Controller
     }
 
     function TinTuc() {
-        $news = NewsQModel::get_news(1);
+        $news = NewsQModel::get_news(4);
         return view('pages.news', [
             'news' => $news
         ]);

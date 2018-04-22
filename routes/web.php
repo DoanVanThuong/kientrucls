@@ -55,6 +55,22 @@ Route::group(['prefix' =>'admin'], function(){
         Route::post('/sua/{id}','AdminControllers\TinTucController@postSua');		
         Route::get('/xoa/{id}','AdminControllers\TinTucController@getXoa');
     });
+    Route::group(['prefix'=>'duan'] , function(){
+        Route::get('/danhsach','AdminControllers\DuAnController@getDanhSach');
+        Route::get('/them','AdminControllers\DuAnController@getThem');
+        Route::post('/them','AdminControllers\DuAnController@postThem');
+        Route::get('/sua/{id}','AdminControllers\DuAnController@getSua');
+        Route::post('/sua/{id}','AdminControllers\DuAnController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\DuAnController@getXoa');
+    });
+    Route::group(['prefix'=>'loaiduan'] , function(){
+        Route::get('/danhsach','AdminControllers\LoaiDuAnController@getDanhSach');
+        Route::get('/them','AdminControllers\LoaiDuAnController@getThem');
+        Route::post('/them','AdminControllers\LoaiDuAnController@postThem');
+        Route::get('/sua/{id}','AdminControllers\LoaiDuAnController@getSua');
+        Route::post('/sua/{id}','AdminControllers\LoaiDuAnController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\LoaiDuAnController@getXoa');
+    });
 });
 
 // Route::get('admin', function(){
