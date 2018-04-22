@@ -12,12 +12,19 @@ class LoaiDuAnController extends Controller
 {
     function getDanhSach() {
         $loaiduan = LoaiDuAn::all();
+        $duan = DuAn::all();
         return view('adminls.loaiduan.danhsach', [
-            'loaiduan' => $loaiduan
+            'loaiduan' => $loaiduan,
+            'duan' => $duan,
         ]);
     }
 
-    function getThem() {
+    public static function countProject($id) {
+        $soLuongDuAn = DuAn::counts($id);
+       return $soLuongDuAn;
+    }
+
+     function getThem() {
         return view('adminls.loaiduan.them');
     }
 }

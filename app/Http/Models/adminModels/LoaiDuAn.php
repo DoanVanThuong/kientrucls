@@ -16,4 +16,6 @@ class LoaiDuAn extends Model
    public static function getTableName(){
        return with(new static)->getTable();
    }
+
+ 
 }

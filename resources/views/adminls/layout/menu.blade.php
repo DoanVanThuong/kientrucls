@@ -73,7 +73,6 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="{{$view == 'project_category_list' ? 'active' : ''}}  "><a href="admin/loaiduan/danhsach">Danh sách loại dự án</a></li>
-                    <li class="{{$view == 'project_category_add' ? 'active' : ''}} "><a href="admin/loaiduan/them">Thêm dự loại án mới</a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'project' ? 'active' : ''}}  ">

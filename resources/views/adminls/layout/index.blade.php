@@ -99,10 +99,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 'info': true,
                 'autoWidth': false,
                 'responsive': true
-            })
-        })
+            });
+        });
+        
 </script>
 @yield('define-js')
+
 <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 
 

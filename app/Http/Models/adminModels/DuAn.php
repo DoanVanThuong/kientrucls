@@ -3,10 +3,12 @@
 namespace App\Http\Models\adminModels;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
+
 
 class DuAn extends Model
 {
-    protected $tabl = 'project';
+    protected $table = 'projects';
 
     public function loaiduan()
     {
@@ -17,5 +19,8 @@ class DuAn extends Model
         return with(new static)->getTable();
     }
 
-   //TODo COunt project by category_id
+    public static function counts($id) {
+       return  DB::table('projects')->where('category_id',$id)
+        ->count();
+    }
 }
