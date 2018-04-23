@@ -25,8 +25,10 @@ class DuAnController extends Controller
     
     function getSua($id) {
         $duan = DuAn::find($id);
+        $loaiduan = LoaiDuAn::all();
         return view('adminls.duan.sua', [
-            'duan' => $duan
+            'duan' => $duan,
+            'loaiduan' => $loaiduan
         ]);
     }
 
@@ -126,4 +128,98 @@ class DuAnController extends Controller
     $duan->save();
        return redirect('admin/duan/them')->with('thongbao','thêm thành công');
    }
+   
+   function postSua(Request $request, $id) {
+       echo $request->loaiduan;
+        //validate
+        $this->validate($request , 
+        [
+            'tenloai' =>'required|unique:project_category,name|min:3|max:100',
+        ], 
+        [
+            'tenloai.required' =>'Bạn chưa nhập tên dự án',
+            'tenloai.unique' =>'tên dự án đã tồn tại',
+            'tenloai.min' => 'tên dự án phải có độ dài từ 3 cho đến 100 ký tự',
+            'tenloai.max' => 'tên dự án phải có độ dài từ 3 cho đến 100 ký tự',
+        ]);
+        $duan = DuAn::find($id);
+        if(!$duan) {
+            return;
+        }
+        $duan->category_id = $request->loaiduan;
+        $duan->name = $request->tenloai;
+        $duan->des = $request->description;    
+        //kiem tra upload anh
+        if($request->hasFile('anh')) { 
+        if ($request->file('anh')->isValid()) {                
+            $file = $request->file('anh');
+            $format =strtolower( $file->getClientOriginalExtension());
+                if($format !='jpg' && $format !='png' && $format !='jpeg' && $format !='bmp'  ) {
+                    alert()->error('Có lỗi', 'Error');
+                    return redirect('admin/duan/sua/'.$id)->with('loi','file ảnh phải có đuôi jpg, png, jpeg, bmp');
+                    }             
+                    //lay ten hinh
+                    $tenhinh = $file->getClientOriginalName();
+                    
+                    //dat ten hinh cho khoi trung
+                    $hinh = str_random(4)."_".$tenhinh;
+                
+                    //luu hinh vào thu muc tương ứng
+                    if($request->loaiduan == 1)
+                    {            
+                        unlink($duan->img);                                         
+                        $file->move('img/projects/bietthu', $hinh);
+                        //neu random trung thi chay lai random lai
+                        while (file_exists("img/projects/bietthu".$hinh)) {
+                            $hinh = str_random(4)."_".$tenhinh;
+                        }
+                        echo"bietthu";
+                        $duan->img = strtolower('img/projects/bietthu/'.$hinh);
+                        
+                    }
+                    //luu hinh vào thu muc
+                    if($request->loaiduan == 2)
+                    {
+                        unlink($duan->img);                                         
+                        
+                        $file->move('img/projects/nhaco', $hinh);
+                        //neu random trung thi chay lai random lai
+                        while (file_exists("img/projects/nhaco".$hinh)) {
+                            $hinh = str_random(4)."_".$tenhinh;
+                        }
+                        $duan->img = strtolower('img/projects/nhaco/'.$hinh);                    
+                    }
+                    //luu hinh vào thu muc
+                    if($request->loaiduan == 3)
+                    {
+                        unlink($duan->img);                                         
+                        $file->move('img/projects/nhalo', $hinh);
+                        //neu random trung thi chay lai random lai
+                        while (file_exists("img/projects/nhalo".$hinh)) {
+                            $hinh = str_random(4)."_".$tenhinh;
+                        }
+                        $duan->img = strtolower('img/projects/nhalo/'.$hinh);                    
+                    }//luu hinh vào thu muc
+                    if($request->loaiduan == 4)
+                    {
+                        unlink($duan->img);                                                                 
+                        $file->move('img/projects/vanphong', $hinh);
+                        //neu random trung thi chay lai random lai
+                        while (file_exists("img/projects/vanphong".$hinh)) {
+                            $hinh = str_random(4)."_".$tenhinh;
+                        }
+                        $duan->img = strtolower('img/projects/vanphong/'.$hinh);
+                    }
+            }
+            else
+            return redirect('admin/duan/sua/'.$id)->with('loi','Lỗi, vui lòng kiểm tra lại');                
+        }        
+        else
+        {             
+           
+        }
+        $duan->save();
+        return redirect('admin/duan/sua/'.$id)->with('thongbao','sửa thành công');
+   }
+  
 }
