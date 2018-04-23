@@ -9,6 +9,12 @@ use App\Http\Models\adminModels\BoSuuTap;
 use App\Http\Models\adminModels\SanPham;
 use App\Http\Models\adminModels\TinTuc;
 use App\Http\Models\CategoryProductQModel;
+use App\Http\Models\ProjectQModel;
+use App\Http\Models\NewsQModel;
+
+
+
+
 
 
 class AdminController extends Controller
@@ -19,12 +25,16 @@ class AdminController extends Controller
         $numProducts = SanPham::count();
         $numNews = TinTuc::count();
         $product_newest = CategoryProductQModel::getProductByNum(4);
+        $news_newest = NewsQModel::get_news(4);
+        $project_newst = ProjectQModel::getProject(4);
         return view('adminls.dashboard', [
             'numProjects' =>$numProjects,
             'numGalleries' =>$numGalleries,
             'numProducts' =>$numProducts,
             'numNews' =>$numNews,
-            'product_newest' => $product_newest
+            'product_newest' => $product_newest,
+            'news_newest' => $news_newest,
+            'project_newst' => $project_newst
             
         ]);
     }

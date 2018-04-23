@@ -1,7 +1,43 @@
 @extends('adminls.layout.index')
 <?php $view = 'dashboard'; ?>
 <?php $curr = 'dashboard'; ?>
-
+@section('define-css')
+<style>
+        .color-palette {
+          height: 35px;
+          line-height: 35px;
+          text-align: center;
+        }
+    
+        .color-palette-set {
+          margin-bottom: 15px;
+        }
+    
+        .color-palette span {
+          display: none;
+          font-size: 12px;
+        }
+    
+        .color-palette:hover span {
+          display: block;
+        }
+    
+        .color-palette-box h4 {
+          position: absolute;
+          top: 100%;
+          left: 25px;
+          margin-top: -40px;
+          color: rgba(255, 255, 255, 0.8);
+          font-size: 12px;
+          display: block;
+          z-index: 7;
+        }
+        .img-wp {
+            height: 142px;
+            overflow: hidden;
+        }
+      </style>
+@stop
 
 @section('content')
     <div class="row">
@@ -67,9 +103,39 @@
             </h1>
         </div>
         <div class="col-md-7"> 
-                           
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                    <h3 class="box-title">Tin tức - xu hướng mới nhất</h3>
+                    <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+                <div class="box-body">
+                    <ul class="products-list product-list-in-box">
+                    @foreach($news_newest as $item)
+                    <li class="item">
+                        <div class="product-img">
+                        <img src="{{asset($item->img)}}" class="img-responsive" alt="Product Image">
+                        </div>
+                        <div class="product-info">
+                        <a href="javascript:void(0)" class="product-title">{{$item->title}}
+                        <span class="product-description">
+                                {{$item->des}}
+                        </span>
+                        </div>
+                    </li>
+                    @endforeach
+                    </ul>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center">
+                    <a href="admin/sampham/danhsach" class="uppercase">Tất cả tin tức</a>
+                </div>
+                <!-- /.box-footer -->
+            </div>              
         </div>
-      
         <div class="col-md-5">
             <div class="box box-primary">
                 <div class="box-header with-border">
@@ -103,6 +169,33 @@
                   <a href="admin/sampham/danhsach" class="uppercase">Xem tất cả sản phẩm</a>
                 </div>
                 <!-- /.box-footer -->
+            </div>
+        </div>
+    </div>
+    {{-- dự án mới nhất --}}
+    <div class="row">
+        <div class="col-md-12">
+            <div class="box box-default color-palette-box">
+                <div class="box-header with-border">
+                    <h3 class="box-title"><i class="fa fa-tag"></i>Dự án mới nhất</h3>
+                </div>
+                <div class="box-body">
+                    <div class="row">
+                        @foreach($project_newst as $item)
+                        <div class="col-sm-3 col-md-3">
+                            <h4 class="text-center bg-light-blue">{{$item->name}}</h4>       
+                            <div class="color-palette-set">
+                               <div class="img-wp">
+                                <img src="{{$item->img}}" class="img-responsive" alt="">
+                               </div>
+                            </div>
+                        </div>
+                        @endforeach                        
+                    </div>               
+                </div>
+                <div class="box-footer text-center">
+                    <a href="admin/duan/danhsach" class="uppercase">Xem tất cả dự án</a>
+                </div>
             </div>
         </div>
     </div>
