@@ -144,6 +144,8 @@ class LoaiSanPhamController extends Controller
             alert()->error('Có lỗi', 'Error');
         }
         else
+        unlink($loaisanpham->img);        
+        
         alert()->success('Xóa thành công', 'Successfully');
         $loaisanpham->delete();
         return redirect('/admin/loaisanpham/danhsach')->with('thongbao','xóa thành công'.$loaisanpham->name);	

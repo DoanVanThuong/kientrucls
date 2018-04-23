@@ -65,7 +65,7 @@ Route::group(['prefix' =>'admin'], function(){
     });
     Route::group(['prefix'=>'loaiduan'] , function(){
         Route::get('/danhsach','AdminControllers\LoaiDuAnController@getDanhSach');
-        Route::get('/them','AdminControllers\LoaiDuAnController@getThem');
+        Route::get('/them','AdminControllers\LoaiDuAnController@getDanhSach');
         Route::post('/them','AdminControllers\LoaiDuAnController@postThem');
         Route::get('/sua/{id}','AdminControllers\LoaiDuAnController@getSua');
         Route::post('/sua/{id}','AdminControllers\LoaiDuAnController@postSua');		

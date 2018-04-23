@@ -26,6 +26,7 @@ class TinTucController extends Controller
         if(!$tintuc) {
             return;
         }
+        unlink($tintuc->img);
         $tintuc>delete();
     return redirect('/admin/tintuc/danhsach')->with('thongbao','Xóa thành công '.''. $tintuc->name);	
     }

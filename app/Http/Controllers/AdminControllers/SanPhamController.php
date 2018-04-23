@@ -158,6 +158,8 @@ class SanPhamController extends Controller
     if(!$sanpham){
         return;
     }
+    unlink($sanpham->img);        
+    
     $sanpham->delete();
     return redirect('/admin/sanpham/danhsach')->with('thongbao','Xóa thành công '.''. $sanpham->name);	
 
