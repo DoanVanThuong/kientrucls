@@ -12,10 +12,7 @@
             @endif
             <?php $i++; ?>
             ">
-                <div class="container">
-                    <div class="testimonial-img">
-                        <img src="{{asset($item->img)}}" alt="" class="img-responsive">
-                    </div>
+                <div class="container">                    
                     <div class="testimonial-body">{{$item->content}}
                     </div>
                     <div class="testimonial-border"></div>

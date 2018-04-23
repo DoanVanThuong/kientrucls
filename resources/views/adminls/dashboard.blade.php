@@ -96,7 +96,7 @@
             </div>
         </div>
     </div>
-    {{-- sum --}}
+    {{-- /sum --}}
     <div class="row">
         <div class="box-header">
             <h1 class="box-title">
@@ -173,7 +173,7 @@
             </div>
         </div>
     </div>
-    {{-- news & product --}}
+    {{--/ news & product --}}
     <div class="row">
         <div class="col-md-12">
             <div class="box box-default color-palette-box">
@@ -213,14 +213,13 @@
                 <div class="box-header">
                     <i class="fa fa-comments-o"></i>
                     <h3 class="box-title">Phản hồi mới nhất</h3>
-                    <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
-                    
+                    <div class="box-tools pull-right" data-toggle="tooltip" title="Status">                   
                     </div>
                 </div>
                 <div class="box-body chat" id="chat-box">
                     @foreach($feedback_newst as $item)
                     <div class="item">
-                        <img src="{{asset($item->img)}}" alt="user image" class="online">
+                        <img src="{{asset('img/default-user.png')}}" alt="user image" class="online">
                         <p class="message">
                             <a href="javascript:void(0)" class="name">
                             <small class="text-muted pull-right"><i class="fa fa-clock-o"></i>{{$item->created_at->diffForHumans()}}</small>
@@ -232,7 +231,7 @@
                     @endforeach                           
                 </div>
                 <div class="box-footer text-center">
-                    <a href="javascript:void(0) ">Thêm phản hồi</a>
+                    <a href="admin/feedback/danhsach">Xem tất cả phản hồi</a>
                 </div>
             </div>
         </div>
@@ -265,47 +264,49 @@
               </div>
         </div>
     </div>
+    {{-- feedback - Customer --}}        
     <div class="row">
- {{-- Contact Info --}}
- <div class="col-md-12">
-        <div class="box box-primary">
-            <div class="box-header with-border">
-              <h3 class="box-title">Thông tin liên lạc</h3>
-              <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                </button>
-                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
-              </div>
+        <div class="col-md-12">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                <h3 class="box-title">Thông tin liên lạc</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                </div>
+                <div class="box-body">
+                    <dl>
+                        <dt>Địa chỉ <span><i class="fa fa-address-card-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                            <dd>{{$contact->address}}</dd>
+                        <dt>Điện thoại <span><i class="fa fa-phone fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                            <dd>{{$contact->phone}}</dd>
+                        <dt>Hotline <span><i class="fa fa-mobile fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                            <dd>{{$contact->hotline}}</dd>
+                        <dt>Fax <span><i class="fa fa-fax fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                            <dd>{{$contact->fax}}</dd>
+                        <dt>Email <span><i class="fa fa-envelope-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                            <dd>{{$contact->email}}</dd>
+                    </dl>
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-google"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center">
+                <a href="admin/lienlac/sua/{{$contact->id}}" class="uppercase">Chỉnh sửa thông tin</a>
+                </div>
+                <!-- /.box-footer -->
             </div>
-            <div class="box-body">
-                <dl>
-                    <dt>Địa chỉ <span><i class="fa fa-address-card-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
-                        <dd>{{$contact->address}}</dd>
-                    <dt>Điện thoại <span><i class="fa fa-phone fa-lg text-primary" aria-hidden="true"></i></span></dt>
-                        <dd>{{$contact->phone}}</dd>
-                    <dt>Hotline <span><i class="fa fa-mobile fa-lg text-primary" aria-hidden="true"></i></span></dt>
-                        <dd>{{$contact->hotline}}</dd>
-                    <dt>Fax <span><i class="fa fa-fax fa-lg text-primary" aria-hidden="true"></i></span></dt>
-                        <dd>{{$contact->fax}}</dd>
-                    <dt>Email <span><i class="fa fa-envelope-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
-                        <dd>{{$contact->email}}</dd>
-                </dl>
-                <div class="text-center">
-                    <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-google"><i class="fa fa-google-plus"></i></a>
-                    <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
-                    <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
-                  </div>
-              </div>
-            <!-- /.box-body -->
-            <div class="box-footer text-center">
-            <a href="admin/lienlac/sua/{{$contact->id}}" class="uppercase">Chỉnh sửa thông tin</a>
-            </div>
-            <!-- /.box-footer -->
-        </div>
-    </div>    
+        </div>    
     </div>
+    {{-- /Contact Info --}}    
+    
 @stop
 
 @section('define-js')

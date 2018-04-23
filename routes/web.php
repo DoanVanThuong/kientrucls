@@ -83,7 +83,11 @@ Route::group(['prefix' =>'admin'], function(){
     Route::group(['prefix'=>'lienlac'] , function(){
         Route::get('/sua/{id}','AdminControllers\LienLacController@getSua');
         Route::post('/sua/{id}','AdminControllers\LienLacController@postSua');		
-        Route::get('/xoa/{id}','AdminControllers\LienLacController@getXoa');
+    });
+    Route::group(['prefix'=>'feedback'] , function(){
+        Route::get('/danhsach','AdminControllers\FeedBackController@getDanhSach');
+        Route::get('/sua/{id}','AdminControllers\FeedBackController@getSua');	
+        Route::get('/xoa/{id}','AdminControllers\FeedBackController@getXoa');        	
     });
 });
 

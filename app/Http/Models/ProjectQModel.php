@@ -18,7 +18,8 @@ class ProjectQModel extends Model {
 
     public static function getFeedBack($num) {
         return DB::table('feedback as f')
-        ->select('f.customer', 'f.content' , 'f.id','f.img')
+        ->select('f.customer', 'f.content' , 'f.id','f.top')
+        ->where('top',true)
         ->take($num)
         ->get();
     }
