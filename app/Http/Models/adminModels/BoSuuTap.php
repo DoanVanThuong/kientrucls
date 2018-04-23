@@ -22,4 +22,11 @@ class BoSuuTap extends Model
         ->count();
     }
 
+    public static function getGallery($category_id) {
+        return DB::table('gallery')
+        ->where('category_id', $category_id)
+        ->orderBy('id','created')
+        ->get();
+    } 
+
 }

@@ -31,7 +31,7 @@ class ProjectQModel extends Model {
 
     public static function getProjectByCategory($cat) {
         return DB::table('gallery as g')
-        ->select('g.img','g.id')
+        ->select('g.img','g.id','g.name')
         ->where('category_id', $cat)
         ->get();
     }

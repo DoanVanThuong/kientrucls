@@ -73,7 +73,7 @@ Route::group(['prefix' =>'admin'], function(){
     });
     Route::group(['prefix'=>'bosuutap'] , function(){
         Route::get('/danhsach','AdminControllers\BoSuuTapController@getDanhSach');
-        Route::get('/them','AdminControllers\BoSuuTapController@getDanhSach');
+        Route::get('/them','AdminControllers\BoSuuTapController@getThem');
         Route::post('/them','AdminControllers\BoSuuTapController@postThem');
         Route::get('/sua/{id}','AdminControllers\BoSuuTapController@getSua');
         Route::post('/sua/{id}','AdminControllers\BoSuuTapController@postSua');		
