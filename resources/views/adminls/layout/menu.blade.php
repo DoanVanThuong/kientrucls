@@ -31,7 +31,7 @@
       <ul class="sidebar-menu" data-widget="tree">
             <li class="header">HEADER</li>
             <!-- Optionally, you can add icons to the links -->
-            <li><a href="/"><i class="fa fa-link"></i> <span>Trang chủ</span></a></li>
+            <li  class="{{$view == 'dashboard' ? 'active' : ''}}  "><a href="/admin"><i class="fa fa-link"></i> <span>Trang quản trị</span></a></li>
             <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
             <a href="javascript:void(0)   "><i class="fa fa-link "></i> <span>Loại sản phẩm</span>
                 <span class="pull-right-container">

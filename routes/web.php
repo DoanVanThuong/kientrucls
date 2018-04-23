@@ -31,6 +31,7 @@ Route::group(['prefix' =>'tin-tuc'] ,function(){
 });
 //adimin
 Route::group(['prefix' =>'admin'], function(){
+    route::get('/','AdminControllers\AdminController@getDanhSach');
     Route::group(['prefix'=>'loaisanpham'] , function(){
         Route::get('/danhsach','AdminControllers\LoaiSanPhamController@getDanhSach');
         Route::get('/them','AdminControllers\LoaiSanPhamController@getThem');

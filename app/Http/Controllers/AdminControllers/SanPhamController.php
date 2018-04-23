@@ -97,7 +97,7 @@ class SanPhamController extends Controller
          //validate
          $this->validate($request , 
          [
-             'tenSP' =>'required|unique:products,name|min:3|max:100'
+             'tenSP' =>'required|min:3|max:100'
      ], 
      [
          'tenSP.required' =>'Bạn chưa nhập tên sản phẩm',
@@ -137,6 +137,9 @@ class SanPhamController extends Controller
                  }
                  //luu hinh vào thu muc
                  //xóa file cũ
+                 if(!file_exists($sanpham->img)) {
+                    $sanpham->img = " ";
+                 }
                  unlink($sanpham->img);              
                  $file->move('img/products', $hinh);
                  $sanpham->img = strtolower('img/products/'.$hinh);

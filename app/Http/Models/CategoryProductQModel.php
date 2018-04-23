@@ -41,6 +41,15 @@ class CategoryProductQModel extends Model {
         ->first();
         return $data->id;
     }
+
+    public static function getProductByNum($num) {
+        return DB::table('products as p')
+        ->select('p.*')
+        ->orderBy('id','desc')
+        ->take($num)
+        ->get();
+    }
+    
     
 
 }
