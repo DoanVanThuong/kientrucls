@@ -259,7 +259,7 @@
                   </ul>
                 </div>
                 <div class="box-footer text-center">
-                  <a href="javascript:void(0)" class="uppercase">Xem tất cả khách hàng</a>
+                  <a href="admin/khachhang/danhsach" class="uppercase">Xem tất cả khách hàng</a>
                 </div>
               </div>
         </div>

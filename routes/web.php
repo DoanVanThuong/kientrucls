@@ -89,6 +89,14 @@ Route::group(['prefix' =>'admin'], function(){
         Route::get('/sua/{id}','AdminControllers\FeedBackController@getSua');	
         Route::get('/xoa/{id}','AdminControllers\FeedBackController@getXoa');        	
     });
+    Route::group(['prefix'=>'khachhang'] , function(){
+        Route::get('/danhsach','AdminControllers\KhachHangController@getDanhSach');
+        Route::get('/them','AdminControllers\KhachHangController@getThem');
+        Route::post('/them','AdminControllers\KhachHangController@postThem');
+        Route::get('/sua/{id}','AdminControllers\KhachHangController@getSua');
+        Route::post('/sua/{id}','AdminControllers\KhachHangController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\KhachHangController@getXoa');        	
+    });
 });
 
 // Route::get('admin', function(){

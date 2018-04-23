@@ -16,11 +16,6 @@ use App\Http\Models\CategoryProductQModel;
 use App\Http\Models\ProjectQModel;
 use App\Http\Models\NewsQModel;
 
-
-
-
-
-
 class AdminController extends Controller
 {
     public function getDanhSach() {
