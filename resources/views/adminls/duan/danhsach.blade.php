@@ -44,10 +44,10 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <div class="delete-icon" data-toggle="tooltip">
-                        <a href="admin/loaiduan/xoa/{{$item->id}}" data-ix="{{$item->id}}" class="delete" title="Xóa">
+                        <a href="admin/duan/xoa/{{$item->id}}" data-ix="{{$item->id}}" class="delete" title="Xóa">
                             <i class="fa fa-times"></i>
                         </a>
-                        <a href="admin/loaiduan/sua/{{$item->id}}" data-ix="{{$item->id}}" class="edit" title="Sửa">
+                        <a href="admin/duan/sua/{{$item->id}}" data-ix="{{$item->id}}" class="edit" title="Sửa">
                             <i class="fa fa-edit"></i>
                         </a>
                     </div>
@@ -74,11 +74,23 @@
         @include('adminls.functions.alert')
         <div class="box-body">
         <div class="form-group">
+            <label>Loại Dự án</label>
+            <select class="form-control" name="loaiduan">
+                @foreach($loaiduan as $item)                  
+                    <option value="{{$item->id}}">{{$item->name}}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form-group">
           <label for="exampleInputEmail1">Tên dự án <span class="text-danger">*</span></label>
           <input type="text" name="tenloai" class="form-control" id="exampleInputEmail1" placeholder="Nhập tên loại">
         </div>
         <div class="form-group">
-                <label for="exampleInputFile">Chọn ảnh đại diện</label>
+            <label for="exampleInputEmail1">Miêu tả dự án <span class="text-danger">*</span></label>
+            <input type="text" name="description" class="form-control"  placeholder="Nhập tên loại">
+        </div>
+        <div class="form-group">
+                <label for="exampleInputFile">Chọn ảnh đại diện <span class="text-danger">*</span></label>
                 <input type="file" name="anh" id="exampleInputFile">
               </div>
       <!-- /.box-body -->

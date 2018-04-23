@@ -57,7 +57,7 @@ Route::group(['prefix' =>'admin'], function(){
     });
     Route::group(['prefix'=>'duan'] , function(){
         Route::get('/danhsach','AdminControllers\DuAnController@getDanhSach');
-        Route::get('/them','AdminControllers\DuAnController@getThem');
+        Route::get('/them','AdminControllers\DuAnController@getDanhSach');
         Route::post('/them','AdminControllers\DuAnController@postThem');
         Route::get('/sua/{id}','AdminControllers\DuAnController@getSua');
         Route::post('/sua/{id}','AdminControllers\DuAnController@postSua');		

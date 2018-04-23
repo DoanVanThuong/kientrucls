@@ -31,6 +31,12 @@
 @extends('adminls.layout.index')
 @section('content')
     <div class="row">
+            <div class="box-header">
+                    <h1 class="box-title">
+                            Các Loại dự án
+                            <small>danh sách</small>
+                    </h1>
+                </div>
         @foreach($loaiduan as $item)     
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">

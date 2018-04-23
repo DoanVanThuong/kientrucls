@@ -83,7 +83,6 @@
                 </a>
                 <ul class="treeview-menu">
                     <li class="{{$view == 'project_list' ? 'active' : ''}}  "><a href="admin/duan/danhsach">Danh sách dự án</a></li>
-                    <li class="{{$view == 'project_add' ? 'active' : ''}} "><a href="admin/duan/them">Thêm dự án mới</a></li>
                 </ul>
             </li>
       </ul>
