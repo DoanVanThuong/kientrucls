@@ -39,9 +39,7 @@ class LoaiDuAnController extends Controller
         }
         $loaiduan->delete();
         return redirect('/admin/loaiduan/danhsach')->with('thongbao','xóa thành công'.' '.$loaiduan->name);	     
-        
-       
-        
+ 
     }
 
     public static function countProject($id) {

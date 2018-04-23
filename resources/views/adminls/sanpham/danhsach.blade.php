@@ -38,7 +38,7 @@
                             <td class="text-center">{{$item->id}}</td>
                             <td>{{$item->name}}</td>
                             <td>
-                                <a href="javascript:void(0) ">{{$item->loaisanpham->name}}</a>                            
+                                <a href="javascript:void(0) ">{{$item->loaisanpham['name']}}</a>                            
                             </td>                            
                             <td>{{$item->code}}</td>
                             <td>{{$item->price}}</td>
