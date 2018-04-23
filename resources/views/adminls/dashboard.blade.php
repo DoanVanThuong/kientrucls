@@ -178,6 +178,11 @@
             <div class="box box-default color-palette-box">
                 <div class="box-header with-border">
                     <h3 class="box-title"><i class="fa fa-tag"></i>Dự án mới nhất</h3>
+                    <div class="box-tools pull-right">
+                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                      </div>
                 </div>
                 <div class="box-body">
                     <div class="row">
@@ -198,6 +203,153 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="row">
+        {{-- new Feedback --}}
+        <div class="col-md-4">
+            <div class="box box-success">
+            <div class="box-header">
+                <i class="fa fa-comments-o"></i>
+                <h3 class="box-title">Phản hồi mới nhất</h3>
+                <div class="box-tools pull-right" data-toggle="tooltip" title="Status">
+                <div class="btn-group" data-toggle="btn-toggle">
+                    <button type="button" class="btn btn-default btn-sm active"><i class="fa fa-square text-green"></i>
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm"><i class="fa fa-square text-red"></i></button>
+                </div>
+                </div>
+            </div>
+            <div class="box-body chat" id="chat-box">
+                <div class="item">
+                <img src="dist/img/user4-128x128.jpg" alt="user image" class="online">
+                <p class="message">
+                    <a href="#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 2:15</small>
+                    Mike Doe
+                    </a>
+                    I would like to meet you to discuss the latest news about
+                    the arrival of the new theme. They say it is going to be one the
+                    best themes on the market
+                </p>
+                <div class="attachment">
+                    <h4>Attachments:</h4>
+
+                    <p class="filename">
+                    Theme-thumbnail-image.jpg
+                    </p>
+
+                    <div class="pull-right">
+                    <button type="button" class="btn btn-primary btn-sm btn-flat">Open</button>
+                    </div>
+                </div>
+                <!-- /.attachment -->
+                </div>
+                <!-- /.item -->
+                <!-- chat item -->
+                <div class="item">
+                <img src="dist/img/user3-128x128.jpg" alt="user image" class="offline">
+
+                <p class="message">
+                    <a href="#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:15</small>
+                    Alexander Pierce
+                    </a>
+                    I would like to meet you to discuss the latest news about
+                    the arrival of the new theme. They say it is going to be one the
+                    best themes on the market
+                </p>
+                </div>
+                <!-- /.item -->
+                <!-- chat item -->
+                <div class="item">
+                <img src="dist/img/user2-160x160.jpg" alt="user image" class="offline">
+
+                <p class="message">
+                    <a href="#" class="name">
+                    <small class="text-muted pull-right"><i class="fa fa-clock-o"></i> 5:30</small>
+                    Susan Doe
+                    </a>
+                    I would like to meet you to discuss the latest news about
+                    the arrival of the new theme. They say it is going to be one the
+                    best themes on the market
+                </p>
+                </div>
+            </div>
+            <div class="box-footer text-center">
+                <a href="javascript:void(0) ">Thêm phản hồi</a>
+            </div>
+            </div>
+        </div>
+        <!-- USERS LIST -->        
+        <div class="col-md-4">
+            <div class="box box-danger">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Khách hàng mới</h3>
+
+                  <div class="box-tools pull-right">
+                    <span class="label label-danger">{{$member_newst->count()}} khách hàng mới</span>
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="box-body no-padding">
+                  <ul class="users-list clearfix">
+                    @foreach($member_newst as $item)
+                    <li>
+                        <img src="{{asset($item->img)}}" alt="User Image">
+                        <a class="users-list-name" href="#">{{$item->name}}</a>
+                        <span class="users-list-date">{{$item->created_at->diffForHumans()}}</span>
+                    </li>
+                    @endforeach                   
+                  </ul>
+                </div>
+                <div class="box-footer text-center">
+                  <a href="javascript:void(0)" class="uppercase">Xem tất cả khách hàng</a>
+                </div>
+              </div>
+        </div>
+        {{-- Contact Info --}}
+        <div class="col-md-4">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                  <h3 class="box-title">Thông tin liên lạc</h3>
+                  <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                  </div>
+                </div>
+                <div class="box-body">
+                    <dl>
+                        <dt>Địa chỉ <span><i class="fa fa-address-card-o" aria-hidden="true"></i></span></dt>
+                            <dd>Số 22/16/157 Phố Đức Giang - Long Biên - Hà Nội</dd>
+                        <dt>Điện thoại <span><i class="fa fa-phone" aria-hidden="true"></i></span></dt>
+                            <dd>02462570507</dd>
+                        <dt>Hotline <span><i class="fa fa-mobile" aria-hidden="true"></i></span></dt>
+                            <dd>0983334968</dd>
+                        <dt>Fax <span><i class="fa fa-fax" aria-hidden="true"></i></span></dt>
+                            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+                        <dt>Email <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span></dt>
+                            <dd> largeandsmall.jsc@gmail.com</dd>    
+                    </dl>
+                    <div class="text-center">
+                        <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-google"><i class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a>
+                      </div>
+                  </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center">
+                  <a href="admin/sampham/danhsach" class="uppercase">Chỉnh sửa thông tin</a>
+                </div>
+                <!-- /.box-footer -->
+            </div>
+        </div>     
     </div>
 @stop
 
