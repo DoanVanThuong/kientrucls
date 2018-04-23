@@ -13,6 +13,11 @@ class LoaiDuAn extends Model
        return $this->hasMany('App\Http\Models\adminModels\DuAn','category_id' ,'id');
    }
 
+   public function bosuutap()
+   {
+       return $this->hasMany('App\Http\Models\adminModels\BoSuuTap','category_id' ,'id');
+   }
+
    public static function getTableName(){
        return with(new static)->getTable();
    }
