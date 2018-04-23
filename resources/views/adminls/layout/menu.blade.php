@@ -95,6 +95,17 @@
                     <li class="{{$view == 'gallery_list' ? 'active' : ''}}  "><a href="admin/bosuutap/danhsach">Danh sách </a></li>
                 </ul>
             </li>
+            <li class="treeview {{$curr == 'customer' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-link "></i> <span>Khác hàng</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'customer_list' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach">Danh sách khách hàng</a></li>
+                    <li class="{{$view == 'customer_add' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach">Thêm </a></li>                    
+                </ul>
+            </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
