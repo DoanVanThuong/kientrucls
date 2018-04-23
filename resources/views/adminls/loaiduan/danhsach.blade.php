@@ -35,8 +35,11 @@
             <div class="col-md-3 col-sm-6 col-xs-12">
                 <div class="info-box">
                     <div class="delete-icon" data-toggle="tooltip">
-                    <a href="admin/loaiduan/xoa/{{$item->id}}" data-ix="{{$item->id}}" class="delete" title="Xóa">
+                        <a href="admin/loaiduan/xoa/{{$item->id}}" data-ix="{{$item->id}}" class="delete" title="Xóa">
                             <i class="fa fa-times"></i>
+                        </a>
+                        <a href="admin/loaiduan/sua/{{$item->id}}" data-ix="{{$item->id}}" class="edit" title="Sửa">
+                            <i class="fa fa-edit"></i>
                         </a>
                     </div>
                     <span class="info-box-icon bg-aqua">
