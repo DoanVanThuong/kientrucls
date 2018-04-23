@@ -279,16 +279,16 @@
             </div>
             <div class="box-body">
                 <dl>
-                    <dt>Địa chỉ <span><i class="fa fa-address-card-o" aria-hidden="true"></i></span></dt>
-                        <dd>Số 22/16/157 Phố Đức Giang - Long Biên - Hà Nội</dd>
-                    <dt>Điện thoại <span><i class="fa fa-phone" aria-hidden="true"></i></span></dt>
-                        <dd>02462570507</dd>
-                    <dt>Hotline <span><i class="fa fa-mobile" aria-hidden="true"></i></span></dt>
-                        <dd>0983334968</dd>
-                    <dt>Fax <span><i class="fa fa-fax" aria-hidden="true"></i></span></dt>
-                        <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
-                    <dt>Email <span><i class="fa fa-envelope-o" aria-hidden="true"></i></span></dt>
-                        <dd> largeandsmall.jsc@gmail.com</dd>    
+                    <dt>Địa chỉ <span><i class="fa fa-address-card-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                        <dd>{{$contact->address}}</dd>
+                    <dt>Điện thoại <span><i class="fa fa-phone fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                        <dd>{{$contact->phone}}</dd>
+                    <dt>Hotline <span><i class="fa fa-mobile fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                        <dd>{{$contact->hotline}}</dd>
+                    <dt>Fax <span><i class="fa fa-fax fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                        <dd>{{$contact->fax}}</dd>
+                    <dt>Email <span><i class="fa fa-envelope-o fa-lg text-primary" aria-hidden="true"></i></span></dt>
+                        <dd>{{$contact->email}}</dd>
                 </dl>
                 <div class="text-center">
                     <a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a>
@@ -300,7 +300,7 @@
               </div>
             <!-- /.box-body -->
             <div class="box-footer text-center">
-              <a href="admin/sampham/danhsach" class="uppercase">Chỉnh sửa thông tin</a>
+            <a href="admin/lienlac/sua/{{$contact->id}}" class="uppercase">Chỉnh sửa thông tin</a>
             </div>
             <!-- /.box-footer -->
         </div>

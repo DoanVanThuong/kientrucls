@@ -80,6 +80,11 @@ Route::group(['prefix' =>'admin'], function(){
         Route::post('/sua/{id}','AdminControllers\BoSuuTapController@postSua');		
         Route::get('/xoa/{id}','AdminControllers\BoSuuTapController@getXoa');
     });
+    Route::group(['prefix'=>'lienlac'] , function(){
+        Route::get('/sua/{id}','AdminControllers\LienLacController@getSua');
+        Route::post('/sua/{id}','AdminControllers\LienLacController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\LienLacController@getXoa');
+    });
 });
 
 // Route::get('admin', function(){
