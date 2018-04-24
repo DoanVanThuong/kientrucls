@@ -36,6 +36,6 @@ class LienLacController extends Controller
         $lienlac->fax = $request->fax;
         $lienlac->email = $request->email;
         $lienlac->save();   
-        return redirect('admin/lienlac/sua/'.$id.'/')->with('thongbao','Sửa thành công');
+        return redirect('admin/lienlac/danhsach')->with('thongbao','Sửa thành công');
     }
 }

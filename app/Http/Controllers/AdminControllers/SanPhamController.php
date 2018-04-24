@@ -153,7 +153,7 @@ class SanPhamController extends Controller
       }         
      $sanpham->save();
      //thêm thành công thì làm gì?
-     return redirect('admin/sanpham/sua/'.$id)->with('thongbao','sửa thành công');
+     return redirect('admin/sanpham/danhsach')->with('thongbao','sửa thành công');
    }
 
    function getXoa($id) {

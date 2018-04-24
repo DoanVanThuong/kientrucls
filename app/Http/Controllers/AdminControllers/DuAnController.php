@@ -219,7 +219,7 @@ class DuAnController extends Controller
            
         }
         $duan->save();
-        return redirect('admin/duan/sua/'.$id)->with('thongbao','sửa thành công');
+        return redirect('admin/duan/danhsach')->with('thongbao','sửa thành công');
    }
   
 }

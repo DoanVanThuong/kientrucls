@@ -148,6 +148,6 @@ class LoaiDuAnController extends Controller
          }
 		$loaiduan->save();
 		//sau khi sửa xong trở lại trang sửa		
-		return redirect('admin/loaiduan/sua/'.$id.'/')->with('thongbao','sửa thành công');
+		return redirect('admin/loaiduan/danhsach')->with('thongbao','sửa thành công');
     }
 }

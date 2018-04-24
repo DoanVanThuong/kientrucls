@@ -145,7 +145,7 @@ class TinTucController extends Controller
          }         
 		$tintuc->save();
 		//thêm thành công thì làm gì?
-		return redirect('admin/tintuc/sua/'.$id)->with('thongbao','Sửa thành công');
+		return redirect('admin/tintuc/danhsach')->with('thongbao','Sửa thành công');
     }
 }
 

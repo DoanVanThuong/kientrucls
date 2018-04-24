@@ -135,7 +135,7 @@ class LoaiSanPhamController extends Controller
          }
 		$loaisanpham->save();
 		//sau khi sửa xong trở lại trang sửa		
-		return redirect('admin/loaisanpham/sua/'.$id.'/')->with('thongbao','sửa thành công');
+		return redirect('admin/loaisanpham/danhsach')->with('thongbao','sửa thành công');
     }
 
     function getXoa($id) {

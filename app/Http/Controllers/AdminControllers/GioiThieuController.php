@@ -32,6 +32,6 @@ class GioiThieuController extends Controller
         $gioithieu->title = $request->tieude;
         $gioithieu->content = $request->noidung;
         $gioithieu->save();   
-        return redirect('admin/gioithieu/sua/'.$id.'/')->with('thongbao','Sửa thành công');      
+        return redirect('admin/gioithieu/danhsach')->with('thongbao','Sửa thành công');      
     }
 }

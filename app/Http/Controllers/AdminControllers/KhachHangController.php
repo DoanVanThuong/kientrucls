@@ -132,6 +132,6 @@ class KhachHangController extends Controller
          }
 		$khachhang->save();
 		//sau khi sửa xong trở lại trang sửa		
-		return redirect('admin/khachhang/sua/'.$id.'/')->with('thongbao','sửa thành công');
+		return redirect('admin/khachhang/danhsach')->with('thongbao','sửa thành công');
     }
 }

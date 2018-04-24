@@ -227,6 +227,6 @@ class BoSuuTapController extends Controller
         
      }
      $bosuutap->save();
-     return redirect('admin/bosuutap/sua/'.$id)->with('thongbao','sửa thành công');
+     return redirect('admin/bosuutap/danhsach')->with('thongbao','sửa thành công');
 }
 }
