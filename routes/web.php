@@ -88,6 +88,7 @@ Route::group(['prefix' =>'admin'], function(){
     });
     Route::group(['prefix'=>'feedback'] , function(){
         Route::get('/danhsach','AdminControllers\FeedBackController@getDanhSach');
+        Route::post('/them','AdminControllers\FeedBackController@postThem');        
         Route::get('/sua/{id}','AdminControllers\FeedBackController@getSua');	
         Route::get('/xoa/{id}','AdminControllers\FeedBackController@getXoa');        	
     });

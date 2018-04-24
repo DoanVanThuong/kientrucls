@@ -27,7 +27,7 @@ class GioiThieuController extends Controller
 		], 
 		[
 			'tieude.required' =>'Bạn chưa nhập tiêu đề',
-            'noidung.required' => 'Bạn chưa nhập tiêu nội dung',
+            'noidung.required' => 'Bạn chưa nhập nội dung',
 		]);
         $gioithieu->title = $request->tieude;
         $gioithieu->content = $request->noidung;

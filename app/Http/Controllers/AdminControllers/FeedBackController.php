@@ -35,4 +35,21 @@ class FeedBackController extends Controller
         return redirect('admin/feedback/danhsach')->with('thongbao', 'Xóa thành công phản hồi của ');        
         
     }
+
+    function postThem(Request $request) {
+        $this->validate($request,
+			[
+                'noidung' =>'required',
+		], 
+		[
+            'noidung.required' => 'Bạn chưa nhập nội dung',
+		]);
+        $feedback = new Feedback();
+        $feedback->content = $request->noidung;
+        $feedback->customer = $request->customer;     
+        $feedback->top = false;
+        $feedback->save();      
+        return redirect('/lien-he')->with('thongbao', 'Gửi phản hồi thành công');        
+            
+    }
 }
