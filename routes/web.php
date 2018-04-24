@@ -14,9 +14,7 @@
 Route::get('/', 'PageController@TrangChu');
 Route::get('gioi-thieu', 'PageController@GioiThieu');
 
-Route::get('lien-he', function() {
-    return view('pages/contact');
-});
+Route::get('lien-he', 'PageController@LienHe');
 
 Route::get('bo-suu-tap', 'PageController@DuAn');
 //sản phẩm

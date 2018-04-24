@@ -8,6 +8,8 @@ use App\Http\Models\CategoryProductQModel;
 use App\Http\Models\ProjectQModel;
 use App\Http\Models\BaseModel;
 use App\Http\Models\NewsQModel;
+use App\Http\Models\adminModels\LienLac;
+
 
 
 
@@ -67,6 +69,13 @@ class PageController extends Controller
         $news = NewsQModel::get_news(4);
         return view('pages.news', [
             'news' => $news
+        ]);
+    }
+
+    function LienHe() {
+        $lienhe = LienLac::all()->first();
+        return view('pages.contact',[
+            'lienhe' =>$lienhe
         ]);
     }
 
