@@ -102,7 +102,7 @@
                 <div class="col-md-3 col-sm-6 mainf-item">
                     <h3 class="widget-title">Tin tức mới nhất</h3>
                     <div class="title-border"></div>
-                    @foreach($news as $item)
+                    @foreach($news_provide as $item)
                     <div class="row entry-post">
                         <div class="col-md-5 col-xs-3">
                             <img src="{{asset($item->img)}}" alt="" class="img-responsive">
@@ -117,19 +117,7 @@
                         </div>
                     </div>
                     @endforeach
-                    {{-- <div class="row entry-post">
-                        <div class="col-md-5 col-xs-3">
-                            <img src="img/home/f1.png" alt="" class="img-responsive">
-                        </div>
-                        <div class="col-md-7 col-xs-9">
-                            <h4 class="entry-title">
-                                <a href="#">Ngọc Trinh và căn phòng màu tím</a>
-                            </h4>
-                            <div class="entry-meta">
-                                <span class="meta-date">April 25, 2015</span>
-                            </div>
-                        </div>
-                    </div> --}}
+                    
                 </div>
             </div>
         </div>

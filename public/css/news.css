@@ -37,6 +37,9 @@
     margin-bottom: 5px;
     margin-top: 15px;
     text-align: justify;
+    height: 105px;
+    overflow: hidden;
+    word-break: break-word;
 }
 .des a {
     background:#fbc658;

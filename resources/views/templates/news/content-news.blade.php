@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row">
                 @foreach($news as $item)
-                <div class="col-md-6">
+                <div class="col-md-4">
                     <div class="content-wp">
                         <div class="img-news">
                             <img src="{{asset($item->img)}}" class="img-responsive" alt="">

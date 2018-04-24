@@ -23,6 +23,7 @@ class BaseModel extends Model {
     return DB::table('news as n')
     ->select('n.*')
     ->take($number)
+    ->limit($number)
     ->orderBy('id')
     ->get();
   }

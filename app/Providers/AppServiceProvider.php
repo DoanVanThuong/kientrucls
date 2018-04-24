@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
             'address' => $address,
             'about' => $about,
             'category' =>$category,
-            'news' => $news
+            'news_provide' => $news
             ]);
 
             

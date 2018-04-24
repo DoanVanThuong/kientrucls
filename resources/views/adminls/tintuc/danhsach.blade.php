@@ -32,7 +32,7 @@
                             <td class="text-center">{{$item->id}}</td>
                             <td>{{$item->title}}</td>                                                     
                             <td>{{$item->des}}</td>
-                            <td>{{!!$item->content!!}}</td>
+                            <td>{!!$item->content!!}</td>
                             <td>{{$item->slug}}</td>                   
                             <td style="width:30%">
                                 <img src="{{asset($item->img)}}" class="img-responsive" alt="">
