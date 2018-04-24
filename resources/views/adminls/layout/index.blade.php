@@ -39,7 +39,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" >
   <!-- Main Header -->
      @include('adminls.layout.header')
   <!-- Left side column. contains the logo and sidebar -->
@@ -53,7 +53,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     </section>
 
     <!-- Main content -->
-    <section class="content container-fluid">
+    <section class="content container-fluid" >
         @yield('content')
     </section>
     <!-- /.content -->
@@ -106,6 +106,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 @yield('define-js')
 
 <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
+<script src="{{asset('js/plugins/webflow.js')}}"></script>
 
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.

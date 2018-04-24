@@ -30,11 +30,11 @@
                 </div>
             </section>
             <!--Introduction-->
-            <section class="introduction">
+            <section class="introduction" data-ix="float-in-on-scroll">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
-                            <div class="author-wrap">
+                            <div class="author-wrap" data-ix="float-in-on-scroll-2">
                                 <img src="{{asset('img/about/author.png')}}" alt="" class="img-responsive">
                                 <div class="author-info">
                                     <h4 class="author-name">PETER KUELKER </h4>
@@ -42,10 +42,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8 col-sm-8">
+                        <div class="col-md-8 col-sm-8" data-ix="float-in-on-scroll-3">
                             <h2 class="home-title about-title">{{$about->title}}</h2>
                             <div class="about-hr"></div>
-                            <div class="intro-txt">
+                            <div class="intro-txt" data-ix="float-in-on-scroll">
                             <p>{!! $about->content !!}</p>
                             </div>
                         </div>

@@ -62,7 +62,7 @@
 @endsection
 @section('content')
     <div class="box-header">
-        <h1 class="box-title">
+        <h1 class="box-title" data-ix"floating">
             Các Bộ sưu tập của Kiến trúc LS
             <small>danh sách</small>
         </h1>
@@ -70,7 +70,7 @@
         &nbsp;
         <a href="admin/bosuutap/them" title="Thêm mới" data-toggle="tooltip" class="btn btn-info" role="button">Thêm ảnh</a>
     </div>
-    <div class="box box-default color-palette-box">
+    <div class="box box-default color-palette-box" data-ix="float-in-on-scroll-2">
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập biệt thự</h3>
         </div>
@@ -113,7 +113,7 @@
         <!-- /.box-body -->
     </div>
     {{-- biethu --}}
-    <div class="box box-default color-palette-box">
+    <div class="box box-default color-palette-box" data-ix="float-in-on-scroll-2">
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập nhà cổ</h3>
         </div>
@@ -157,7 +157,7 @@
         <!-- /.box-body -->
     </div>
     {{-- nha co --}}
-    <div class="box box-default color-palette-box">
+    <div class="box box-default color-palette-box" data-ix="float-in-on-scroll-3">
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu nhà lô</h3>
         </div>
@@ -201,7 +201,7 @@
         <!-- /.box-body -->
     </div>
     {{-- nha lo --}}
-    <div class="box box-default color-palette-box">
+    <div class="box box-default color-palette-box" data-ix="float-in-on-scroll-3">
             <div class="box-header with-border">
                 <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập văn phòng</h3>
             </div>
