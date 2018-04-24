@@ -100,6 +100,14 @@ Route::group(['prefix' =>'admin'], function(){
         Route::post('/sua/{id}','AdminControllers\KhachHangController@postSua');		
         Route::get('/xoa/{id}','AdminControllers\KhachHangController@getXoa');        	
     });
+    Route::group(['prefix'=>'inbox'] , function(){
+        Route::get('/danhsach','AdminControllers\InboxController@getDanhSach');
+        Route::get('/them','AdminControllers\InboxController@getThem');
+        Route::post('/them','AdminControllers\InboxController@postThem');
+        Route::get('/sua/{id}','AdminControllers\InboxController@getSua');
+        Route::post('/sua/{id}','AdminControllers\InboxController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\InboxController@getXoa');        	
+    });
 });
 
 // Route::get('admin', function(){
