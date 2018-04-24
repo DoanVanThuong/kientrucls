@@ -16,6 +16,14 @@ public static function get_news($num){
         ->paginate($num);
         
 }
+
+public static function get_news_without_paging($num){
+    return DB::table('news as n')
+        ->select('n.*')
+        ->take($num)
+        ->orderBy('id','date')
+        ->get();        
+}
 //lay tin bang dem
 public static function get_news_by_count(){
     return DB::table('news as n')
