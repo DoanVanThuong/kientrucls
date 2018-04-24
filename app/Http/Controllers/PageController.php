@@ -21,13 +21,15 @@ class PageController extends Controller
         $project = ProjectQModel::getProject(4);
         $feedback = ProjectQModel::getFeedback(3);
         $logo = ProjectQModel::getLogoCustomer();
+        $slide = BaseModel::getSlide(4);
 
        return view('pages.index', [
            'product' => $product,
            'project' => $project,
            'feedback' => $feedback,
            'logo' => $logo,
-           ]);
+           'slide' =>$slide
+        ]);
     }
 
     function GioiThieu() {

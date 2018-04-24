@@ -101,12 +101,15 @@ Route::group(['prefix' =>'admin'], function(){
         Route::get('/xoa/{id}','AdminControllers\KhachHangController@getXoa');        	
     });
     Route::group(['prefix'=>'inbox'] , function(){
-        Route::get('/danhsach','AdminControllers\InboxController@getDanhSach');
-        Route::get('/them','AdminControllers\InboxController@getThem');
-        Route::post('/them','AdminControllers\InboxController@postThem');
-        Route::get('/sua/{id}','AdminControllers\InboxController@getSua');
-        Route::post('/sua/{id}','AdminControllers\InboxController@postSua');		
-        Route::get('/xoa/{id}','AdminControllers\InboxController@getXoa');        	
+        Route::get('/danhsach','AdminControllers\InboxController@getDanhSach');      	
+    });
+    Route::group(['prefix'=>'slide'] , function(){
+        Route::get('/danhsach','AdminControllers\SlideController@getDanhSach');
+        Route::get('/them','AdminControllers\SlideController@getThem');
+        Route::post('/them','AdminControllers\SlideController@postThem');
+        Route::get('/sua/{id}','AdminControllers\SlideController@getSua');
+        Route::post('/sua/{id}','AdminControllers\SlideController@postSua');		
+        Route::get('/xoa/{id}','AdminControllers\SlideController@getXoa');        	
     });
 });
 

@@ -58,56 +58,22 @@
             </div>
             <!-- /.container-->
         </nav>
-
         <div class="skitter skitter-large">
             <ul>
+                @foreach($slide as $item)
                 <li>
                     <a href="#">
-                        <img src="{{asset('img/home/slider1.png')}}" class="cubeSize" class="img-responsive" />
+                        <img src="{{asset($item->img)}}" class="cubeSize img-responsive" />
                     </a>
                     <div class="label_text">
-                        <div class="hsubtitle">Kiến trúc LS</div>
+                        <div class="hsubtitle">{{$item->title}}</div>
                         <div class="hborder"></div>
-                        <h2 class="htitle">Cải thiện ngôi nhà
-                            <br> Và điều kiện sống</h2>
+                        <h2 class="htitle">{{$item->sub}}</h2>
                     </div>
                 </li>
-                <li>
-                    <a href="#">
-                        <img src="{{asset('img/home/slider2.png')}}" class="cubeSize" class="img-responsive" />
-                    </a>
-                    <div class="label_text">
-                        <div class="hsubtitle">Kiến trúc LS</div>
-                        <div class="hborder"></div>
-                        <h2 class="htitle">Không gian dù lớn hay nhỏ
-                            <br> Thì cũng cần phải đẹp</h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{asset('img/home/slider3.png')}}" class="cubeSize" class="img-responsive" />
-                    </a>
-                    <div class="label_text">
-                        <div class="hsubtitle">Kiến trúc LS</div>
-                        <div class="hborder"></div>
-                        <h2 class="htitle">Chăm sóc ngôi nhà của bạn
-                            <br> Là sứ mệnh của chúng tôi</h2>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="{{asset('img/home/slider3.png')}}" class="cubeSize" class="img-responsive" />
-                    </a>
-                    <div class="label_text">
-                        <div class="hsubtitle">Kiến trúc LS</div>
-                        <div class="hborder"></div>
-                        <h2 class="htitle">Chăm sóc ngôi nhà của bạn
-                            <br> Là sứ mệnh của chúng tôi</h2>
-                    </div>
-                </li>
+                @endforeach
             </ul>
         </div>
-
     </section>
 </header>
 <!--end Header-->

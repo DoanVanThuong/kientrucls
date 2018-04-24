@@ -105,16 +105,27 @@
                 </ul>
             </li>
             <li class="treeview {{$curr == 'inbox' ? 'active' : ''}}  ">
-                    <a href="javascript:void(0)"><i class="fa fa-inbox "></i> <span>Inbox</span>
-                        <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li class="{{$view == 'inbox_list' ? 'active' : ''}}  "><a href="admin/inbox/danhsach"><i class="fa fa-list "></i>Inbox</a></li>
-                        {{-- <li class="{{$view == 'inbox_add' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach"><i class="fa fa-plus "></i>Thêm </a></li>                     --}}
-                    </ul>
-                </li>
+                <a href="javascript:void(0)"><i class="fa fa-inbox "></i> <span>Inbox</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'inbox_list' ? 'active' : ''}}  "><a href="admin/inbox/danhsach"><i class="fa fa-list "></i>Inbox</a></li>
+                    {{-- <li class="{{$view == 'inbox_add' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach"><i class="fa fa-plus "></i>Thêm </a></li>                     --}}
+                </ul>
+            </li>
+            <li class="treeview {{$curr == 'slide' ? 'active' : ''}}  ">
+                <a href="javascript:void(0)"><i class="fa fa-picture-o "></i> <span>Slide</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li class="{{$view == 'slide_list' ? 'active' : ''}}  "><a href="admin/slide/danhsach"><i class="fa fa-list "></i>Xem</a></li>
+                    <li class="{{$view == 'slide_add' ? 'active' : ''}}  "><a href="admin/slide/them"><i class="fa fa-plus "></i>Thêm </a></li>                    
+                </ul>
+            </li>
       </ul>
       <!-- /.sidebar-menu -->
     </section>

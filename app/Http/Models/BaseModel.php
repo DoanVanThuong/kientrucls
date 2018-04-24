@@ -27,5 +27,12 @@ class BaseModel extends Model {
     ->orderBy('id')
     ->get();
   }
+
+  public static function getSlide($num) {
+    return DB::table('slide as s')
+    ->select('s.*')
+    ->take($num)
+    ->get();
+  }
 }
 ?>
