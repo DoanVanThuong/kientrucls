@@ -68,7 +68,9 @@
 
 
 /* news detail */
-
+.detail p .img {
+    margin:0px auto;
+}
 .news-relative {
     margin-top:100px;
 }
