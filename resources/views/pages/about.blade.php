@@ -46,7 +46,7 @@
                             <h2 class="home-title about-title">{{$about->title}}</h2>
                             <div class="about-hr"></div>
                             <div class="intro-txt">
-                            <p>{{$about->content}}</p>
+                            <p>{!! $about->content !!}</p>
                             </div>
                         </div>
     

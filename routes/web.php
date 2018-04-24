@@ -84,6 +84,10 @@ Route::group(['prefix' =>'admin'], function(){
         Route::get('/sua/{id}','AdminControllers\LienLacController@getSua');
         Route::post('/sua/{id}','AdminControllers\LienLacController@postSua');		
     });
+    Route::group(['prefix'=>'gioithieu'] , function(){
+        Route::get('/sua/{id}','AdminControllers\GioiThieuController@getSua');
+        Route::post('/sua/{id}','AdminControllers\GioiThieuController@postSua');		
+    });
     Route::group(['prefix'=>'feedback'] , function(){
         Route::get('/danhsach','AdminControllers\FeedBackController@getDanhSach');
         Route::get('/sua/{id}','AdminControllers\FeedBackController@getSua');	

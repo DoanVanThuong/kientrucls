@@ -11,6 +11,7 @@ use App\Http\Models\adminModels\TinTuc;
 use App\Http\Models\adminModels\KhachHang;
 use App\Http\Models\adminModels\FeedBack;
 use App\Http\Models\adminModels\LienLac;
+use App\Http\Models\adminModels\GioiThieu;
 
 use App\Http\Models\CategoryProductQModel;
 use App\Http\Models\ProjectQModel;
@@ -29,6 +30,7 @@ class AdminController extends Controller
         $member_newst = KhachHang::all();
         $feedback_newst = FeedBack::all();
         $contact = LienLac::all()->first();
+        $gioithieu = GioiThieu::all()->first();
         return view('adminls.dashboard', [
             'numProjects' =>$numProjects,
             'numGalleries' =>$numGalleries,
@@ -39,7 +41,8 @@ class AdminController extends Controller
             'project_newst' => $project_newst,
             'member_newst' => $member_newst,
             'feedback_newst' => $feedback_newst,
-            'contact' => $contact     
+            'contact' => $contact,
+            'gioithieu' => $gioithieu   
         ]);
     }
 }

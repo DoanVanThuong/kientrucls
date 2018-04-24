@@ -266,7 +266,7 @@
     </div>
     {{-- feedback - Customer --}}        
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="box box-primary">
                 <div class="box-header with-border">
                 <h3 class="box-title">Thông tin liên lạc</h3>
@@ -299,7 +299,30 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer text-center">
-                <a href="admin/lienlac/sua/{{$contact->id}}" class="uppercase">Chỉnh sửa thông tin</a>
+                <a href="admin/lienlac/sua/{{$contact->id}}" class="uppercase">Chỉnh sửa thông tin liên lạc</a>
+                </div>
+                <!-- /.box-footer -->
+            </div>
+        </div> 
+        <div class="col-md-6">
+            <div class="box box-primary">
+                <div class="box-header with-border">
+                <h3 class="box-title">Giới thiệu</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                </div>
+                </div>
+                <div class="box-body">
+                    <div class="content-about" style="height:245px; overflow: scroll">
+                            <h2>{{$gioithieu->title}}</h2>
+                            {!!$gioithieu->content!!}
+                    </div>              
+                </div>
+                <!-- /.box-body -->
+                <div class="box-footer text-center">
+                    <a href="admin/gioithieu/sua/{{$gioithieu->id}}" class="uppercase">Chỉnh sửa thông tin giới thiệu</a>
                 </div>
                 <!-- /.box-footer -->
             </div>
@@ -309,41 +332,3 @@
     
 @stop
 
-@section('define-js')
-<script>
-        var host = 'http://' + window.location.host;
-        var map;
-
-        function initMap(lat1 = 21.0681041, lng1 = 105.880896) {
-            var stonetile = {
-                lat: lat1,
-                lng: lng1
-            };
-            map = new google.maps.Map(document.getElementById('map'), {
-                center: stonetile,
-                zoom: 17
-            });
-            var img = {
-                url: 'img/home/icon-map.png',
-                size: new google.maps.Size(100, 100),
-                origin: new google.maps.Point(0, 0),
-                anchor: new google.maps.Point(50, 50),
-                scaledSize: new google.maps.Size(100, 78)
-            };
-            var marker = new google.maps.Marker({
-                position: stonetile,
-                draggable: false,
-                map: map,
-                icon: img
-            });
-        }
-        $('.item-branches').on('click', function () {
-            var lat1 = parseFloat($(this).data('l'));
-            var lng1 = parseFloat($(this).data('lg'));
-            initMap(lat1, lng1);
-            $('.item-branches').removeClass('active');
-            $(this).addClass('active');
-        });
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC2Qcxw_0TWYNdIrbrsuju7kjCWxlR5uGc&callback=initMap" async
-@stop
