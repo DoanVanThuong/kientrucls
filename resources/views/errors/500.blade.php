@@ -2,9 +2,9 @@
 @section('main-content')
     <div class="error-page">
         <div class="container">
-            <h2 class="headline text-yellow text-center text-danger" style="color:#f39c12 !important; font-size:140px"> 404</h2>
+            <h2 class="headline text-yellow text-center" style="color:#dd4b39 !important; font-size:140px"> 404</h2>
             <div class="error-content text-center">
-                <h3><i class="fa fa-warning text-yellow"></i> Oops! Trang bạn yêu cầu không khả dụng.</h3>       
+                <h3><i class="fa fa-warning text-yellow"></i> Oops! Có lỗi xảy ra, Vui lòng kiểm tra lại.</h3>       
                 <p>                   
                     <a href="/">Trở về trang chủ</a> 
                 </p>                 

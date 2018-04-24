@@ -23,20 +23,20 @@
                                     <tbody>
                                         <tr>
                                             <td class="body-left">Mã sản phẩm</td>
-                                            <td class="body-right">hrj77</td>
+                                            <td class="body-right">{{$dataProduct->code}}</td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Giá bán</td>
-                                            <td class="body-right" style="color:red">30.000.000 vnđ
+                                            <td class="body-right" style="color:red">{{$dataProduct->price }} vnđ
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Bảo hành</td>
-                                            <td class="body-right">12 tháng</td>
+                                            <td class="body-right">{{$dataProduct->guarantee}}</td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Tính trạng</td>
-                                            <td class="body-right">Còn hàng</td>
+                                            <td class="body-right">{{$dataProduct->status}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -52,25 +52,24 @@
                                     <tbody>
                                         <tr>
                                             <td class="body-left">Kích thước(cm)</td>
-                                            <td class="body-right body-right2">1240 x 900 x 850 </td>
+                                            <td class="body-right body-right2">{{$dataProduct->size}} </td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">mô tả</td>
-                                            <td class="body-right body-right2">Bộ ghế Sofa bọc Da cao cấp gồm 1 ghế băng và 2 ghế đơn.Ghế được thiết
-                                                kế tạo nhăn tự nhiên kết hợp với phần gỗ sơn được ốp nổi bên ngoài
+                                            <td class="body-right body-right2">{{$dataProduct->des}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Màu sắc</td>
-                                            <td class="body-right body-right2">0.96 sqm</td>
+                                            <td class="body-right body-right2"></td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Trọng lượng(kgs)</td>
-                                            <td class="body-right body-right2">21.8 Kgs</td>
+                                            <td class="body-right body-right2"></td>
                                         </tr>
                                         <tr>
                                             <td class="body-left">Chất liệu</td>
-                                            <td class="body-right body-right2">905 boxes</td>
+                                            <td class="body-right body-right2"></td>
                                         </tr>
 
                                     </tbody>

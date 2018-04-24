@@ -12,19 +12,10 @@
                     $n++;   
                 ?>            
                 <div class="slider-item">
-                    <div class="img-slider outside-bg">
-                    <img class="thumbnail" alt="" src="{{asset($item->img)}}">
-                        <div class="inside-bg">
-                            <img class="img-responsive" src="{{asset($item->img)}}">
-                            <div class="order-bar">
-                                <div class="order">
-                                <a href="/san-pham/{{$item->slug}}">View Detail</a>
-                                </div>
-                                <div class="arrow">
-                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="img-slider outside-bg" data-toogle=""tooltip>
+                    <a href="/san-pham/{{$item->slug}}" title="{{$item->name}}">
+                            <img class="thumbnail" alt="" src="{{asset($item->img)}}">                     
+                      </a>
                     </div>
                     <div class="text-item">
                         <p class="text1">{{$item->name}}</p>
