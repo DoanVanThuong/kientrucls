@@ -2,6 +2,7 @@
 @extends('master-page')
 @section('title')Liên hệ | Kiến trúc LS
 @stop
+
 @section('define-css')
 <link rel="stylesheet" href="{{asset('css/header-page.css')}}">
 <link rel="stylesheet" href="{{asset('css/contact.css')}}">
