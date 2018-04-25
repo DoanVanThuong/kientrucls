@@ -221,8 +221,11 @@
                 <div class="box-header">
                     <i class="fa fa-comments-o"></i>
                     <h3 class="box-title">Phản hồi mới nhất</h3>
-                    <div class="box-tools pull-right" data-toggle="tooltip" title="Status">                   
-                    </div>
+                    <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                            </button>
+                            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                          </div>
                 </div>
                 <div class="box-body chat" id="chat-box">
                     @foreach($feedback_newst as $item)

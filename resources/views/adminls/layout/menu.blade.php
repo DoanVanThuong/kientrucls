@@ -5,7 +5,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{asset('img\projects\nhaco\rWKp_004.JPG')}}" class="img-circle" alt="User Image">
+          <img src="{{asset('img/default-user.png')}}" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           @if(Auth::user())
@@ -30,7 +30,7 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
             <!-- Optionally, you can add icons to the links -->
-            <li  class="{{$view == 'dashboard' ? 'active' : ''}}  "><a href="/admin"><i class="fa fa-desktop"></i> <span>Trang quản trị</span></a></li>
+            <li  class="{{$view == 'dashboard' ? 'active' : ''}}  "><a href="/admin/ls"><i class="fa fa-desktop"></i> <span>Trang quản trị</span></a></li>
             <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
             <a href="javascript:void(0)   "><i class="fa fa-industry "></i> <span>Loại sản phẩm</span>
                 <span class="pull-right-container">
@@ -129,7 +129,7 @@
                 </ul>
             </li>
             <li><a href="/admin/dangky"><i class="fa fa-user"></i> <span>Thêm user</span></a></li>
-            <li><a href="/admin/dangxuat"><i class="fa fa-logout"></i> <span>Thoát</span></a></li>
+            <li><a href="/admin/dangxuat"><i class="fa fa-sign-out"></i> <span>Thoát</span></a></li>
             
       </ul>
       <!-- /.sidebar-menu -->
