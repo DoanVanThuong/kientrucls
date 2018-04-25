@@ -53,7 +53,7 @@
                                         <a href="/bo-suu-tap">Công trình kiến trúc</a>
                                     </li>
                                     <li>
-                                        <a href="javascript:void(0)">Công trình nội thất</a>                                        
+                                        <a href="/cong-trinh-noi-that">Công trình nội thất</a>                                        
                                     </li>                               
                                 </ul>
                             </li>

@@ -17,6 +17,8 @@ Route::get('gioi-thieu', 'PageController@GioiThieu');
 Route::get('lien-he', 'PageController@LienHe');
 
 Route::get('bo-suu-tap', 'PageController@DuAn');
+Route::get('cong-trinh-noi-that', 'PageController@CongTrinhNoiThat');
+
 //sản phẩm
 Route::group(['prefix' =>'san-pham'] ,function(){
 	Route::get('/','PageController@SanPham');

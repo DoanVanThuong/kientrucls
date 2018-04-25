@@ -67,6 +67,13 @@ class PageController extends Controller
         ]);
     }
 
+    function CongTrinhNoiThat() {
+        $congtrinhnoithat = ProjectQModel::getProjectByCategory(5);
+        return view('pages.gallery_furniture', [
+            'congtrinhnoithat' => $congtrinhnoithat
+        ]);
+    }
+
     function TinTuc() {
         $news = NewsQModel::get_news(4);
         return view('pages.news', [
