@@ -45,7 +45,7 @@
                                 <a href="/tin-tuc">Tin Tức</a>                                
                             </li>
                             <li class="dropdown">
-                                <a href="#">Bộ Sưu tập 
+                                <a href="#" class="sub">Bộ Sưu tập 
                                     <span class="caret"></span>
                                 </a>
                                 <ul class="submenu list-unstyled" style="display:none" >

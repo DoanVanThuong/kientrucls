@@ -1,5 +1,5 @@
 (function () {
-    $('.dropdown').click(function (e) {
+    $('.dropdown a.sub').click(function (e) {
         e.preventDefault();
         $('.submenu').slideToggle();
     });
