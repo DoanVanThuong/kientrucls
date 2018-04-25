@@ -27,6 +27,19 @@ body {
     width: 100% !important;
 }
 
+.submenu li a {
+    color:#d2d2d2;
+    font-size:16px;
+}
+.submenu li {
+    padding:4px 4px;
+    
+}
+.submenu li:hover a{
+    color:red !important;
+    padding-bottom: 5px;
+    transition:all .2s;   
+}
 
 .navbar-offcanvas.in {
     background-color: #f8f8f8

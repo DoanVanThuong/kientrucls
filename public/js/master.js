@@ -1,5 +1,8 @@
 (function () {
-
+    $('.dropdown').click(function (e) {
+        e.preventDefault();
+        $('.submenu').slideToggle();
+    });
     //menu
     $(window).scroll(function () {
         var currentHeight = $(document).scrollTop();
@@ -65,7 +68,5 @@
         $('html,body').animate({ scrollTop: 0 }, 800);
     });
 
-    $('.dropdown').click(function () {
-        alert('s');
-    });
+
 })();
