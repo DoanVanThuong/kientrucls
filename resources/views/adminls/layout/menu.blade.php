@@ -128,7 +128,8 @@
                     <li class="{{$view == 'slide_add' ? 'active' : ''}}  "><a href="admin/slide/them"><i class="fa fa-plus "></i>Thêm </a></li>                    
                 </ul>
             </li>
-            <li><a href="/dangxuat"><i class="fa fa-logout"></i> <span>Thoát</span></a></li>
+            <li><a href="/admin/dangky"><i class="fa fa-user"></i> <span>Thêm user</span></a></li>
+            <li><a href="/admin/dangxuat"><i class="fa fa-logout"></i> <span>Thoát</span></a></li>
             
       </ul>
       <!-- /.sidebar-menu -->

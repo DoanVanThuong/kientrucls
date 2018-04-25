@@ -58,7 +58,7 @@
             </form>          
            <a href="javascript:void(0) ">Quên mật khẩu</a>
             <br>
-            <a href="/dangky" class="text-center">Đăng kí user mới</a>
+            <a href="/admin/dangky" class="text-center">Đăng kí user mới</a>
 
         </div>
         <!-- /.login-box-body -->

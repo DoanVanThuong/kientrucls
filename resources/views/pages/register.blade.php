@@ -65,7 +65,7 @@
                 {!!csrf_field()!!}            
             </form>          
             <br>
-            <a href="/dangnhap" class="text-center">Đã có tài khoản</a>
+            <a href="/admin/dangnhap" class="text-center">Đã có tài khoản</a>
         </div>
         <!-- /.login-box-body -->
     </div>

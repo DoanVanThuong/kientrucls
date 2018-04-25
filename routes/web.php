@@ -30,21 +30,20 @@ Route::group(['prefix' =>'tin-tuc'] ,function(){
 	Route::get('/','PageController@TinTuc');
 	Route::get('/{slug}','NewsController@ViewNewsDetail');
 });
-//URL dang nhap admin
-Route::get('/dangky','AdminControllers\UserController@getDangKy');
-Route::post('/dangky','AdminControllers\UserController@postDangKy');
-Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
-Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
+
 
 Route::get('/admin','AdminControllers\UserController@getDangNhap');
 Route::post('/admin','AdminControllers\UserController@postDangNhap');
 
-
-Route::get('/dangxuat','AdminControllers\UserController@getDangXuat');
-
-
 //adimin
 Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function(){
+        //URL dang nhap admin
+        Route::get('/dangky','AdminControllers\UserController@getDangKy');
+        Route::post('/dangky','AdminControllers\UserController@postDangKy');
+        Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
+        Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
+        Route::get('/dangxuat','AdminControllers\UserController@getDangXuat');
+        
         route::get('/ls','AdminControllers\AdminController@getDanhSach');
         Route::group(['prefix'=>'loaisanpham'] , function(){
             Route::get('/danhsach','AdminControllers\LoaiSanPhamController@getDanhSach');
