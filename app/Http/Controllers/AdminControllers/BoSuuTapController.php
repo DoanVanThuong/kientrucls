@@ -144,13 +144,9 @@ class BoSuuTapController extends Controller
      //validate
      $this->validate($request , 
      [
-         'tenloai' =>'required|unique:gallery,name|min:3|max:100',
+        
      ], 
      [
-         'tenloai.required' =>'Bạn chưa nhập tên dự án',
-         'tenloai.unique' =>'tên dự án đã tồn tại',
-         'tenloai.min' => 'tên dự án phải có độ dài từ 3 cho đến 100 ký tự',
-         'tenloai.max' => 'tên dự án phải có độ dài từ 3 cho đến 100 ký tự',
      ]);
      $bosuutap = BoSuuTap::find($id);
      if(!$bosuutap) {

@@ -23,6 +23,7 @@
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-body">
+                            <h4 class="text-center text-primary">{{$item->name}}</h4>
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <img src="{{asset($item->img)}}" class="thumb img-responsive" alt="">
                             </div>
