@@ -43,8 +43,7 @@ Route::get('/dangxuat','AdminControllers\UserController@getDangXuat');
 
 //adimin
 Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function(){
-    route::group(['prefix'=>'ls'] ,function() {
-        route::get('/','AdminControllers\AdminController@getDanhSach');
+        route::get('/ls','AdminControllers\AdminController@getDanhSach');
         Route::group(['prefix'=>'loaisanpham'] , function(){
             Route::get('/danhsach','AdminControllers\LoaiSanPhamController@getDanhSach');
             Route::get('/them','AdminControllers\LoaiSanPhamController@getThem');
@@ -126,7 +125,6 @@ Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function
             Route::post('/sua/{id}','AdminControllers\SlideController@postSua');		
             Route::get('/xoa/{id}','AdminControllers\SlideController@getXoa');        	
         });
-    });
 });
 
 // Route::get('admin', function(){

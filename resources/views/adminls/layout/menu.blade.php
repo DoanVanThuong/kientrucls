@@ -30,7 +30,7 @@
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
             <!-- Optionally, you can add icons to the links -->
-            <li  class="{{$view == 'dashboard' ? 'active' : ''}}  "><a href="/admin/ls"><i class="fa fa-desktop"></i> <span>Trang quản trị</span></a></li>
+            <li  class="{{$view == 'dashboard' ? 'active' : ''}}  "><a href="/admin"><i class="fa fa-desktop"></i> <span>Trang quản trị</span></a></li>
             <li class="treeview {{$curr == 'categories' ? 'active' : ''}}  ">
             <a href="javascript:void(0)   "><i class="fa fa-industry "></i> <span>Loại sản phẩm</span>
                 <span class="pull-right-container">
@@ -38,8 +38,8 @@
                 </span>
             </a>
             <ul class="treeview-menu">
-                <li class="{{$view == 'categories_list' ? 'active' : ''}}  "><a href="admin/ls/loaisanpham/danhsach"><i class="fa fa-list "></i>Danh sách</a></li>
-                <li class="{{$view == 'categories_add' ? 'active' : ''}} "><a href="admin/ls/loaisanpham/them"><i class="fa fa-plus "></i>Thêm loại SP</a></li>
+                <li class="{{$view == 'categories_list' ? 'active' : ''}}  "><a href="admin/loaisanpham/danhsach"><i class="fa fa-list "></i>Danh sách</a></li>
+                <li class="{{$view == 'categories_add' ? 'active' : ''}} "><a href="admin/loaisanpham/them"><i class="fa fa-plus "></i>Thêm loại SP</a></li>
             </ul>
             </li>
             <li class="treeview {{$curr == 'products' ? 'active' : ''}}  ">
@@ -49,8 +49,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'products_list' ? 'active' : ''}}  "><a href="admin/ls/sanpham/danhsach"><i class="fa fa-list "></i>Danh sách</a></li>
-                    <li class="{{$view == 'products_add' ? 'active' : ''}} "><a href="admin/ls/sanpham/them"><i class="fa fa-plus "></i>Thêm SP</a></li>
+                    <li class="{{$view == 'products_list' ? 'active' : ''}}  "><a href="admin/sanpham/danhsach"><i class="fa fa-list "></i>Danh sách</a></li>
+                    <li class="{{$view == 'products_add' ? 'active' : ''}} "><a href="admin/sanpham/them"><i class="fa fa-plus "></i>Thêm SP</a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'news' ? 'active' : ''}}  ">
@@ -60,8 +60,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'news_list' ? 'active' : ''}}  "><a href="admin/ls/tintuc/danhsach"><i class="fa fa-list "></i>Danh sách tin</a></li>
-                    <li class="{{$view == 'news_add' ? 'active' : ''}} "><a href="admin/ls/tintuc/them"><i class="fa fa-plus "></i>Thêm tin mới</a></li>
+                    <li class="{{$view == 'news_list' ? 'active' : ''}}  "><a href="admin/tintuc/danhsach"><i class="fa fa-list "></i>Danh sách tin</a></li>
+                    <li class="{{$view == 'news_add' ? 'active' : ''}} "><a href="admin/tintuc/them"><i class="fa fa-plus "></i>Thêm tin mới</a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'project_category' ? 'active' : ''}}  ">
@@ -71,7 +71,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'project_category_list' ? 'active' : ''}}  "><a href="admin/ls/loaiduan/danhsach"><i class="fa fa-list "></i>Danh sách loại dự án</a></li>
+                    <li class="{{$view == 'project_category_list' ? 'active' : ''}}  "><a href="admin/loaiduan/danhsach"><i class="fa fa-list "></i>Danh sách loại dự án</a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'project' ? 'active' : ''}}  ">
@@ -81,7 +81,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'project_list' ? 'active' : ''}}  "><a href="admin/ls/duan/danhsach"><i class="fa fa-list "></i>Danh sách dự án</a></li>
+                    <li class="{{$view == 'project_list' ? 'active' : ''}}  "><a href="admin/duan/danhsach"><i class="fa fa-list "></i>Danh sách dự án</a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'gallery' ? 'active' : ''}}  ">
@@ -91,7 +91,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'gallery_list' ? 'active' : ''}}  "><a href="admin/ls/bosuutap/danhsach"><i class="fa fa-list "></i>Danh sách </a></li>
+                    <li class="{{$view == 'gallery_list' ? 'active' : ''}}  "><a href="admin/bosuutap/danhsach"><i class="fa fa-list "></i>Danh sách </a></li>
                 </ul>
             </li>
             <li class="treeview {{$curr == 'customer' ? 'active' : ''}}  ">
@@ -101,8 +101,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'customer_list' ? 'active' : ''}}  "><a href="admin/ls/khachhang/danhsach"><i class="fa fa-list "></i>Danh sách khách hàng</a></li>
-                    <li class="{{$view == 'customer_add' ? 'active' : ''}}  "><a href="admin/ls/khachhang/danhsach"><i class="fa fa-plus "></i>Thêm </a></li>                    
+                    <li class="{{$view == 'customer_list' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach"><i class="fa fa-list "></i>Danh sách khách hàng</a></li>
+                    <li class="{{$view == 'customer_add' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach"><i class="fa fa-plus "></i>Thêm </a></li>                    
                 </ul>
             </li>
             <li class="treeview {{$curr == 'inbox' ? 'active' : ''}}  ">
@@ -112,7 +112,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'inbox_list' ? 'active' : ''}}  "><a href="admin/ls/inbox/danhsach"><i class="fa fa-list "></i>Inbox</a></li>
+                    <li class="{{$view == 'inbox_list' ? 'active' : ''}}  "><a href="admin/inbox/danhsach"><i class="fa fa-list "></i>Inbox</a></li>
                     {{-- <li class="{{$view == 'inbox_add' ? 'active' : ''}}  "><a href="admin/khachhang/danhsach"><i class="fa fa-plus "></i>Thêm </a></li>                     --}}
                 </ul>
             </li>
@@ -123,8 +123,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'slide_list' ? 'active' : ''}}  "><a href="admin/ls/slide/danhsach"><i class="fa fa-list "></i>Xem</a></li>
-                    <li class="{{$view == 'slide_add' ? 'active' : ''}}  "><a href="admin/ls/slide/them"><i class="fa fa-plus "></i>Thêm </a></li>                    
+                    <li class="{{$view == 'slide_list' ? 'active' : ''}}  "><a href="admin/slide/danhsach"><i class="fa fa-list "></i>Xem</a></li>
+                    <li class="{{$view == 'slide_add' ? 'active' : ''}}  "><a href="admin/slide/them"><i class="fa fa-plus "></i>Thêm </a></li>                    
                 </ul>
             </li>
             <li><a href="/dangxuat"><i class="fa fa-logout"></i> <span>Thoát</span></a></li>
