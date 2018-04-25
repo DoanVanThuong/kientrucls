@@ -1,10 +1,9 @@
 <?php $curr = 'gallery';?>
 @extends('master-page')
-@section('title')Giới thiệu | Kiến trúc LS
+@section('title')Bộ sưu tập | Kiến trúc LS
 @stop
 @section('define-css')
 <link rel="stylesheet" href="{{asset('css/product-list.css')}}">
-
 <link rel="stylesheet" href="{{asset('css/header-page.css')}}">
 <link rel="stylesheet" href="{{asset('css/gallery.css')}}">
 @stop
@@ -15,7 +14,7 @@
         <section class="gallery-header clearfix">
             <div class="container">
                 <div class="left">
-                    <h2 class="gallery-header-title">Bộ sưu tập</h2>
+                    <h2 class="gallery-header-title">Bộ sưu tập công trình kiến trúc</h2>
                 </div>
                 <ul class="breadcumb-menu list-inline">
                     <li>
@@ -33,7 +32,7 @@
         <!--our-collection our-collection our-collection our-collection  -->
         <section class="our-collection">
             <div class="our-collection-wp">
-                <h3 class="our-collection-title">Các dự án của Kiến trúc LS </h3>
+                <h3 class="our-collection-title">Các công trình của Kiến trúc LS </h3>
                 <p class="clearfix">Từ thiết kế ban đầu cho đến hoàn thành một cách nhanh chóng và chính xác</p>
                 <ul class="list-inline collection-list">
                     <li id="bungalows">

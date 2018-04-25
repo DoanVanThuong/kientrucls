@@ -1,4 +1,4 @@
-<section class="gallery-banner-content">
+<section class="gallery-banner-content" id="banner-3">
         <div class="gallery-banner two-story-banner">
             <div class="banner-cover">
                 <div class="banner-info-center">
