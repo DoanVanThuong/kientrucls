@@ -14,7 +14,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="thumb-wp">
                         <img src="{{asset($item->img)}}" class="thumb img-responsive" alt="">
-                        <button type="button" class="btn-info" data-toggle="modal" data-target="#bietthu-{{$item->id}}">View project</button>
+                        <button type="button" class="btn-info" data-toggle="modal" data-target="#bietthu-{{$item->id}}">Xem dự án</button>
                     </div>
                 </div>
                 <!-- Modal bungalows1-->

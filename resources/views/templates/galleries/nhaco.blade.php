@@ -14,7 +14,7 @@
                 <div class="col-md-3 col-sm-6">
                     <div class="thumb-wp">
                         <img src="{{asset($item->img)}}" class=" thumb img-responsive" alt="">
-                    <button type="button" class="btn-info" data-toggle="modal" data-target="#nhaco{{$item->id}}">View project</button>
+                    <button type="button" class="btn-info" data-toggle="modal" data-target="#nhaco{{$item->id}}">Xem dự án</button>
                     </div>
                 </div>
                 <!-- Modal comercial1-->
@@ -23,6 +23,7 @@
                         <!-- Modal content-->
                         <div class="modal-content">
                             <div class="modal-body">
+                            <h4 class="text-center text-primary">{{$item->name}}</h4>                                
                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 <img src="{{asset($item->img)}}" class="thumb img-responsive" alt="">
                             </div>
