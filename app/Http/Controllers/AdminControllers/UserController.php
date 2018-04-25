@@ -77,7 +77,7 @@ class UserController extends Controller
 		else
 		{
 			//nếu không thành công thì về lại đăng nhập
-			return redirect('dangnhap')->with('thongbao','Sai tài khoản hoặc mật khẩu');
+			return redirect('admin/dangnhap')->with('thongbao','Sai tài khoản hoặc mật khẩu');
 		}
 	}
 }

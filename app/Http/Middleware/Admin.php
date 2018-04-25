@@ -23,7 +23,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if (!User::checkAuth()) {
+        if (!User::checkAuth(Auth::id())) {
             if ($request->ajax() || $request->wantsJson()) {
                 return response('Unauthorized.', 401);
             } else {

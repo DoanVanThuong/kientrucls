@@ -29,10 +29,14 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    public static function checkAuth() {
+    public static function checkAuth($id) {
         $auth = Auth::id();
         if($auth) {
-            return true;
+            $role = User::find($id)->role;
+            if($role == 1) {
+                return true;
+            }
+            return false;
         }
         else return false;
     }
