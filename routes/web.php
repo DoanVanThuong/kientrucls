@@ -13,12 +13,13 @@
 
 Route::get('/', 'PageController@TrangChu');
 Route::get('gioi-thieu', 'PageController@GioiThieu');
-
 Route::get('lien-he', 'PageController@LienHe');
+//bộ sưu tập
+Route::group(['prefix' =>'bo-suu-tap'], function(){
+    Route::get('cong-trinh-kien-truc', 'PageController@DuAn');
+    Route::get('cong-trinh-noi-that', 'PageController@CongTrinhNoiThat');
 
-Route::get('bo-suu-tap', 'PageController@DuAn');
-Route::get('cong-trinh-noi-that', 'PageController@CongTrinhNoiThat');
-
+});
 //sản phẩm
 Route::group(['prefix' =>'san-pham'] ,function(){
 	Route::get('/','PageController@SanPham');
@@ -29,7 +30,6 @@ Route::group(['prefix' =>'tin-tuc'] ,function(){
 	Route::get('/','PageController@TinTuc');
 	Route::get('/{slug}','NewsController@ViewNewsDetail');
 });
-
 //URL dang nhap admin
 Route::get('/dangky','AdminControllers\UserController@getDangKy');
 Route::post('/dangky','AdminControllers\UserController@postDangKy');

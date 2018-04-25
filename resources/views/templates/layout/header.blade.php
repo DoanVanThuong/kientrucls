@@ -50,10 +50,10 @@
                                 </a>
                                 <ul class="submenu list-unstyled" style="display:none" >
                                     <li>
-                                        <a href="/bo-suu-tap">Công trình kiến trúc</a>
+                                        <a href="/bo-suu-tap/cong-trinh-kien-truc">Công trình kiến trúc</a>
                                     </li>
                                     <li>
-                                        <a href="/cong-trinh-noi-that">Công trình nội thất</a>                                        
+                                        <a href="/bo-suu-tap/cong-trinh-noi-that">Công trình nội thất</a>                                        
                                     </li>                               
                                 </ul>
                             </li>

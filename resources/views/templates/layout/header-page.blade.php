@@ -38,11 +38,11 @@
                         width: 155px;
                         background: rgb(33, 167, 72);z-index:3" >
                             <li>
-                                <a href="/bo-suu-tap">Công trình kiến trúc</a>
+                                <a href="/bo-suu-tap/cong-trinh-kien-truc">Công trình kiến trúc</a>
                             </li>
                             <li>
-                                <a href="/cong-trinh-noi-that">Công trình nội thất</a>                                        
-                            </li>                               
+                                <a href="/bo-suu-tap/cong-trinh-noi-that">Công trình nội thất</a>                                        
+                            </li>                                 
                         </ul>
                     </li>
                     <li class="{{$curr == 'contact' ? 'active' : '' }}">
