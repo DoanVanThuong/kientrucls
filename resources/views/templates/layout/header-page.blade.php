@@ -30,8 +30,20 @@
                     <li class="{{$curr == 'news' ? 'active' : '' }}">
                         <a href="/tin-tuc">Tin Tức</a>
                     </li>
-                    <li class="{{$curr == 'gallery' ? 'active' : ''}}">
-                        <a href="/bo-suu-tap">Bộ Sưu tập</a>
+                    <li class="dropdown {{$curr == 'gallery' ? 'active' : ''}}">
+                         <a href="#" class="sub">Bộ Sưu tập 
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="submenu list-unstyled" style="display:none;position: absolute;
+                        width: 155px;
+                        background: rgb(33, 167, 72);z-index:3" >
+                            <li>
+                                <a href="/bo-suu-tap">Công trình kiến trúc</a>
+                            </li>
+                            <li>
+                                <a href="/cong-trinh-noi-that">Công trình nội thất</a>                                        
+                            </li>                               
+                        </ul>
                     </li>
                     <li class="{{$curr == 'contact' ? 'active' : '' }}">
                         <a href="/lien-he">Liên Hệ</a>
