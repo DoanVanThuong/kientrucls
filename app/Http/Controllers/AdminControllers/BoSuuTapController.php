@@ -134,6 +134,15 @@ class BoSuuTapController extends Controller
                         }
                         $bosuutap->img = strtolower('img/gallery/vanphong/'.$hinh);
                     }
+                    if($request->loaiduan == 5)
+                    {
+                        $file->move('img/gallery/noithat', $hinh);
+                        //neu random trung thi chay lai random lai
+                        while (file_exists("img/gallery/noithat".$hinh)) {
+                            $hinh = str_random(4)."_".$tenhinh;
+                        }
+                        $bosuutap->img = strtolower('img/gallery/noithat/'.$hinh);
+                    }
             }
             else
             return redirect('admin/bosuutap/them')->with('loi','Lỗi, vui lòng kiểm tra lại');                
@@ -143,7 +152,7 @@ class BoSuuTapController extends Controller
             $bosuutap->img = " ";
         }
         $bosuutap->save();
-        return redirect('admin/bosuutap/them')->with('thongbao','thêm thành công');
+        return redirect()->back()->with('thongbao','thêm thành công');
    }
 
    function postSua(Request $request, $id) {
@@ -220,6 +229,16 @@ class BoSuuTapController extends Controller
                      }
                      $bosuutap->img = strtolower('img/gallery/vanphong/'.$hinh);
                  }
+                 if($request->loaiduan == 5)
+                 {
+                     unlink($bosuutap->img);                                                                 
+                     $file->move('img/gallery/noithat', $hinh);
+                     //neu random trung thi chay lai random lai
+                     while (file_exists("img/gallery/noithat".$hinh)) {
+                         $hinh = str_random(4)."_".$tenhinh;
+                     }
+                     $bosuutap->img = strtolower('img/gallery/noithat/'.$hinh);
+                 }
          }
          else
          return redirect('admin/bosuutap/sua/'.$id)->with('loi','Lỗi, vui lòng kiểm tra lại');                
@@ -229,6 +248,6 @@ class BoSuuTapController extends Controller
         
      }
      $bosuutap->save();
-     return redirect('admin/bosuutap/danhsach')->with('thongbao','sửa thành công');
+     return redirect()->back()->with('thongbao','sửa thành công');
 }
 }

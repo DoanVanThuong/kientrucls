@@ -21,7 +21,15 @@
         .color-palette:hover span {
           display: block;
         }
-    
+        .color-palette-set:hover {
+        cursor: pointer;
+        }
+        .img-wp img{
+            transition: .5s;
+        }
+        .color-palette-set:hover img{
+        transform: scale(1.1);
+        }
         .color-palette-box h4 {
           position: absolute;
           top: 100%;
@@ -40,7 +48,7 @@
 @stop
 
 @section('content')
-    <div class="row"  data-ix="float-in-on-scroll">
+    <div class="row"  >
         <div class="col-lg-3 col-xs-6">
             <!-- small box -->
             <div class="small-box bg-aqua">
@@ -97,13 +105,13 @@
         </div>
     </div>
     {{-- /sum --}}
-    <div class="row"  data-ix="float-in-on-scroll">
+    <div class="row" >
         <div class="box-header">
             <h1 class="box-title">
                 Thông tin liên hệ
             </h1>
         </div>
-        <div class="col-md-7" data-ix="float-in-on-scroll-2"> 
+        <div class="col-md-7" > 
             <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">Tin tức - xu hướng mới nhất</h3>
@@ -137,7 +145,7 @@
                 <!-- /.box-footer -->
             </div>              
         </div>
-        <div class="col-md-5" data-ix="float-in-on-scroll-3" >
+        <div class="col-md-5" >
             <div class="box box-primary">
                 <div class="box-header with-border">
                   <h3 class="box-title">Những sản phẩm mới nhất</h3>
@@ -174,8 +182,8 @@
         </div>
     </div>
     {{--/ news & product --}}
-    <div class="row" data-ix="float-in-on-scroll">
-        <div class="col-md-12" data-ix="float-in-on-scroll-2">
+    <div class="row" >
+        <div class="col-md-12" >
             <div class="box box-default color-palette-box">
                 <div class="box-header with-border">
                     <h3 class="box-title"><i class="fa fa-tag"></i>Dự án mới nhất</h3>
@@ -186,7 +194,7 @@
                       </div>
                 </div>
                 <div class="box-body">
-                    <div class="row">
+                    <div class="row ">
                         @foreach($project_newst as $item)
                         <div class="col-sm-3 col-md-3">
                             <h4 class="text-center bg-light-blue">{{$item->name}}</h4>       
@@ -206,9 +214,9 @@
         </div>
     </div>
     {{-- /dự án mới nhất --}}    
-    <div class="row" data-ix="float-in-on-scroll">
+    <div class="row" >
         {{-- new Feedback --}}
-        <div class="col-md-6" data-ix="float-in-on-scroll-2">
+        <div class="col-md-6" >
             <div class="box box-success">
                 <div class="box-header">
                     <i class="fa fa-comments-o"></i>
@@ -236,7 +244,7 @@
             </div>
         </div>
         <!-- USERS LIST -->        
-        <div class="col-md-6" data-ix="float-in-on-scroll-3">
+        <div class="col-md-6" >
             <div class="box box-danger">
                 <div class="box-header with-border">
                   <h3 class="box-title">Khách hàng mới</h3>
@@ -265,8 +273,8 @@
         </div>
     </div>
     {{-- feedback - Customer --}}        
-    <div class="row" data-ix="float-in-on-scroll">
-        <div class="col-md-6" data-ix="float-in-on-scroll-2">
+    <div class="row" >
+        <div class="col-md-6" >
             <div class="box box-primary">
                 <div class="box-header with-border">
                 <h3 class="box-title">Thông tin liên lạc</h3>
@@ -304,7 +312,7 @@
                 <!-- /.box-footer -->
             </div>
         </div> 
-        <div class="col-md-6" data-ix="float-in-on-scroll-3">
+        <div class="col-md-6" >
             <div class="box box-primary">
                 <div class="box-header with-border">
                 <h3 class="box-title">Giới thiệu</h3>

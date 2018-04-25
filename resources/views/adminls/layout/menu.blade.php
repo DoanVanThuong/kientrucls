@@ -91,8 +91,8 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="{{$view == 'gallery_list' ? 'active' : ''}}  "><a href="admin/bosuutap/danhsach"><i class="fa fa-list "></i>Danh sách </a></li>
-                    <li class="{{$view == 'gallery_furniture_list' ? 'active' : ''}}  "><a href="admin/bosuutap/congtrinhnoithat"><i class="fa fa-list "></i>Danh sách </a></li>                    
+                    <li class="{{$view == 'gallery_list' ? 'active' : ''}}  "><a href="admin/bosuutap/danhsach"><i class="fa fa-list "></i>Công trình kiến trúc </a></li>
+                    <li class="{{$view == 'gallery_furniture_list' ? 'active' : ''}}  "><a href="admin/bosuutap/congtrinhnoithat"><i class="fa fa-list "></i>Công trình nội thất</a></li>                    
                 </ul>
             </li>
             <li class="treeview {{$curr == 'customer' ? 'active' : ''}}  ">

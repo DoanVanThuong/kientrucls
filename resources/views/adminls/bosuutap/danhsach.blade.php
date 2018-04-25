@@ -289,5 +289,4 @@
         {{-- van phong --}}
 @stop
 @section('define-js')
-    $();
 @stop
