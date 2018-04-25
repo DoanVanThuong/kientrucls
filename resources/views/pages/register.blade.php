@@ -42,7 +42,14 @@
         <div class="login-box-body">
             @include('adminls.functions.alert')            
             <p class="login-box-msg">Đăng kí user mới</p>
-            <form action="/dangky" method="post" enctype="multipart/form-data" novalidate>
+            <form action="/admin/dangky" method="post" enctype="multipart/form-data" novalidate>
+                <div class="form-group">
+                    <label>Loại user</label>
+                    <select class="form-control" name="role">                            
+                        <option value="1">Admin</option>
+                        <option value="0">Thường</option>                        
+                    </select>
+                </div>
                 <div class="form-group has-feedback">
                     <input type="text" name="name" class="form-control" placeholder="Tên">
                     <span class="fa fa-male form-control-feedback"></span>
@@ -56,9 +63,9 @@
                     <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 </div>  
                 <div class="form-group has-feedback">
-                        <input type="password" name="repassword" class="form-control" placeholder="Xác nhận lại mật khẩu">
-                        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-                    </div>  
+                    <input type="password" name="repassword" class="form-control" placeholder="Xác nhận lại mật khẩu">
+                    <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+                </div>  
                 <div class="form-group text-center">
                     <button class="btn btn-primary" type="submit">Đăng ký</button>
                 </div> 
