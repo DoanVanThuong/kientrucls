@@ -12,6 +12,6 @@
         @yield('main-content')        
         @include('templates.layout.footer')
     </div>
-    @include('templates.libary.foot')
+    @include('templates.libary.foot-page')
 </body>
 </html>

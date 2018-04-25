@@ -34,7 +34,6 @@
                             <li  class="{{$curr == 'product' ? 'active' : '' }}">
                                 <a href="/san-pham">Sản phẩm</a>
                             </li>
-
                         </ul>
                         <div class="stonetile-logo">
                             <a class="navbar-brand" href="/">
@@ -43,10 +42,20 @@
                         </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li class=" {{$curr == 'news' ? 'active' : '' }}">
-                                <a href="/tin-tuc">Tin Tức</a>
+                                <a href="/tin-tuc">Tin Tức</a>                                
                             </li>
-                            <li class=" {{$curr == 'gallery' ? 'active' : '' }}">
-                                <a href="/bo-suu-tap">Bộ Sưu tập</a>
+                            <li class="dropdown">
+                                <a href="#">Bộ Sưu tập 
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="submenu list-unstyled" style="display:none" >
+                                    <li>
+                                        <a href="/bo-suu-tap">Công trình kiến trúc</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)">Công trình nội thất</a>                                        
+                                    </li>                               
+                                </ul>
                             </li>
                             <li class=" {{$curr == 'contact' ? 'active' : '' }}">
                                 <a href="/lien-he">Liên Hệ</a>

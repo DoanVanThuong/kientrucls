@@ -1,5 +1,5 @@
  <!--Header-->
- <header>
+ <header class="header-page">
     <nav class="navbar navbar-default navbar-page">
         <div class="container">
             <div class="navbar-header">

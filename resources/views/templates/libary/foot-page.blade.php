@@ -6,7 +6,6 @@
 <script src="{{asset('js/plugins/jquery.easing.1.3.js')}}"></script>
 <script src="{{asset('js/plugins/jquery.nicescroll.min.js')}}"></script>
 <script src="{{asset('js/plugins/webflow.js')}}"></script>
-<script src="{{asset('js/home.js')}}"></script>
 <script src="{{asset('js/master.js')}}"></script>
 
 @yield('define-js')

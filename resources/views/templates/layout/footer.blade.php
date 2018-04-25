@@ -1,5 +1,5 @@
    <!--scrollToTop-->
-   <button onclick="scrollToTop()" id="scroll" title="Scroll to top">
+   <button  id="scroll" title="Scroll to top">
     <i class="fa fa-chevron-up" aria-hidden="true"></i>
 </button>
 <!--Footer-->

@@ -67,26 +67,6 @@
         ]
     });
 
-    // productSlider.on('afterChange', function (event, slick, currentSlide) {
-    //     //go last slide to first slide
-    //     if (slick.slideCount == currentSlide + 1) {
-    //         $('.hproduct-slider .right').css("visibility", "hidden");
-    //     } else {
-    //         $('.hproduct-slider .right').css("visibility", "visible");
-    //         $('.hproduct-slider').slick('setOption', 'centerMode', true);
-    //     }
-    //     //first slide
-    //     if (currentSlide == 0) {
-    //         $('.hproduct-slider .left').css("visibility", "hidden");
-    //         $('.hproduct-slider .right').css("visibility", "visible");
-    //         $('.hproduct-slider').slick('setOption', 'centerMode', false);
-    //     } else {
-    //         $('.hproduct-slider .left').css("visibility", "visible");
-    //     }
-    // });
-
-
-
     //Slider logo
     $('.logos-slider').slick({
         dots: true,
@@ -119,42 +99,6 @@
         }
         ]
     });
-    //when scrolling to 50px will be appear
-    window.onscroll = function () { scrollFunction() };
-    function scrollFunction() {
-        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-            document.getElementById('scroll').style.display = "block";
-            // document.getElementById('open').style.opacity="0.5";
-        } else {
-            document.getElementById('scroll').style.display = "none";
-        }
-    }
-    //scroll to top  
-    $("#scroll").click(function (e) {
-        e.preventDefault();
-        $('html,body').animate({ scrollTop: 0 }, 800);
-    });
-    //Button go down
-
-    $(document).ready(function () {
-
-        var start = setInterval(scrollButton, 600);
-
-        function scrollButton() {
-            $('.scroll-btn').animate({
-                top: '10px'
-            }, 400);
-        }
-
-        var end = setInterval(scrollTopButton, 1200);
-
-        function scrollTopButton() {
-            $('.scroll-btn').animate({
-                top: '0'
-            }, 400);
-        }
-
-    });
 
     //Change src 
     $(document).ready(function () {
@@ -175,14 +119,66 @@
 
     });
 
-    //Back to top  
-    /*$('.back-top-footer').click(function () {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-    */
+    // shine effect
+    function ShineImg(img) {
+
+        this.imgToCanvas = function (img) {
+            this.canvas = document.createElement('canvas');
+            this.canvas.width = img.width;
+            this.canvas.height = img.height;
+            if (img.className != '') { this.canvas.className = img.className; }
+            this.context = this.canvas.getContext('2d');
+            this.image = img;
+            this.context.drawImage(img, -1, 0, canvas.width, canvas.height);
+            img.parentNode.replaceChild(this.canvas, img);
+        }
+
+        this.imgToCanvas(img);
+
+        this.placeGradient = function (x, y) {
+            this.context.save();
+            this.gradient = this.context.createLinearGradient(x, 40 * Math.sin(15 * Math.PI / 180), x + 40, 40 * Math.sin(15 * Math.PI / 180));
+            gradient.addColorStop(0, 'rgba(255,255,255,0)');
+            gradient.addColorStop(0.5, 'rgba(255,255,255,0.5)');
+            gradient.addColorStop(1, 'rgba(255,255,255,0)');
+            this.context.rotate(15 * Math.PI / 180);
+            this.context.fillStyle = gradient;
+            this.context.globalCompositeOperation = 'source-atop';
+            this.context.fillRect(x, y - x * Math.sin(15 * Math.PI / 180), 40, this.canvas.height / Math.cos(15 * Math.PI / 180) + 40 * Math.sin(15 * Math.PI / 180));
+            this.context.restore();
+        }
+
+        var x = -(this.canvas.width + this.canvas.height * Math.sin(15 * Math.PI / 180));
+        this.animateGradient = function () {
+            this.animation = setInterval(function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                this.context.drawImage(img, -1, 0, canvas.width, canvas.height);
+                this.placeGradient(x, -40 * Math.sin(15 * Math.PI / 180));
+                x += 1;
+                if (x > this.canvas.width + this.canvas.height * Math.sin(15 * Math.PI / 180)) {
+                    x = -(this.canvas.width + this.canvas.height * Math.sin(15 * Math.PI / 180));
+                    clearInterval(this.animation);
+                }
+            }, 1);
+        }
+
+        this.shine = setInterval(this.animateGradient, 6000);
+
+        window.addEventListener('blur', function () {
+            clearInterval(this.shine);
+        }, false);
+
+        window.addEventListener('focus', function () {
+            this.shine = setInterval(this.animateGradient, 7000);
+        }, false);
+
+        return this;
+
+    }
+
+    window.onload = function () {
+        ShineImg(document.getElementById('logo2'));
+    }
 
     //Custom Scroll
     $(document).ready(function () {
