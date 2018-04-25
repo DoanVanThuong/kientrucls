@@ -86,11 +86,13 @@ Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function
         });
         Route::group(['prefix'=>'bosuutap'] , function(){
             Route::get('/danhsach','AdminControllers\BoSuuTapController@getDanhSach');
+            Route::get('/congtrinhnoithat','AdminControllers\BoSuuTapController@getCongTrinhNoiThat');
             Route::get('/them','AdminControllers\BoSuuTapController@getThem');
             Route::post('/them','AdminControllers\BoSuuTapController@postThem');
             Route::get('/sua/{id}','AdminControllers\BoSuuTapController@getSua');
             Route::post('/sua/{id}','AdminControllers\BoSuuTapController@postSua');		
-            Route::get('/xoa/{id}','AdminControllers\BoSuuTapController@getXoa');
+            Route::get('/xoa/{id}','AdminControllers\BoSuuTapController@getXoa');        
+
         });
         Route::group(['prefix'=>'lienlac'] , function(){
             Route::get('/sua/{id}','AdminControllers\LienLacController@getSua');

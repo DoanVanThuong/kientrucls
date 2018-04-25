@@ -12,17 +12,17 @@
         <form action="admin/tintuc/them" method="POST" enctype="multipart/form-data">  
             @include('adminls.functions.alert')
             <div class="box-header">                   
-                    <!-- tools box -->
-                    <div class="pull-right box-tools">
-                      <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
-                              title="Collapse">
-                        <i class="fa fa-minus"></i></button>
-                      <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
-                              title="Remove">
-                        <i class="fa fa-times"></i></button>
-                    </div>
-                    <!-- /. tools -->
-                  </div>
+                <!-- tools box -->
+                <div class="pull-right box-tools">
+                    <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                            title="Remove">
+                    <i class="fa fa-times"></i></button>
+                </div>
+                <!-- /. tools -->
+            </div>
             <div class="box-body pad">               
                 <div class="form-group">
                     <label >Tiêu đề <span class="text-danger">*</span></label>

@@ -22,8 +22,14 @@ class BoSuuTapController extends Controller
             'bietthu' => $bietthu,
             'nhaco' => $nhaco,
             'nhalo' => $nhalo,
-            'vanphong' => $vanphong,
-            
+            'vanphong' => $vanphong,     
+        ]);
+    }
+
+    function getCongTrinhNoiThat() {
+        $congtrinhnoithat = ProjectQModel::getProjectByCategory(5);
+        return view('adminls.bosuutap.congtrinhnoithat', [
+            'congtrinhnoithat'=> $congtrinhnoithat
         ]);
     }
 

@@ -73,6 +73,18 @@
     <div class="box box-default color-palette-box" >
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập biệt thự</h3>
+            <!-- tools box -->
+             <div class="pull-right box-tools">
+                <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                    <i class="fa fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                            title="Remove">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+            <!-- /. tools -->
         </div>
         <div class="box-body">
             <div class="row">
@@ -116,6 +128,16 @@
     <div class="box box-default color-palette-box" >
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập nhà cổ</h3>
+             <!-- tools box -->
+             <div class="pull-right box-tools">
+                    <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                            title="Remove">
+                    <i class="fa fa-times"></i></button>
+                </div>
+                <!-- /. tools -->
         </div>
         <div class="box-body">
             <div class="row">
@@ -160,6 +182,16 @@
     <div class="box box-default color-palette-box" >
         <div class="box-header with-border">
             <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu nhà lô</h3>
+             <!-- tools box -->
+             <div class="pull-right box-tools">
+                    <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                            title="Remove">
+                    <i class="fa fa-times"></i></button>
+                </div>
+                <!-- /. tools -->
         </div>
         <div class="box-body">
             <div class="row">
@@ -204,6 +236,16 @@
     <div class="box box-default color-palette-box" >
             <div class="box-header with-border">
                 <h3 class="box-title"><i class="fa fa-tag"></i>Bộ sưu tập văn phòng</h3>
+                <!-- tools box -->
+                <div class="pull-right box-tools">
+                    <button type="button" class="btn btn-info btn-sm" data-widget="collapse" data-toggle="tooltip"
+                            title="Collapse">
+                    <i class="fa fa-minus"></i></button>
+                    <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
+                            title="Remove">
+                    <i class="fa fa-times"></i></button>
+                </div>
+                <!-- /. tools -->
             </div>
             <div class="box-body">
                 <div class="row">
@@ -245,4 +287,7 @@
             <!-- /.box-body -->
         </div>
         {{-- van phong --}}
+@stop
+@section('define-js')
+    $();
 @stop
