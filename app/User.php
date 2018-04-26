@@ -31,8 +31,12 @@ class User extends Authenticatable
 
     public static function checkAuth($id) {
         $auth = Auth::id();
-        if($auth == $id) {
-            return true;
+        if($auth) {
+            $role = User::find($id)->role;
+            if($role == 1) {
+                return true;
+            }
+            else return false;
         }
         else return false;
     }

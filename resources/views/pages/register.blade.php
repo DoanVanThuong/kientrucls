@@ -42,14 +42,7 @@
         <div class="login-box-body">
             @include('adminls.functions.alert')            
             <p class="login-box-msg">Đăng kí user mới</p>
-            <form action="/admin/dangky" method="post" enctype="multipart/form-data" novalidate>
-                <div class="form-group">
-                    <label>Loại user</label>
-                    <select class="form-control" name="role">                            
-                        <option value="1">Admin</option>
-                        <option value="0">Thường</option>                        
-                    </select>
-                </div>
+            <form action="/admin/dangky" method="post" enctype="multipart/form-data" novalidate>               
                 <div class="form-group has-feedback">
                     <input type="text" name="name" class="form-control" placeholder="Tên">
                     <span class="fa fa-male form-control-feedback"></span>
@@ -72,7 +65,7 @@
                 {!!csrf_field()!!}            
             </form>          
             <br>
-            <a href="/admin/dangnhap" class="text-center">Đã có tài khoản</a>
+            <a href="/admin" class="text-center">Đã có tài khoản</a>
         </div>
         <!-- /.login-box-body -->
     </div>

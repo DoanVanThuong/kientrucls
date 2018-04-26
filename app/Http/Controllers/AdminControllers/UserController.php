@@ -1,10 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\AdminControllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
 use App\User;
 
 class UserController extends Controller
@@ -42,27 +41,24 @@ class UserController extends Controller
         $name = $req->name;
         $email = $req->email;
         $password = $req->password;
-        $role = (int)$req->role;
         if($password != $req->repassword) {
             return redirect()->back()->with('thongbao','mật khẩu nhập lại chưa trùng khớp!');
         }     
         $data = array_add([
             'name' =>$name,
             'email' =>$email,
-            'role' => $role
         ], 'password', $password);
-        // $user = User::create([
-        //     'name' => $data['name'],
-        //     'email' => $data['email'],
-        //     'role' => $data['role'],
-        //     'password' => bcrypt($data['password']),
-        // ]);
-        $user = new User();
-        $user->name = $name;
-        $user->email = $email;
-        $user->role = $role;
-        $user->password = bcrypt($name);        
-        $user->save();    
+        $user = User::create([
+            'name' => $data['name'],
+            'email' => $data['email'],
+            'role' => $data['role'],
+            'password' => bcrypt($data['password']),
+        ]);
+        // $user = new User;
+        // $user->name = $name;
+        // $user->email = $email;
+        // $user->password = bcrypt($name);        
+        // $user->save();    
         return redirect('admin/dangky')->with('thongbao','Đăng kí thành công'); 
    }
    
@@ -85,8 +81,7 @@ class UserController extends Controller
 		}
 		else
 		{
-			//nếu không thành công thì về lại đăng nhập
-			return redirect('admin/dangnhap')->with('thongbao','Sai tài khoản hoặc mật khẩu');
+			return redirect('/admin')->with('thongbao','Sai tài khoản hoặc mật khẩu');
 		}
 	}
 }

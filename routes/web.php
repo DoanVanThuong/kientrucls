@@ -36,7 +36,7 @@ Route::get('/admin','AdminControllers\UserController@getDangNhap');
 Route::post('/admin','AdminControllers\UserController@postDangNhap');
 
 //adimin
-Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function(){
+Route::group(['prefix' =>'admin'], function(){
         //URL dang nhap admin
         Route::get('/dangky','AdminControllers\UserController@getDangKy');
         Route::post('/dangky','AdminControllers\UserController@postDangKy');

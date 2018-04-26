@@ -35,14 +35,16 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="../../index2.html">
+            <a href="/">
                 <b>KienTruc</b>LS</a>
         </div>
         <!-- /.login-logo -->
         <div class="login-box-body">
             <p class="login-box-msg">Đăng nhập để vào trang quản trị</p>
-
-            <form action="/admin" method="post" enctype="multipart/form-data" novalidate>
+            @if(session('thongbao'))
+            <p class="text-danger">{{ session('thongbao')}}</p>
+            @endif
+            <form action="/admin" method="POST" enctype="multipart/form-data" novalidate>
                 <div class="form-group has-feedback">
                     <input type="email" name="email" class="form-control" placeholder="Email">
                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
