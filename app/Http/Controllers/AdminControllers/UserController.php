@@ -42,19 +42,28 @@ class UserController extends Controller
         $name = $req->name;
         $email = $req->email;
         $password = $req->password;
+        $role = (int)$req->role;
         if($password != $req->repassword) {
             return redirect()->back()->with('thongbao','mật khẩu nhập lại chưa trùng khớp!');
         }     
         $data = array_add([
             'name' =>$name,
             'email' =>$email,
+            'role' => $role
         ], 'password', $password);
-        User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
-        ]);
-        return redirect('/dangky')->with('thongbao','Đăng kí thành công'); 
+        // $user = User::create([
+        //     'name' => $data['name'],
+        //     'email' => $data['email'],
+        //     'role' => $data['role'],
+        //     'password' => bcrypt($data['password']),
+        // ]);
+        $user = new User();
+        $user->name = $name;
+        $user->email = $email;
+        $user->role = $role;
+        $user->password = bcrypt($name);        
+        $user->save();    
+        return redirect('admin/dangky')->with('thongbao','Đăng kí thành công'); 
    }
    
    public function postDangNhap(Request $req)
@@ -77,7 +86,7 @@ class UserController extends Controller
 		else
 		{
 			//nếu không thành công thì về lại đăng nhập
-			return redirect('dangnhap')->with('thongbao','Sai tài khoản hoặc mật khẩu');
+			return redirect('admin/dangnhap')->with('thongbao','Sai tài khoản hoặc mật khẩu');
 		}
 	}
 }

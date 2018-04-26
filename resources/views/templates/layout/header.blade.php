@@ -44,7 +44,7 @@
                             <li class=" {{$curr == 'news' ? 'active' : '' }}">
                                 <a href="/tin-tuc">Tin Tức</a>                                
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown {{$curr == 'gallery' ? 'active' : '' }}">
                                 <a href="#" class="sub">Bộ Sưu tập 
                                     <span class="caret"></span>
                                 </a>

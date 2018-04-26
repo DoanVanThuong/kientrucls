@@ -41,7 +41,6 @@ Route::group(['prefix' =>'admin', 'middleware' => ['admin'], ['auth']], function
         Route::get('/dangky','AdminControllers\UserController@getDangKy');
         Route::post('/dangky','AdminControllers\UserController@postDangKy');
         Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
-        Route::get('/dangnhap','AdminControllers\UserController@getDangNhap');
         Route::get('/dangxuat','AdminControllers\UserController@getDangXuat');
         
         route::get('/ls','AdminControllers\AdminController@getDanhSach');
