@@ -41,24 +41,21 @@ class UserController extends Controller
         $name = $req->name;
         $email = $req->email;
         $password = $req->password;
+        $role = (int)$req->loai;
         if($password != $req->repassword) {
             return redirect()->back()->with('thongbao','mật khẩu nhập lại chưa trùng khớp!');
         }     
         $data = array_add([
             'name' =>$name,
             'email' =>$email,
+            'role' =>$role
         ], 'password', $password);
         $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
-            'role' => $data['role'],
+            'role' =>$data['role'],
             'password' => bcrypt($data['password']),
         ]);
-        // $user = new User;
-        // $user->name = $name;
-        // $user->email = $email;
-        // $user->password = bcrypt($name);        
-        // $user->save();    
         return redirect('admin/dangky')->with('thongbao','Đăng kí thành công'); 
    }
    

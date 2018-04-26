@@ -43,6 +43,12 @@
             @include('adminls.functions.alert')            
             <p class="login-box-msg">Đăng kí user mới</p>
             <form action="/admin/dangky" method="post" enctype="multipart/form-data" novalidate>               
+                <div class="form-group">
+                    <select class="form-control" name="loai">
+                        <option value="0">User</option>                              
+                        <option value="1">Admin</option>
+                    </select>
+                </div>
                 <div class="form-group has-feedback">
                     <input type="text" name="name" class="form-control" placeholder="Tên">
                     <span class="fa fa-male form-control-feedback"></span>
