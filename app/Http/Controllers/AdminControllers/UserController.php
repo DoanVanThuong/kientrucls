@@ -3,17 +3,26 @@
 namespace App\Http\Controllers\AdminControllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use Session;
+use Cache;
+
+
 use App\Http\Controllers\Controller;
 use App\User;
 
 class UserController extends Controller
 {
+
    function getDangNhap() {
-       return view('pages.login');
+    
+        return view('pages.login');
+       
    }
 
    function getDangXuat() {
         Auth::logout();
+        Session::flush();
+        Cache::flush();
         return redirect('/');
    }
    function getDangKy() {

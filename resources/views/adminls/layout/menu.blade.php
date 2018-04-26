@@ -129,7 +129,7 @@
                 </ul>
             </li>
             <li><a href="/admin/dangky"><i class="fa fa-user"></i> <span>Thêm user</span></a></li>
-            <li><a href="/admin/dangxuat"><i class="fa fa-sign-out"></i> <span>Thoát</span></a></li>
+            <li><a href="/dangxuat"><i class="fa fa-sign-out"></i> <span>Thoát</span></a></li>
             
       </ul>
       <!-- /.sidebar-menu -->
