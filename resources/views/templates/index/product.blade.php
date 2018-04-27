@@ -10,10 +10,10 @@
     <div class="container hslider-group" data-ix="float-in-on-scroll-2">
         <div class="row hproduct-slider home-slider">
             @foreach($product as $item)
-            <div class="col-md-4 col-sm-4 col-xs-12 hproduct-item item">
-                <a href="">
+            <div class="col-md-4 col-sm-4 col-xs-12 hproduct-item item" data-toogle="tooltip">
+            <a href="/san-pham/{{$item->slug}}" title="{{$item->name}}">
                     <div class="hproduct-item-pic">
-                    <img src="{{asset($item->img)}}" alt="{{$item->type}}" class="img-responsive">
+                    <img src="{{asset($item->img)}}" alt="{{$item->type}}" title="{{$item->name}}" class="img-responsive">
                     </div>
                     <h4 class="home-title">{{$item->name}}</h4>
                     <div class="home-title-border"></div>

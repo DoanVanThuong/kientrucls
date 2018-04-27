@@ -83,7 +83,7 @@
                     <ul class="widget-menu fproduct-menu">
                         @foreach($category as $item)
                         <li>
-                        <a href="{{$item->slug}}">{{$item->name}}</a>
+                        <a href="/san-pham/{{$item->slug}}">{{$item->name}}</a>
                         </li>
                        @endforeach
                     </ul>
@@ -94,7 +94,7 @@
                     <ul class="widget-menu fcate-menu">
                             @foreach($category as $item)
                             <li>
-                            <a href="{{$item->slug}}">{{$item->name}}</a>
+                            <a href="/san-pham/{{$item->slug}}">{{$item->name}}</a>
                             </li>
                            @endforeach
                     </ul>

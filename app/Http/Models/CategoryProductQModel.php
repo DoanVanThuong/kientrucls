@@ -49,6 +49,19 @@ class CategoryProductQModel extends Model {
         ->take($num)
         ->get();
     }
+
+    public static function getCategoryNameBySlug($slug) {
+        return DB::table('categories as c')
+        ->select('c.*')
+        ->where('slug', $slug )
+        ->get();
+    }
+
+    public static function getCategory() {
+        return DB::table('categories as c')
+        ->select('c.*')
+        ->get();
+    }
     
     
 

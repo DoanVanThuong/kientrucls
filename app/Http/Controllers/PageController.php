@@ -9,6 +9,8 @@ use App\Http\Models\ProjectQModel;
 use App\Http\Models\BaseModel;
 use App\Http\Models\NewsQModel;
 use App\Http\Models\adminModels\LienLac;
+use App\Http\Models\adminModels\LoaiSanPham;
+
 
 
 
@@ -22,13 +24,15 @@ class PageController extends Controller
         $feedback = ProjectQModel::getFeedback(3);
         $logo = ProjectQModel::getLogoCustomer();
         $slide = BaseModel::getSlide(4);
+        $category = CategoryProductQModel::getCategory();
 
        return view('pages.index', [
            'product' => $product,
            'project' => $project,
            'feedback' => $feedback,
            'logo' => $logo,
-           'slide' =>$slide
+           'slide' =>$slide,
+           'category' => $category
         ]);
     }
 
@@ -85,6 +89,16 @@ class PageController extends Controller
         $lienhe = LienLac::all()->first();
         return view('pages.contact',[
             'lienhe' =>$lienhe
+        ]);
+    }
+
+    function LoaiSanPham($slug) {
+        $category_id = CategoryProductQModel::getCategoryNameBySlug($slug)->first()->id;
+        $name = CategoryProductQModel::getCategoryName($category_id);
+        $loaisanpham = CategoryProductQModel::getProduct($category_id);
+        return view('pages.category',[
+            'loaisanpham' => $loaisanpham,
+            'name' => $name
         ]);
     }
 

@@ -21,7 +21,7 @@
       
     </div>
     <div class="row">
-        <a class="btn hview-more" href="/bo-suu-tap">Xem thêm các dự án</a>
+        <a class="btn hview-more" href="/bo-suu-tap/cong-trinh-kien-truc">Xem thêm các dự án</a>
     </div>
 </section>
 <!--end Projects-->
