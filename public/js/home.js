@@ -177,7 +177,7 @@
     }
 
     window.onload = function () {
-        ShineImg(document.getElementById('logo2'));
+        ShineImg(document.getElementById('logo'));
     }
 
     //Custom Scroll
