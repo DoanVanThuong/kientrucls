@@ -28,10 +28,8 @@
         <!-- end slider -->
         @endforeach
             @if($n == 0)
-            <div class="text-center">
-                    <h3 class=" text-danger">Không tìm thấy sản phẩm</h3>
+            <h3 class=" text-danger">Không tìm thấy sản phẩm</h3>
 
-            </div>
             @endif
     </div>
     <!-- end container -->
