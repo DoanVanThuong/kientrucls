@@ -109,7 +109,7 @@
                         </div>
                         <div class="col-md-7 col-xs-9">
                             <h4 class="entry-title">
-                            <a href="{{$item->slug}}"></a>{{$item->title}}</a>
+                                <a href="tin-tuc/{{$item->slug}}">{{$item->title}}</a>
                             </h4>
                             <div class="entry-meta">
                                 <span class="meta-date">{{$item->created_at}}</span>

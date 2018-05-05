@@ -30,7 +30,7 @@
                             <h3 class="title">{{$item->title}}</h3>
                         <p class="content">{{$item->des}}</p>
                             <div class="view-more text-center">
-                                <a href="/tin-tuc/{{$item->slug}}" class="btn btn-info" role="button">Xem chi tiết</a>
+                                <a href="/tin-tuc/{{$item->slug}}" class="btn btn-info">Xem chi tiết</a>
                             </div>
                         
                         </div>
