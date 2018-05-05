@@ -22,10 +22,10 @@
                         </div>
                     </a>                 
                 </div>
-            </div>          
+            </div> 
+        @endforeach                     
         </div>
         <!-- end slider -->
-        @endforeach
             @if($n == 0)
             <h3 class=" text-danger">Không tìm thấy sản phẩm</h3>
 
