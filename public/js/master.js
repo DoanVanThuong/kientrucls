@@ -6,25 +6,13 @@
     //menu
     $(window).scroll(function () {
         var currentHeight = $(document).scrollTop();
-        if ($('body').hasClass('home')) {
-            var navHeight = $(".stonetile-banner").outerHeight();
-            if (currentHeight >= navHeight) {
-                $('#menu-top').hide();
-                $('#scroll-menu').show();
-                $('header.header-page nav').addClass('fixed');
-            } else {
-                $('#menu-top').show();
-                $('#scroll-menu').hide();
-                $('header.header-page nav').removeClass('fixed');
-            }
+        if (currentHeight > 200) {
+            $('header.header-page nav').addClass('fixed');
         } else {
-            if (currentHeight > 0) {
-                $('header.header-page nav').addClass('fixed');
-            } else {
-                $('header.header-page nav').removeClass('fixed');
-            }
+            $('header.header-page nav').removeClass('fixed');
         }
     });
+
 
     //when scrolling to 50px will be appear
     window.onscroll = function () { scrollFunction() };

@@ -59,5 +59,15 @@
 
 @section('define-js')
 <script src="{{asset('js/product-list.js')}}"></script>
-@stop
 
+
+<script>
+    $('.send').click(function() {
+       $('#form_feedback').submit();
+    });
+
+    $('#btn-sendFeedback').click(function(){
+        $('#feedback').slideToggle();
+    });
+</script>
+@stop

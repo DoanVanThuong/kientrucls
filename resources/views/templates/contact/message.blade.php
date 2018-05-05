@@ -47,14 +47,3 @@
 </section>
 
 
-@section('define-js')
-<script>
-    $('.send').click(function() {
-       $('#form_feedback').submit();
-    });
-
-    $('#btn-sendFeedback').click(function(){
-        $('#feedback').slideToggle();
-    });
-</script>
-@stop

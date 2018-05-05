@@ -25,6 +25,17 @@ body {
     top: 0 !important;
     z-index: 999 !important;
     width: 100% !important;
+    animation:slide-down 0.7s;
+}
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    } 
+    100% {
+        opacity: 0.9;
+        transform: translateY(0);
+    } 
 }
 
 .submenu li a {

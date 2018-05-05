@@ -44,5 +44,6 @@
 @section('define-js')
 <script src="{{asset('js/product_detail.js')}}"></script>
 <script src="{{asset('js/gallery.js')}}"></script>
+<script src="{{asset('js/product-list.js')}}"></script>
 
 @stop

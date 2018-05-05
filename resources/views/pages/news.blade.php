@@ -18,6 +18,6 @@
 @stop
 
 @section('define-js')
-{{-- <script src="{{asset('js/product-list.js')}}"></script> --}}
+<script src="{{asset('js/product-list.js')}}"></script>
 
 @stop
