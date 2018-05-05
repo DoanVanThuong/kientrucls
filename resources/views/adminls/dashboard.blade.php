@@ -140,7 +140,7 @@
                 </div>
                 <!-- /.box-body -->
                 <div class="box-footer text-center">
-                    <a href="admin/sampham/danhsach" class="uppercase">Tất cả tin tức</a>
+                    <a href="admin/tintuc/danhsach" class="uppercase">Tất cả tin tức</a>
                 </div>
                 <!-- /.box-footer -->
             </div>              
