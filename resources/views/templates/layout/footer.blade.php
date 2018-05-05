@@ -61,17 +61,17 @@
                     </div>
                     <ul class="footer-social">
                         <li>
-                            <a href="https://www.facebook.com/stonetilecanada">
+                            <a href="javascript:void(0)">
                                 <i class="fa fa-facebook" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/StonetileCanada">
+                        <a href="javascript:void(0)">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://plus.google.com/108272472820847102517">
+                        <a href="javascript:void(0)">
                                 <i class="fa fa-google-plus" aria-hidden="true"></i>
                             </a>
                         </li>
