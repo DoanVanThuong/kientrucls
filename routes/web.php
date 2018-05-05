@@ -22,7 +22,7 @@ Route::group(['prefix' =>'bo-suu-tap'], function(){
 });
 //sản phẩm
 Route::group(['prefix' =>'san-pham'] ,function(){
-    Route::get('/{category}', 'PageController@LoaiSanPham');
+    Route::get('/loai/{category}', 'PageController@LoaiSanPham');
 	Route::get('/','PageController@SanPham');
 	Route::get('/{slug}','ProductController@ViewProductDetail');
 });

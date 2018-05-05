@@ -15,15 +15,14 @@
             <?php $n++; ?>
             <div class="thumbnail-wp">
                 <div class="thumb-relative">
-                <a href="{{$item->slug}}" data-toogle="tooltip">
+                <a href="/san-pham/{{$item->slug}}" data-toogle="tooltip">
                 <img src="{{asset($item->img)}}" alt="" title="{{$item->name}}" class="thumb img-responsive">
                         <div class="cap">
                             <h4>{{$item->name}}</h4>
                         </div>
                     </a>                 
                 </div>
-            </div>
-            
+            </div>          
         </div>
         <!-- end slider -->
         @endforeach

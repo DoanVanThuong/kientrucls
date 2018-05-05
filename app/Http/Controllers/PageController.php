@@ -96,6 +96,7 @@ class PageController extends Controller
         $category_id = CategoryProductQModel::getCategoryNameBySlug($slug)->first()->id;
         $name = CategoryProductQModel::getCategoryName($category_id);
         $loaisanpham = CategoryProductQModel::getProduct($category_id);
+
         return view('pages.category',[
             'loaisanpham' => $loaisanpham,
             'name' => $name
