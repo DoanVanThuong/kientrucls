@@ -5,16 +5,16 @@
                 <div class="line"></div>
             </div>
             <div class="info">
-                <div class="row">
-                    <div class="col-md-3 col-xs-12 location">
+                <div class="row">                    
+                    <div class="col-md-3 col-xs-12 phone">
                         <div class="row">
                             <div class="col-md-3 col-xs-3">
-                                <div class="contact-item sl-small-location">
+                                <div class="contact-item sl-small-location ">
                                 </div>
                             </div>
                             <div class="col-md-9 col-xs-9 address-item">
                                 <p>
-                                    {{$lienhe->address}}
+                                    <strong>{{$lienhe->address}}</strong>
                                 </p>
                             </div>
                         </div>
