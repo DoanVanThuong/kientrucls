@@ -1,6 +1,6 @@
 <?php $curr = 'index';?>
 @extends('master')
-@section('title')Trang chủ | Kiến trúc LS
+@section('title')Công ty Cổ phần Tư vấn Thiết kế Xây dựng và Thương mại Không gian Lớn và Nhỏ
 @stop
 
 @section('main-content')

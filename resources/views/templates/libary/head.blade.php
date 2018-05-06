@@ -8,10 +8,11 @@
     <meta property="og:url"           content="{{URL::current()}}" />
     <meta property="og:type"          content="website" />
     <meta property="og:description"   content="Kiến trúc LS" />
-    <meta property="og:image"         content="{{asset('img/home/logo-ls.png')}}"/>
+    <meta property="og:image"         content="{{asset('img/favicon.ico')}}"/>
     <meta property="og:title" content="@yield('title')" />
     <meta name="author" content= "kientrucls.vn" />
     <meta name="Design" content="by DVT" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('img/favicon.ico')}}">
     @yield('og')
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/bootstrap-theme.min.css')}}">
