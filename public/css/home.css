@@ -275,6 +275,9 @@
     transition: all .2s;
     transform: scale(1.1);
 }
+.img-project:hover img {
+	opacity: .4;
+}
 .img-project:hover .project-des {
     display: block;
     transition: all .3s ease-out;

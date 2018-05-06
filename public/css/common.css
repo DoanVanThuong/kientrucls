@@ -113,7 +113,8 @@
 }
 
 html, body {
-    overflow-x: hidden;
+	overflow-x: hidden;
+	-ms-scroll-limit-y-max:100px;
 }
 
 body {
