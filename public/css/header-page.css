@@ -1,3 +1,6 @@
+.navbar-page  .navbar-nav li a {
+    color:#fff !important;
+}
 .navbar-page  .navbar-nav li:hover{
     background: rgb(33,167,72); 
 }
@@ -14,3 +17,48 @@
     color:#fff;
     transition: all .2s;
  }
+ .navbar-page {
+    background-position: top;
+    background: url(../img/bg2.jpg) no-repeat;
+    background-size: cover;
+    background-position-x: 0px;
+    background-position-y: -27px;
+ }
+ @media only screen and (min-width: 100px) and (max-width: 479px) {
+    .navbar-page .navbar-brand {
+        height: 100px;
+    }
+    .navbar-page {
+        background-position-x: 0px;
+        background-position-y:20%;
+     }
+   
+
+ }
+
+ @media only screen and (min-width: 480px) and (max-width: 767px) {
+    .navbar-page .navbar-brand {
+        height: 100px;
+    }
+    .navbar-page {
+        background-position-x: 0px;
+        background-position-y:20%;
+       
+     }
+   
+ }
+
+@media only screen and (min-width: 960px) and (max-width: 1240px) {
+    .navbar-page {
+        background-position-x: 0px;
+        background-position-y:20%;
+       
+     }
+} 
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .navbar-page {
+        background-position-x: 0px;
+        background-position-y:20%;
+       
+     }
+} 
