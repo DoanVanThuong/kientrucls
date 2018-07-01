@@ -28,10 +28,9 @@ class BaseModel extends Model {
     ->get();
   }
 
-  public static function getSlide($num) {
+  public static function getSlide() {
     return DB::table('slide as s')
     ->select('s.*')
-    ->take($num)
     ->get();
   }
 }

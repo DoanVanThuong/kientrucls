@@ -23,7 +23,7 @@ class PageController extends Controller
         $project = ProjectQModel::getProject(4);
         $feedback = ProjectQModel::getFeedback(3);
         $logo = ProjectQModel::getLogoCustomer();
-        $slide = BaseModel::getSlide(4);
+        $slide = BaseModel::getSlide();
         $category = CategoryProductQModel::getCategory();
 
        return view('pages.index', [
